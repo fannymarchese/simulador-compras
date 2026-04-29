@@ -1,0 +1,60 @@
+var AWDayOfWeekStart = 1; 
+
+var AWAMString = "AM";
+var AWPMString = "PM";
+
+var AWCalendarLabelPattern = "{AWShortMonth} {AWShortYear}";
+var AWPreviousYearTitle = 'A\u00F1o anterior';
+var AWPreviousMonthTitle = 'Mes anterior';
+var AWNextMonthTitle = 'Mes siguiente';
+var AWNextYearTitle = 'A\u00F1o siguiente';
+
+var AWMonthNames = new Array();
+AWMonthNames['0'] = 'enero';
+AWMonthNames['1'] = 'febrero';
+AWMonthNames['2'] = 'marzo';
+AWMonthNames['3'] = 'abril';
+AWMonthNames['4'] = 'mayo';
+AWMonthNames['5'] = 'junio';
+AWMonthNames['6'] = 'julio';
+AWMonthNames['7'] = 'agosto';
+AWMonthNames['8'] = 'septiembre';
+AWMonthNames['9'] = 'octubre';
+AWMonthNames['10'] = 'noviembre';
+AWMonthNames['11'] = 'diciembre';
+AWMonthNames['12'] = '';
+
+var AWShortMonthNames = new Array();
+AWShortMonthNames ['0'] = 'ene';
+AWShortMonthNames ['1'] = 'feb';
+AWShortMonthNames ['2'] = 'mar';
+AWShortMonthNames ['3'] = 'abr';
+AWShortMonthNames ['4'] = 'may';
+AWShortMonthNames ['5'] = 'jun';
+AWShortMonthNames ['6'] = 'jul';
+AWShortMonthNames ['7'] = 'ago'; 
+AWShortMonthNames ['8'] = 'sep';
+AWShortMonthNames ['9'] = 'oct';
+AWShortMonthNames ['10'] = 'nov';
+AWShortMonthNames ['11'] = 'dic';
+AWShortMonthNames ['12'] = '';
+
+var AWWeekdayNames = new Array();
+AWWeekdayNames['0'] = 'domingo';
+AWWeekdayNames['1'] = 'lunes';
+AWWeekdayNames['2'] = 'martes';
+AWWeekdayNames['3'] = 'mi\u00E9rcoles';
+AWWeekdayNames['4'] = 'jueves';
+AWWeekdayNames['5'] = 'viernes';
+AWWeekdayNames['6'] = 's\u00E1bado';
+AWWeekdayNames['7'] = '';
+
+var AWShortWeekdayNames = new Array();
+AWShortWeekdayNames['0'] = 'dom';
+AWShortWeekdayNames['1'] = 'lun';
+AWShortWeekdayNames['2'] = 'mar';
+AWShortWeekdayNames['3'] = 'mi\u00E9';
+AWShortWeekdayNames['4'] = 'jue';
+AWShortWeekdayNames['5'] = 'vie';
+AWShortWeekdayNames['6'] = 's\u00E1b';
+AWShortWeekdayNames['7'] = '';

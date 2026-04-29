@@ -1,0 +1,9936 @@
+/*
+    Copyright (c) 1996-2015 Ariba, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+        http: //www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/
+
+/*! normalize.css v1.1.2 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+/*main,
+*/
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+  outline: 0;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  background: none repeat scroll 0 0 #D7D7D7;
+  border: 0 none;
+  height: 1px;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+p,
+pre {
+  margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ * 5. Support for IE 5.5
+ */
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+  cursor: hand;
+  /* 5 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border: 0;
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  width: 100%;
+}
+
+/**
+ * Overrides the 100% table width above so that tables copied from Word which don't have
+ * width set by default would not be forced to 100% width.
+ */
+
+table .MsoTableGrid {
+  width: auto;
+  width: initial;
+}
+
+/**
+ * This class controls the font-family, size and weight all across the pages
+ */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font: 300 13px/16px Arial, Verdana, sans-serif;
+}
+
+body {
+  background-color: #FFF;
+  color: #000;
+}
+
+h1,
+.h1 {
+  color: #666666;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.8em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+h2,
+.h2 {
+  color: #363636;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 10px 0 3px;
+  white-space: nowrap;
+}
+
+h3,
+.h3 {
+  border-bottom: 1px dotted gray;
+  color: #555580;
+  font-size: 18px;
+  line-height: 1.2em;
+  margin: 0 0 5px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+h4,
+.h4 {
+  margin: 0 0 5px 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+input {
+  line-height: 28px;
+  padding-right: 4px;
+}
+input::-ms-clear {
+    display: none;
+}
+
+textarea {
+  border: 1px solid #7F9DB9;
+}
+
+a:link,
+a:visited {
+  color: #00679E;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #199DE0 !important;
+ text-decoration: underline !important;
+ text-decoration-color: #D7D7D7 !important;
+}
+
+a:hover .w-pml-icon,
+a:focus .w-pml-icon {
+  color: #199DE0;
+}
+ #commandBarTop .leg-txt-dec-none {
+   display:inline-block;
+ }
+
+#commandBarTop a:focus,
+.w-pm-menu a:focus,
+.a-nav-bar-create div:focus,
+.w-cmd-wrapper #cmdlinks a:focus,
+.dbTabWrapper .a-nav-bar-cmds a:focus,
+.dbTabWrapper .w-dashboard-tabs .w-tablist  a:focus {
+  border: 1px dashed black !important;
+  outline: 0;
+}
+
+#cmdlinks a:focus {
+padding: 5px;
+}
+
+/* layout classes */
+
+body {
+  text-align: center;
+}
+
+td {
+  white-space: normal;
+}
+
+.w-layer {
+  /* this is where absolutely positioned elements should be moved to */
+  height: 0;
+  overflow: visible;
+  position: relative;
+  z-index: 100;
+}
+
+/*
+  Set of generic re-usable CSS class
+*/
+.taL {
+  text-align:left;
+}
+
+.taC {
+  text-align:center;
+}
+
+.taR {
+  text-align:right;
+}
+
+.flL {
+  float:left;
+}
+
+.flR {
+  float:right;
+}
+
+.nomargin {
+  margin:0;
+}
+
+.nopadding {
+  padding:0;
+}
+
+.nopadding-left {
+  padding-left:0 !important;
+}
+
+.vaBA {
+  vertical-align:baseline!important;
+}
+
+.vaB {
+  vertical-align:bottom!important;
+}
+
+.vaM {
+  vertical-align:middle!important;
+}
+
+.vaS {
+  vertical-align:super!important;
+}
+
+.vaTT {
+  vertical-align:text-top!important;
+}
+
+.vaT {
+  vertical-align:top!important;
+}
+
+/* depreciated. in widgets.css, the class name is noWrap. We should make these two
+   styles the same. So that we don't need to put two versions of noWrap in class */
+.nowrap {
+    white-space:nowrap;
+}
+
+/* AW6 class name for noWrap. */
+.noWrap {
+    white-space: nowrap;
+}
+
+.u-listitem li {
+  line-height: 25px;
+}
+
+/*
+Constants and a mixin to be used for creating the responsive grid.
+*/
+
+/*
+A section indicates a horizontal break in the design. Will clear the design
+against all elements that float before it.
+*/
+
+.section,
+section {
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+A group (usually used in conjunction with a section) is used to contain floating
+elements, so that the design will contain and break after all the floating
+elements in the group.
+*/
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+.group:after,
+.group:before {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+/*
+Floating sections used to breakup the page. Usually contained inside of a
+`group` and `section`, please include the class `col` and `cols-n` on your
+column element.
+*/
+
+.col-12 {
+  width: 980px;
+}
+
+.col-11 {
+  width: 896.34px;
+}
+
+.col-10 {
+  width: 812.66px;
+}
+
+.col-9 {
+  width: 728.99px;
+}
+
+.col-8 {
+  width: 645.33px;
+}
+
+.col-7 {
+  width: 561.62px;
+}
+
+.col-6 {
+  width: 478px;
+}
+
+.col-5 {
+  width: 394.38px;
+}
+
+.col-4 {
+  width: 310.67px;
+}
+
+.col-3 {
+  width: 227px;
+}
+
+.col-2 {
+  width: 143.34px;
+}
+
+.col-1 {
+  width: 59.66px;
+}
+
+.col-custom {
+  /* override for specific widgets */
+}
+
+.col {
+  float: left;
+  margin-right: 23px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+/* needed for legacy browsers */
+
+.col-lastChild {
+  margin-right: 0;
+}
+
+/* all browsers except IE6 and lower */
+
+.clearfix {
+  display: inline-block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+
+/*
+This is the CSS required to render the page chrome in the AW5 style.
+*/
+
+.bigBodyRev {
+  color: #fff;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.bigBodyBoldRev {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/** main page wrapper **/
+.w-main-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+/** page wrapper content **/
+.w-page-wrapper-content {
+  padding: 0 30px 0 15px;
+  width: 100%;
+}
+/** page wrapper content with no TOC needs a larger left padding to match right padding **/
+.w-page-wrapper-content-no-toc {
+
+    padding-left: 30px;
+}
+/* Remove double padding for full "dialog" pages */
+.w-page-wrapper-content div.w-dlg-panel {
+  padding:0;
+}
+
+/* AWDebugPane styles:
+ * It's ok to set different font-family to AWDebugPane classes
+ */
+.debugBar {
+  font-weight: 700;
+  font: 11px Arial, Verdana, Helvetica, sans-serif;
+  position: absolute;
+  left: 254px;
+  top: 0;
+  filter: alpha(opacity=050);
+  opacity: 0.87;
+}
+
+.debugBarVis {
+  font-weight: 700;
+  font: 11px Arial, Verdana, Helvetica, sans-serif;
+  position: absolute;
+  border-left: 1px solid #9C9CB8;
+  border-right: 1px solid #9C9CB8;
+  border-bottom: 1px solid #9C9CB8;
+  background-color: #E9E9F1;
+  padding-left: 3px;
+  left: 250px;
+  top: 0;
+  filter: alpha(opacity=100);
+  opacity: 1.0;
+}
+
+.debugWarning {
+  background-color: yellow;
+  color: #000;
+  font: bold 6pt Arial, Verdana, sans-serif;
+  padding: 2px;
+}
+
+div.debugWarning {
+  float:left;
+  border: 1px red solid;
+  text-align:left;
+}
+
+.debugError {
+  background-color:red;
+  color:#000000;
+  font: bold 6pt Arial, Verdana, sans-serif;
+  padding:2px;
+}
+
+div.debugError {
+  float:left;
+  border: 1px yellow solid;
+  text-align:left;
+}
+
+.debug-title {
+  color:#ffffff;
+  padding:4px 7px 3px 5px;
+  width:450px;
+}
+
+.debug-close-ct {
+  padding-left:4px;
+}
+
+.debug-close-img {
+  padding:2px;
+}
+
+.debug-menu {
+  padding:5px;
+  text-align:left;
+}
+
+.debug-section {
+  padding-left:10px;
+  text-align:left;
+}
+
+.debug-dev-w {
+  font-weight:bold;
+  color:#000000;
+  background-color:#ffeaaa;
+  padding:5px 0 5px 10px;
+}
+
+.debug-dev-e {
+  font-weight:bold;
+  color:#ffffff;
+  background-color:red;
+  padding:5px 0 5px 10px;
+}
+/* End AWDebugPane styles */
+
+/* MessagesList styles to print error/alert/confirmation messages */
+.message {
+  padding: 3px 5px 15px 3px;
+  text-align: left;
+  color: #616161;
+}
+/* end MessagesList */
+
+div.info {
+  background-color: #F5F5F9;
+  font-size: 9px;
+  line-height: 15px;
+  padding: 3px 5px 0 5px;
+}
+
+.tabListWrapper .rbB {
+  padding: 0 0 0 0;
+}
+
+/* greeting defines base style for greeting string on the page header
+    greetingSelection is used to add the additional styles when the
+    greeting is active (clickable) */
+
+.greeting,
+a.greeting:link,
+a.greeting:visited {
+  color: #666;
+  font-size: 9px;
+  line-height: 18px;
+  text-decoration: none;
+  cursor: default;
+}
+
+a.greetingSelection:link,
+a.greetingSelection:visited {
+  cursor: pointer !important;
+  cursor: hand !important;
+}
+
+/* Styles to dynamically control min/max control appearance */
+.awtMMNone {
+    display:none;
+}
+div.awtMMScroll, div.awtMMMax {
+    color:#00679e;
+    padding-left: 15px;
+    border-left: 1px solid #d7d7d7;
+}
+div.awtMMScroll:hover, div.awtMMMax:hover {
+    color:#2ba4f2;
+}
+td.awtMMScroll, td.awtMMMax {
+    padding:1px 15px 1px 0px;
+    cursor:pointer;
+    cursor:hand;
+}
+/*Hide scroll up when showing scroll down*/
+td.awtMMScroll div.awtMMMax {
+    display: none;
+}
+/*Hide scroll down when showing scroll up*/
+td.awtMMMax div.awtMMScroll {
+    display: none;
+}
+
+/* CSS Tabs */
+
+.tabWrapper {
+  /* "marker" class to set context for styles below */
+}
+
+.tabContentWrapper {
+  /* "marker" class to set context for styles below */
+}
+
+.lgTabWrapper {
+  /* "marker" class to set context for styles below */
+}
+
+.dbTabWrapper {
+  /* "marker" class to set context for styles below */
+}
+
+.pageTabWrapper {
+  /* "marker" class to set context for styles below */
+}
+
+.tabListWrapper {
+  padding: 0;
+  margin-top: 7px;
+}
+
+.tabWrapper td.tabBoxLeft,
+.tabWrapper td.tabBoxRight,
+.tabBoxSpacer {
+  display: none;
+}
+
+td.tabBox {
+  height: 19px;
+  background: url(cssTabLine.gif) repeat-x left bottom;
+  padding: 4px 0 0 5px;
+}
+
+table.tabBox {
+  width: 100%;
+}
+
+div.tab,
+div.tabSelected {
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  background-repeat: repeat-x;
+  text-align: center;
+  white-space: nowrap;
+  background-position: bottom;
+}
+
+div.tab {
+  border: 1px solid #669;
+  border-bottom-style: none;
+  background: #DFDFEC url(cssTabWrapperFill.gif);
+  margin-right: 3px;
+}
+
+a.tab:link,
+a.tab:visited {
+  display: block;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 1px 5px 0 5px;
+}
+
+a.tab:hover {
+  background-color: #ccd;
+  border-bottom: none;
+  padding: 1px 5px 0 5px;
+}
+
+div.tabSelected {
+  background-image: url(cssTabWrapperSelectedFill.gif);
+  padding: 1px 5px 0 5px;
+  border: 1px solid #669;
+  border-bottom: 1px solid #E4E4E4;
+  margin: 0 0 0 0;
+}
+
+a.tabSelected:link,
+a.tabSelected:visited {
+  display: block;
+  text-decoration: none;
+}
+
+.tabNav:link,
+.tabNav:visited {
+  display: block;
+  float: right;
+  color: #555580 !important;
+  background: url(cssTabSep.gif) no-repeat 0 4px;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 1px 5px 0 15px;
+  margin: 0 3px 0 0;
+}
+
+.tabNav:hover {
+  display: block;
+  float: right;
+  color: #555580 !important;
+  background: url(cssTabSep.gif) no-repeat 0 4px;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: underline;
+  padding: 1px 5px 0 15px;
+  margin: 0 3px 0 0;
+}
+
+.tabShadow {
+  display: block;
+}
+
+.tabContentWrapper div.tabPanel {
+  /*
+  These scrollbar properties only work in older IEs.
+  */
+  scrollbar-face-color: #fff;
+  scrollbar-shadow-color: #fff;
+  scrollbar-highlight-color: #fff;
+  scrollbar-3dlight-color: #9C9CB8;
+  scrollbar-darkshadow-color: #ccd;
+  scrollbar-track-color: #E9E9F1;
+  scrollbar-arrow-color: #555580;
+  border: 1px solid #9C9CB8;
+  border-top-width: 0;
+  overflow: visible;
+  padding: 25px 50px 10px 10px;
+}
+
+.noPadding div.tabPanel {
+  padding: 0 0 0 0;
+}
+
+.noPadding td.tabBox {
+  padding-top: 0;
+}
+
+.tabListWrapper .grad {
+  display: none;
+}
+
+table .tabListWrapper .rbB {
+  border-width: 0;
+}
+
+.tabListWrapper .rbC {
+  display: none;
+}
+
+.dbTabWrapper a {
+  color: #FFFFFF;
+}
+
+/* Accessibility Toolbar */
+
+.separator {
+    border-right: 1.5px solid darkgray;
+    margin: 0 8px;
+    height: 36px;
+}
+
+.accessibility {
+    padding: 10px;
+    color: black;
+    background-color: #EAECEE;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.accessibility:focus {
+    outline: 1px dashed black;
+}
+
+.accessibilityToolbar {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+/** Page tabs **/
+
+.pageTabWrapper .tabListWrapper {
+  border: none;
+  border-bottom: 3px solid #D9D9D9;
+}
+
+.pageTabWrapper td.tabBox {
+  background-image: none;
+  padding: 0;
+  vertical-align: bottom;
+}
+
+.pageTabWrapper td.tabBoxLeft,
+.pageTabWrapper td.tabBoxRight {
+  display: none;
+}
+
+.pageTabWrapper .tabLeft,
+.pageTabWrapper .tabRight,
+.pageTabWrapper .tabSelectedLeft,
+.pageTabWrapper .tabSelectedRight {
+  width: 8px;
+  height: 20px;
+}
+
+.pageTabWrapper .tab,
+.pageTabWrapper .tabSelected {
+  border: none;
+  margin: 0;
+}
+
+.pageTabWrapper .tabLeft {
+  background-image: url("cssTabLeftAW.gif");
+}
+
+.pageTabWrapper div.tab {
+  background-image: url("cssTabFillAW.gif");
+  height: 18px;
+  padding-top: 2px;
+  color: #C1C1C1;
+}
+
+.pageTabWrapper .tabRight {
+  background-image: url("cssTabRightAW.gif");
+  margin-right: 5px;
+}
+
+.pageTabWrapper a.tab:link,
+.pageTabWrapper a.tab:visited,
+.pageTabWrapper a.tab:hover {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: normal;
+  color: #162A9D;
+  background-color: transparent;
+}
+
+.pageTabWrapper .tabSelectedLeft {
+  background-image: url("cssTabSelectedLeftAW.gif");
+}
+
+.pageTabWrapper div.tabSelected {
+  background-image: url("cssTabSelectedFillAW.gif");
+  height: 17px;
+  padding-top: 3px;
+  color: #C1C1C1;
+}
+
+.pageTabWrapper td.firstTab .tabLeft {
+  background-image: url("cssTabFirstLeftAW.gif");
+}
+
+.pageTabWrapper td.firstTab .tabSelectedLeft {
+  background-image: url("cssTabSelectedFirstLeftAW.gif");
+}
+
+.pageTabWrapper a.tabSelected:link,
+.pageTabWrapper a.tabSelected:visited {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: normal;
+  color: #000;
+}
+
+.pageTabWrapper .tabSelectedRight {
+  background-image: url("cssTabSelectedRightAW.gif");
+}
+
+.pageTabWrapper td.lastTab .tabRight {
+  background-image: url("cssTabLastRightAW.gif");
+}
+
+.pageTabWrapper td.lastTab .tabSelectedRight {
+  background-image: url("cssTabSelectedLastRightAW.gif");
+}
+
+.cmdTabWrapper td.tabBox {
+  background-image: none;
+}
+
+.cmdTabWrapper div.tab {
+  border: none;
+  background-image: none;
+}
+
+.cmdTabWrapper div.tabSelected {
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+}
+
+.cmdTabWrapper div.tab {
+  background: transparent none;
+  border: none;
+  white-space: nowrap;
+}
+
+.cmdTabWrapper a.tabSelected {
+  font-weight: bold;
+}
+
+.cmdTabWrapper .tabListWrapper {
+  margin-top: 0;
+}
+
+.cmdTabWrapper a.tab:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.vTabSet .wizBox {
+  margin-top: 7px;
+}
+
+.vTabSet .tocItem,
+.vTabSet .tocItemCurrent {
+  padding: 5px 0 0 0;
+}
+
+.vTabSet .tocItemCurrent {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.vTabs {
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.vTabs .searchItemLink {
+  padding: 0 20px 0 10px;
+}
+
+.vTabs a {
+  text-decoration: none;
+}
+
+.vTabs a:hover {
+  text-decoration: underline;
+}
+
+.vTabBg {
+  background-color: #E9E9F1;
+}
+
+.vTabSet .tocItem .rbBC,
+.vTabSet .tocItem .rbFC,
+.vTabSet .tocItem .rbBFC {
+  background-color: #E9E9F1;
+  border-color: #fff;
+}
+
+.vTabSet .tocItemCurrent .rbBC,
+.vTabSet .tocItemCurrent .rbFC,
+.vTabSet .tocItemCurrent .rbBFC {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.vTabSet .tabPanel {
+  padding-left: 18px;
+}
+
+/** ROUNDED BOX */
+
+.rbC {
+  display: block;
+  background: transparent;
+  font-size: 1px;
+}
+
+.rb1,
+.rb2,
+.rb3,
+.rb4,
+.rbB {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.rb1,
+.rb2,
+.rb3,
+.rb4 {
+  border-top: 0 none;
+  border-bottom: 0 none;
+  display: block;
+  overflow: hidden;
+}
+
+.rbl .rb1,
+.rbl .rb2,
+.rbl .rb3,
+.rbl .rb4 {
+  border-right: none;
+}
+
+.rbR .rb1,
+.rbR .rb2,
+.rbR .rb3,
+.rbR .rb4 {
+  border-left: none;
+}
+
+.rb1,
+.rb2,
+.rb3 {
+  height: 1px;
+}
+
+.rbBC {
+  border-color: #9C9CB8;
+  background-color: #9C9CB8;
+}
+
+.rbFC {
+  background-color: #EBEBEB;
+}
+
+.rbBFC {
+  background: transparent;
+}
+
+.rbT .rbB {
+  border-width: 0 1px 1px 1px;
+}
+
+.rbBt .rbB {
+  border-width: 1px 1px 0 1px;
+}
+
+.rbA .rbB,
+.rbSA .rbB {
+  border-width: 0 1px 0 1px;
+}
+
+.rbL .rbB {
+  border-width: 0 0 0 1px;
+}
+
+.rbR .rbB {
+  border-width: 0 1px 0 0;
+}
+
+.rbBL .rbB {
+  border-width: 1px 1px 0 1px;
+}
+
+.rbBR .rbB {
+  border-width: 1px 1px 0 1px;
+}
+
+.rbTL .rbB {
+  border-width: 0 1px 1px;
+}
+
+.rbT .rb1,
+.rbBt .rb1,
+.rbA .rb1 {
+  margin: 0 5px;
+}
+
+.rbSA .rb1 {
+  margin: 0 2px;
+}
+
+.rbT .rb2,
+.rbBt .rb2,
+.rbA .rb2 {
+  margin: 0 3px;
+  border-width: 0 2px;
+}
+
+.rbSA .rb2 {
+  margin: 0 1px;
+  border-width: 0 1px;
+}
+
+.rbT .rb3,
+.rbBt .rb3,
+.rbA .rb3 {
+  margin: 0 2px;
+}
+
+.rbT .rb4,
+.rbBt .rb4,
+.rbA .rb4 {
+  height: 2px;
+  margin: 0 1px;
+}
+
+.rbL .rb1,
+.rbBL .rb1,
+.rbTL .rb1 {
+  margin: 0 0 0 5px;
+}
+
+.rbL .rb2,
+.rbBL .rb2,
+.rbTL .rb2 {
+  margin: 0 0 0 3px;
+  border-width: 0 1px 0 2px;
+}
+
+.rbL .rb3,
+.rbBL .rb3,
+.rbTL .rb3 {
+  margin: 0 0 0 2px;
+}
+
+.rbL .rb4,
+.rbBL .rb4,
+.rbTL .rb4 {
+  height: 2px;
+  margin: 0 0 0 1px;
+}
+
+.rbR .rb1,
+.rbBR .rb1 {
+  margin: 0 5px 0 0;
+}
+
+.rbR .rb2,
+.rbBR .rb2 {
+  margin: 0 3px 0 0;
+  border-width: 0 2px 0 1px;
+}
+
+.rbR .rb3,
+.rbBR .rb3 {
+  margin: 0 2px 0 0;
+}
+
+.rbR .rb4,
+.rbBR .rb4 {
+  height: 2px;
+  margin: 0 1px 0 0;
+}
+
+/* refresh region */
+
+.rr {
+  display: inline;
+}
+
+.rrVis .rr {
+  display: block;
+  border: 1px #99EEAA dotted;
+}
+
+div.showRR,
+span.showRR {
+  background-color: #BBFFAA;
+  border: 1px solid #99EEAA !important;
+  display: block;
+}
+
+tr.showRR > td,
+tr.showRR td.tableBody,
+table.showRR td.tableBody {
+  background-color: #BBFFAA !important;
+  border: 1px solid #99EEAA !important;
+}
+
+tr.selReg > td {
+  background-color: #BBFFAA !important;
+}
+
+.rrVis #BPR_Footer .rr,
+#BPR_Footer,
+#BPR_Panels,
+#BPR_FLs,
+#BSF,
+#DC,
+#PEP,
+#PEP .rr {
+  display: inline;
+  border: none;
+}
+
+#BPR_Body {
+  text-align: left;
+}
+
+/* DialogBox */
+div.w-dlg-dialog {
+  padding: 10px 15px;
+}
+div.w-dlg-panel {
+  padding: 0 30px;
+}
+/* Confirmation */
+.panelContainer .w-dlg-panel {
+  display: block;
+  margin: 0 auto;
+}
+
+/*
+  we do not adding margin top bottom as dialog needs to scrol. + panel itself already
+  add this spacing
+  */
+.panelContainer .w-dlg-dialog {
+  display: block;
+  margin: 0px auto;
+}
+
+div.w-dlg-wrapper {
+  color: #464646;
+  text-align: left;
+  width: auto;
+  position: relative;
+  border : 1px solid transparent;
+}
+
+div.dialogWrapper {
+  background-color: #fff;
+  border: 1px solid #66667E;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  padding: 1px;
+}
+
+.w-dlg-wrapper .w-dlg-inner-wrapper {
+  min-width: 240px;
+  min-height: 120px;
+  padding: 30px;
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.27);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.27);
+  zoom: 1;
+  background: #FFFFFF;
+}
+
+.w-dlg-header {
+  font-size: 20px;
+  line-height: 20px;
+  white-space: normal;
+}
+
+.w-dlg-content {
+  margin: 15px 0;
+  font-size: 13px;
+  width: auto;
+}
+
+.w-dlg-content .col-12 {
+  width: auto;
+}
+
+/* Make it display:table as first level RR has impact on width, the same applies for
+ header as on some pages dialog title goes takes up almost 70% of hte page width
+ */
+.w-dlg-header,
+.panel:not(.w-dlg-panel-active)  .w-dlg-content {
+  display: table;
+}
+
+.w-dlg-content .w-oc-table .rr,  .w-dlg-content input[type="text"] + div.rr{
+    display: inline;
+}
+
+.panel div.awtstrut, .w-dlg-panel-active  div.tableHead  th.tableHead.thSpacer {
+  display: none !important;
+}
+
+.w-dlg-content  div:not(.a-apc-fieldM-condTitle) > table:not(.htmlarea):not(.w-tbl-w-1):not(.w-arccs-table),
+.panel:not(.w-dlg-panel-active) .w-dlg-content table.w-tbl-fixed,
+.panel:not(.w-dlg-panel-active)  div.tableBody,
+.panel:not(.w-dlg-panel-active)  div.tableHead
+{
+  width: auto !important;
+}
+
+.w-dlg-content table.ftL {
+  width: auto;
+}
+
+/*
+  This might be better to set on global level directly. On the chooser container there is always
+  search input field and table which can scroll. But to be sure let' set it only for the dialog
+*/
+.w-dlg-content .w-chpContainer {
+  overflow: hidden;
+}
+
+.w-dlg-content table.w-chpContainer {
+  width: 100%;
+}
+
+.IsSaf .w-dlg-buttons {
+  display: inline-table;
+}
+
+.w-dlg-buttons {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+}
+
+.w-dlg-buttons .buttonsContainer {
+    text-align: center;
+    padding: 5px 0;
+}
+/* fix large calculated height for RTA*/
+.w-dlg-panel-active .rtaWrapper iframe,  .w-dlg-panel-active .rtaWrapper .htmlarea {
+  height: 140px !important;
+}
+
+
+/* All buttons should be right aligned */
+.w-dlg-buttons button {
+  margin-left: 15px;
+}
+
+.w-dlg-buttons button:focus {
+  margin-left: 13px;
+}
+
+
+/* some dialogs might have wrapped buttons inside a table*/
+.w-dlg-buttons > table {
+  width: auto;
+  float:right;
+}
+
+.panel:not(.w-dlg-panel-active) .w-dlg-content .w-hint {
+  display: none;
+}
+
+/* UR-3368 - HF for the wrapping data content inside a dialog */
+.w-dlg-content .scrollTableWrapper.noWrap td {
+  white-space: inherit;
+}
+
+.buttonsContainer {
+
+}
+table.panel {
+  display: none;
+  margin: 0 auto;
+}
+
+table.panel td.panel {
+  padding: 35px;
+}
+
+table.panel,
+td.panel {
+  width: 1%;
+}
+
+div.panel {
+  position: absolute;
+  z-index: 1199;
+  overflow: visible;
+  display: none;
+}
+
+
+.panelContainer {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  display: none;
+}
+
+/* IE specific fix to shrink wrap the popup dialog and center it.*/
+/* 03/04/2015 TODO wazzario: remove all useless IsIE, IsIE7 classes when browser compatibility is finished*/
+.IsIE7 .panelContainer DIV.panel {
+  /*position: absolute;*/
+  /*right: 50%;*/
+}
+
+/*
+   IE specific fix to shrink wrap the popup dialog and center it.
+   http://11heavens.com/how-to-shrinkwrap-and-center-a-block-element-inside-a-block-element
+*/
+.IsIE7 .panelContainer div.w-dlg-dialog {
+  /*position: relative;*/
+  /*left: 50%;*/
+}
+
+/*
+  This could be probably removed as we intro above style .panelContainer div.panel.
+  The problem is when the UI is wrapped with panelContainer this div.panel must be
+  set to relative. When there is no panelContainer the panel must be absolute
+*/
+#AWAboutDiv, #AWContactDiv,
+#AWSessionExpirationDiv,#AWNotificationDiv,
+#pollDialog {
+    position: absolute;
+}
+
+/* Session Manager */
+.w-awsession-req-iframe-keep {
+  height: 300px;
+}
+
+.w-awsession-req-iframe-nokeep {
+  height: 0;
+  width: 0;
+}
+
+.w-awsession-req-iframe-border {
+  border: 0;
+}
+
+/* About/Contact Us Box Dialog*/
+div.w-dlg-wrapper.about{
+  text-align: justify;
+  width: 550px;
+  border: 1px solid #D7D7D7;
+  box-shadow: 0 0 5px #C9C9C9;
+}
+
+.w-about-box-title {
+  font-size: 20px;
+}
+.w-about-box-copyright,
+.w-contact-box-copyright {
+  float: right;
+  position: relative;
+  top: 3px;
+  font-size: 11px;
+  color: #969696;
+}
+.w-contact,
+.w-about {
+  padding: 20px 0;
+}
+
+.w-contact-box-title {
+  font-size: 20px;
+}
+
+span#pollCountDown {
+  color: #98C718;
+}
+
+/* Poll Dialog Box DialogBox */
+
+div.w-dlg-content-wrapper {
+
+}
+
+.w-dlg-content-wrapper .pageHead {
+  font-size: 20px;
+}
+
+.w-dlg-content-wrapper .stepNavTop,
+.w-dlg-content-wrapper .stepNavBottom {
+  border-width: 1px;
+}
+
+.w-dlg-content-wrapper .stepNavBottom {
+  padding: 15px 0 0 0;
+}
+
+.w-dlg-content-wrapper .footerTopPadding {
+  padding-top: 0;
+}
+
+
+/* AribaBasicPageWrapper classes */
+.w-abpw-padder {
+  padding:11px 0 0px 30px;
+}
+
+.w-abpw-toc-padder {
+  padding-left:10px;
+}
+
+.w-abpw-legal {
+  height:40px;
+}
+
+/* end AribaBasicPageWrapper */
+
+/** Command bar **/
+
+.w-cmd-wrapper,
+.w-cmd-wrapper-L2,
+.w-about-trigger {
+  padding-right: 30px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.w-cmd-wrapper {
+  padding-top: 4px;
+}
+
+.w-cmd-wrapper-L2 {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.cmdBarWrapper .mastCmdContainer {
+  padding: 0 20px 0;
+}
+
+.cmdBarWrapper .cmdFill {
+  background-image: url(cssCmdFillAW.gif);
+  height: 30px;
+}
+
+.cmdBarWrapper .cmdLeft {
+  background-image: url(cssCmdLeft.gif);
+  width: 8px;
+  height: 30px;
+}
+
+.cmdBarWrapper .cmdRight {
+  background-image: url(cssCmdRight.gif);
+  height: 30px;
+  width: 8px;
+}
+
+.cmdBarWrapper td.mastCmd {
+  padding-left: 30px;
+  white-space: nowrap;
+}
+
+.mastCmd {
+  color: #A1A1A1;
+}
+
+.cmdBarWrapper .mastCmd a:hover,
+.cmdBarWrapper .mastCmd a:link,
+.cmdBarWrapper .mastCmd a:visited,
+.cmdBarWrapper .mastCmd .readOnly {
+  text-decoration: none;
+  color: #000;
+}
+
+.cmdBarWrapper .mastCmdRollover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.cmdBarWrapper .mastCmdMenu:link,
+.cmdBarWrapper .mastCmdMenu:visited,
+.cmdBarWrapper .mastCmdMenu:hover {
+  color: #000;
+  text-decoration: none;
+  background: none no-repeat 100% 4px;
+  padding: 0 13px 2px 0;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.cmdBarWrapper .mastCmdMenu:hover {
+  background-image: url(cssCmdArrow.gif);
+}
+
+/* FIELD ERROR INDICATORS */
+
+.errorAsterisk {
+  background-color: rgb(207,16,26);
+  padding: 2px 0px 2px 0px;
+}
+
+.warningAsterisk {
+  background-color: #FDBF40;
+  padding: 2px 0px 2px 0px;
+}
+.error,
+.w-error {
+  color:#FF0000;
+}
+
+/* ERROR MESSAGE BUBBLE */
+
+.bubble_tooltip {
+  width: 130px;
+  position: absolute;
+  display: none;
+  overflow-y: visible;
+  overflow-x: auto;
+  z-index: 1203;
+}
+
+.bubble_body {
+  z-index: 1203;
+}
+
+.bubble_tooltip .bubble_middle {
+  background: #F2DFDF;
+  position: relative;
+}
+
+.bubble_tooltip .bubble_middle .bubbleText {
+  position: relative;
+  color: #CC0000;
+  overflow-wrap: anywhere;
+}
+
+.bubble_middle {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.bubble_tooltip .bubble_tip_left, .bubble_tip_right {
+  background-repeat: no-repeat;
+  position: relative;
+  line-height: 12px;
+  height: 12px;
+  left: 0;
+  overflow: hidden;
+}
+
+.bubble_tooltip .bubble_tip_left {
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f2dede;
+}
+
+.bubble_tooltip .bubble_tip_right {
+  float:right;
+  height:0;
+  width:0;
+  border-left: 10px solid transparent;
+  border-top: 10px solid #f2dede;
+}
+
+.bubble_list {
+  list-style: square outside;
+  margin-left: 1.5em;
+  padding-left: -1em;
+}
+
+.dialogContent {
+  padding: 5px;
+}
+
+b.rtop,
+b.rbottom {
+  display: block;
+}
+
+b.rtop b,
+b.rbottom b {
+  display: block;
+  height: 1px;
+  overflow: hidden;
+}
+
+b.r1 {
+  margin: 0 5px;
+}
+
+b.r2 {
+  margin: 0 3px;
+}
+
+b.r3 {
+  margin: 0 2px;
+}
+
+b.rtop b.r4,
+b.rbottom b.r4 {
+  margin: 0 1px;
+  height: 2px;
+}
+
+/** BRANDING */
+/* TODO ahebert: This set of classes is about branding in AW5 mode
+                 TODO: create a widget test page and ask UCDG new colors
+                 for these branding classes.
+                 In the meantime, comment the background colors and the colors.
+*/
+
+.brandLt {
+  /*background-color: #ccf;*/
+}
+
+.brandMd {
+  /*background-color: #99c;*/
+}
+
+.brandDk {
+  /*background-color: #669;*/
+}
+
+.brandVeryDk {
+  /*background-color: #336;*/
+}
+
+.brandAccent {
+  /*background-color: #ffeaaa;*/
+}
+
+.grayVeryLt {
+  /*background-color: #eee;*/
+}
+
+.grayLt {
+  /*background-color: #ccc;*/
+}
+
+.grayMd {
+  /*background-color: #999;*/
+}
+
+.grayDk {
+  /*background-color: #666;*/
+}
+
+.brandLtText {
+  /*color: #ccf; */
+}
+
+.brandDkText {
+  /*color: #669;*/
+  white-space: nowrap;
+}
+
+.brandVeryDkText {
+  /*color: #336;*/
+}
+
+.w-vertline {
+  border-left:1px solid #d7d7d7;
+}
+/** END BRANDING */
+
+/** MENU CLASSES - MENU STYLES */
+
+.awnavLink {
+  color: #336;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.awmenuLink {
+  color: #336;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.awsmallMenuLink {
+  color: #336;
+  text-decoration: underline;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 9px;
+  font-weight: normal;
+}
+
+.awmenu {
+  position: absolute;
+  z-index: 1500;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 2px;
+  border: 1px solid #669;
+  cursor: default;
+}
+
+.awmenuForJavadoc {
+  width: 640px;
+}
+
+.w-pm-head {
+  background-color: #EEEEEE;
+  color: #333333;
+  font-size: 13px;
+  line-height: 45px;
+  padding: 0 15px;
+  height: 45px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mC,
+.awmenuCell {
+  display: block;
+  color: #000;
+  background-color: #ffffff;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 2px 10px 3px 15px;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.mCD,
+.awmenuCellDisabled {
+  display: block;
+  color: #A7A7CC;
+  background-color: #E9E9F1;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 2px 10px 3px 15px;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.w-pm-divider,
+.awmenuDivider {
+  border-top:1px solid #D7D7D7;
+  margin:1px 0 0 0;
+}
+
+/* Default class for PopupMenu */
+.w-pm-menu {
+  background-color: #FFFFFF;
+  border: 1px solid #D7D7D7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  color: #636363;
+  position: absolute;
+  padding: 0 !important;
+  z-index: 1500;
+}
+
+.w-pm-more {
+  font-size:13px;
+}
+.w-pm-icon-check,
+.w-pm-icon-bullet {
+  padding-right: 6px;
+}
+.w-pm-icon-check {
+  font-size:10px;
+}
+.w-pm-icon-bullet {
+  font-size:8px;
+}
+.w-pm-col {
+  border: none!important;
+}
+/* Correct bug in Chrome where this was creating a empty div visible */
+.w-pm-dummy-img {
+  line-height:0;
+  height:0;
+  width:0;
+}
+/* PopupMenuLink */
+.w-pml-icon {
+  color: #acd4ed;
+  font-size:7px;
+}
+
+#cmdlinks .w-pml-icon,
+.dbTabWrapper .w-pml-icon {
+  color: #FFFFFF;
+}
+
+/* PopupMenuItem */
+.w-pmi-item {
+  font-size: 13px;
+  line-height: 30px;
+  height: 30px;
+  display: block;
+  color: #363636!important;
+  background-color: #FFFFFF;
+  padding: 0 30px;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.w-pmi-item:hover,
+.w-pmi-item:focus
+{
+border: 1px solid transparent;
+}
+
+.w-pmi-hover {
+  background-color: #f2f2f2 !important;
+  border: 1px solid transparent;
+}
+.w-pmi-disabled {
+  color:#969696!important;
+}
+div.w-popupmenuitem-divider {
+    height:1px;
+    padding:0;
+}
+hr.w-popupmenuitem-divider {
+    margin:0;
+}
+.w-pmi-check,
+.w-pmi-check-disabled,
+.w-pmi-bullet,
+.w-pmi-bullet-disabled {
+  padding: 0 30px 0 12px;
+}
+
+.cellColl {
+  display: none;
+}
+
+.awmenuEx .cellColl {
+  display: block;
+}
+
+.awmenuEx .awmenuCell,
+.awmenuEx .mC {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.awmenuEx .cellO {
+  display: none;
+}
+
+table.w-pm-2col {
+  background: #ffffff;
+}
+
+table.w-pm-2col td {
+  border-right: 1px solid #d7d7d7;
+  vertical-align: top;
+  width: 50%;
+}
+
+.lazyLoading {
+  text-align: center;
+  padding: 5px 20px;
+  font-style: italic;
+}
+
+.fixedArrow {
+  background: url(cssarrow.gif) no-repeat 100% 2px;
+  padding: 0 8px 2px 0;
+}
+
+a.cmdLink:link,
+a.cmdLink:visited {
+  color: #FFE080;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+  font-weight: bold;
+}
+
+.cmdLinkArrow {
+  padding: 0 8px 2px 0;
+}
+
+.cmdLinkArrow:hover {
+  background: url(cssarrow_cmdlink.gif) no-repeat 100% 2px;
+  padding: 0 8px 2px 0;
+}
+
+.tip_close {
+  color: #999;
+  font-size: 10px;
+  font-weight: 700;
+  float: right;
+  margin: 0 3px 0 0;
+}
+
+.tip_close a {
+  color: #999 !important;
+  text-decoration: none;
+}
+
+table.hoverLink .awmenuLink {
+  text-decoration: none;
+}
+
+table.hoverLink .awmenuLink:hover {
+  text-decoration: underline;
+}
+
+.hoverArrow {
+  padding: 0 8px 2px 0;
+}
+
+.hoverArrowLeft {
+  padding: 0 0 2px 8px;
+}
+
+/* AWImage */
+/* this is really about mapping colors size.  Padding and such should be page specific */
+.w-img {
+  font-size: 15px;
+  color: #636363;
+}
+
+/* w-img color:
+   ideally it wouldn't say "red" or other colors in the name, but it
+   was difficult to get a clean, non-confusing abstracted name.  */
+
+a:link .w-img,
+a:visited .w-img {
+    color: #00679E;
+}
+
+a:hover .w-img,
+a:focus .w-img {
+  color: #199DE0;
+}
+
+.w-img-clr-red,
+a:link .w-img-clr-red,
+a:visited .w-img-clr-red {
+  color: #D03B3B;
+}
+a:hover .w-img-clr-red {
+  color: #FF6666;
+}
+
+.w-img-clr-yellow,
+a:link .w-img-clr-yellow,
+a:visited .w-img-clr-yellow {
+  color: #F2AE43;
+}
+a:hover .w-img-clr-yellow {
+  color: #FAC364;
+}
+
+.w-img-clr-green,
+a:link .w-img-clr-green,
+a:visited .w-img-clr-green {
+  color: #58B957;
+}
+a:hover .w-img-clr-green {
+  color: #6FFf66;
+}
+/* end w-img colors */
+
+.w-img-dl-up {
+  font-size: 20px;
+}
+.w-img-srch {
+  font-size: 20px;
+}
+.w-img-conf {
+  color: #3c763d;
+  font-size: 18px;
+}
+
+.w-img-awxToggleImageTrue,
+.w-img-awxToggleImageFalse {
+  font-size: 9px;
+}
+
+.w-img-icn_movedown,
+.w-img-icn_moveup,
+.w-img-icn_shuttle_left,
+.w-img-icn_shuttle_right {
+  font-size: 10px;
+}
+
+.w-img-cssbullet,
+.w-img-cssbullet_dis {
+  vertical-align: middle;
+  color: #000;
+  font-size: 6px;
+}
+
+/* AribaNotificationDialog */
+.w-notification-box {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+.w-notification {
+  background: #fff;
+  width: 400px;
+  padding: 0;
+}
+
+.w-notification-box-header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.w-notification-title {
+  font-size: 14px;
+}
+
+.w-notification-box-close {
+  right: 10px;
+  position: absolute;
+  font-size: 12px;
+}
+
+.w-notification div {
+  padding: 5px 5px 5px 5px;
+  margin: 0 0 0 0;
+  overflow: auto;
+  height: 100%;
+}
+
+.w-notification li {
+  margin: 0 0 10px 0;
+  padding: 0 0 0 16px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.w-notification .w-notification-high:before{
+  content: '\e094';
+  color: #D03B3B;
+  font-family: 'SAP-icons';
+  padding-right: 5px;
+}
+
+.w-notification div a {
+  font-weight: normal;
+}
+
+.w-notification div a:Hover {
+  text-decoration: underline;
+}
+
+.w-notification .w-notification-no-link {
+  font-weight: normal;
+  color: #666;
+}
+
+/* ARCInvoicingNavPanel */
+.panelRule {
+  height: 0;
+  line-height: 0;
+  border-top: 1px solid #e9e9f1;
+  border-bottom: 1px solid #9c9cb8;
+  width: 90%;
+  margin: 10px auto;
+}
+
+/* AribaToc */
+.w-toc-box {
+  border: 1px solid #E6E6E6;
+  margin-left: 30px;
+  min-width: 260px;
+}
+
+.w-toc-content {
+  padding-top: 15px;
+}
+
+/** TocPanel **/
+.w-toc-panel-title {
+  background-color: #F2F2F2!important;
+  color: #363636;
+  text-decoration:none;
+  white-space: nowrap;
+  line-height: 35px;
+  font-size: 15px;
+}
+
+a:link .w-toc-panel-title,
+a:visited .w-toc-panel-title {
+  color: #00679E!important;
+}
+
+a:hover .w-toc-panel-title  {
+  color: #199DE0!important;
+}
+
+.w-toc-panel-img {
+  padding-right:5px;
+}
+
+/** TocPanelItem **/
+.w-toc-panel-item {
+  padding-left:5px;
+}
+
+/* BucketItem */
+.w-toc-item {
+  line-height: 15px;
+  padding-left: 40px;
+  padding-top: 4px;
+}
+
+.w-toc-item-template {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px 0 15px;
+}
+
+.w-toc-ignore-ie-fix {
+  display: none;
+}
+
+.tocItem,
+.w-toc-item a {
+  color: #000;
+}
+
+.tocItemCurrent,
+.w-toc-item-current {
+  color: #000;
+  background-color: #fcf8e2;
+}
+
+.tocItemRollover,
+.w-toc-item-rollover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* BucketHeading */
+.w-toc-item-title {
+  font-weight: bold;
+  padding: 8px 0 6px 15px;
+}
+
+.w-toc-item-title img {
+  margin-top: -5px;
+}
+
+.w-toc-flashing {
+  background-color: #fff;
+  line-height: 15px;
+  padding-left: 20px;
+  padding-top: 4px;
+}
+
+.w-toc-buckets {
+  width:250px;
+}
+
+.tocTitle {
+  color: #555580;
+}
+
+.tocBg {
+  background-color: #ccd;
+}
+
+.tocFlashing {
+  background-color: #fff;
+}
+
+/** rounded step box **/
+
+.w-roundedstepbox-spacer {
+  font-size: 1px;
+  height: 1px;
+  line-height: 1px;
+  width: 190px;
+}
+
+/* BUTTONS */
+
+.w-btn,
+.w-btn:visited {      /* TODO: wazzario: update those properties with default button size (small or large) and delete duplicates in .w-btn-small/.w-btn-large */
+  background: #FFFFFF;
+  color: #0076CB;
+  border: 1px solid #0076CB;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  /*
+  This fixes a Mozilla-only bug with input elements. The input elements
+  line-height cannot be changed (since 2011), because of a setting in the
+  built-in browser stylesheet:
+  http://hg.mozilla.org/mozilla-central/rev/b97aef275b5e
+  This ensures it has the same height, regardless of the line-height.
+
+  Also, fixes an issue with IE where it adds extra padding to the height
+  of button elements.
+  */
+  height: 36px;
+  line-height: 36px;
+  min-width: 100px;
+  opacity: 1;
+  outline: none;
+  overflow: visible;
+  /* IE padding bug */
+  padding: 0px 30px;
+  position: relative;
+  text-align: center;
+  text-indent: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* small buttons */
+.w-btn-extra-small {
+  height: 29px;
+  line-height: 29px;
+  font-size: 12px;
+  min-width: 50px;
+  padding: 0 15px;
+}
+
+.w-btn-small {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  min-width: 100px;
+  padding: 0 15px;
+}
+
+/* large buttons */
+.w-btn-large {
+  height: 38px;
+  line-height: 36px;
+  font-size: 16px;
+  min-width: 175px;
+  padding: 0 32px;
+}
+
+/*IE9 fixes to remove extra spacings on buttons*/
+.IsIE9 .w-btn {
+  padding: 0px;
+}
+
+.IsIE9 input.w-btn {
+/*input type works fine without span */
+  padding: 0 20px;
+}
+
+.IsIE9 .w-btn > span:first-child,
+.IsIE9 .w-btn-large > span:first-child {
+  padding: 0 20px;
+}
+
+.IsIE9 .w-btn-small > span:first-child,
+.IsIE9 .w-btn-extra-small > span:first-child {
+  padding: 0 15px;
+}
+
+.IsIE7 .w-btn{
+  /*margin-right: 10px;*/
+  /*line-height: 20px;*/
+}
+/*
+This fixes an issue with anchors where the padding isn't considered in
+in the width and height, like it is with inputs and buttons. Also, removing
+text decoration.
+*/
+
+a.w-btn {
+  height: 33px;
+  min-width: 75px;
+  text-decoration: none;
+}
+
+a.w-btn.w-btn-small {
+    min-width: 48px; /* adjust for 2px border and 30px padding with small size button */
+    height: 28px; /* adjust for 2px border with small size button */
+}
+
+a.w-btn.w-btn-large {
+    min-width: 113px; /* adjust for 2px border and 60px padding with large size button */
+    height: 34px; /* adjust for 2px border with large size button */
+}
+
+a.w-btn-default {
+  height: 33px; /* adjust for 2px border. total height 35px */
+}
+
+.w-btn.w-btn-hover,
+.w-btn:hover,
+.w-btn:focus {
+  background: #0076CB;
+  border : 1px solid transparent !important;
+  color: #FFFFFF;
+  border: none;
+}
+
+.w-btn-primary,
+.w-btn-primary:hover,
+.w-btn-primary:focus {
+
+ background: #065D9C;
+  color: #FFFFFF;
+  border: 2px solid transparent !important; 
+}
+
+
+.w-btn.w-btn-active,
+.w-btn:active,
+.w-btn-primary.w-btn-active,
+.w-btn-primary:active {
+  background: #065D9C;
+  color: #FFFFFF;
+  border: 1px solid #0079ad;
+}
+
+.w-btn-default,
+.w-btn-default:visited {
+  background: #FFFFFF;
+  color: #0087ca;
+  border: 1px solid #0087ca;
+}
+
+.w-btn-default.w-btn-hover,
+.w-btn-default:hover {
+  background: #FAFAFA;
+}
+
+.w-btn-default.w-btn-active,
+.w-btn-default:active {
+  background: #0079ad;
+}
+
+.w-btn-primary,
+.w-btn-primary:visited {
+  background: #0076CB;
+  color: #FFFFFF;
+  border: 2px solid transparent !important; 
+}
+
+.w-btn-warning,
+.w-btn-warning:visited {
+  /* not implemented yet */
+}
+
+.w-btn-warning.w-btn-hover,
+.w-btn-warning:hover {
+  /* not implemented yet */
+}
+
+.w-btn-warning.w-btn-active,
+.w-btn-warning:active {
+  /* not implemented yet */
+}
+
+/*
+Normally, I avoid important, but it is hard to guarantee the specificity
+when either the disabled class or attribute are applied. Applying
+the !important ensured that a disabled button always looks disabled,
+even when it is hovered or activated. msnider 11/4/2013
+*/
+
+.w-btn-disabled,
+.w-btn:disabled {
+  border: 1px solid #D7D7D7!important;
+  background: #FFFFFF!important;
+  color: #969696!important;
+  cursor: default!important;
+  box-shadow: none!important;
+}
+
+/* INPUT TYPE="text" */
+
+/* This is to get rid of outline in chrome between tab switch */
+
+.w-txt:focus,
+.w-txt:focus ~ [class*="w-txt-icon-"],
+.w-psw:focus {
+  outline: none;
+  border-color: #199DE0 ;
+}
+
+.w-txt,
+.w-txt:visited,
+.w-psw,
+.w-psw:visited {
+  background-color: #FFF;
+  border: 1px solid #ACD4ED;
+  color: #969696;
+  cursor: text;
+  display: inline-block;
+  height: 28px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.w-txt.w-txt-hover,
+.w-txt:hover
+.w-psw:hover {
+  background-color: #FAFAFA;
+  border-color: #ACD4ED;
+}
+
+.w-txt:focus:hover,
+.w-txt:focus:hover ~ [class*="w-txt-icon-"],
+.w-psw:focus:hover {
+  border-color: #199DE0;
+}
+
+.w-txt.w-txt-active {
+  color: #000;
+  -webkit-box-shadow: inset 0 0 6px #DBDBDB;
+  box-shadow: inset 0 0 6px #DBDBDB;
+  outline: none;
+}
+
+.w-txt.w-txt-disabled,
+.w-txt.w-txt-disabled ~ [class*="w-txt-icon"] {
+  cursor: default;
+  background-color: #FAFAFA;
+  border: 1px solid #D7D7D7;
+  color: #DBDBDB;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.w-txt.w-txt-invalid,
+.w-txt.w-txt-invalid ~ [class*="w-txt-icon"] {
+  background-color: transparent;
+  border: 1px solid #F14C4C;
+}
+
+.w-chWrapper-invalid .w-txt.w-txt-invalid, .w-chWrapper-invalid .w-txt.w-txt-invalid ~ [class*="w-txt-icon"] {
+   background-color: transparent;
+   border: none;
+ }
+
+/* Default size is medium */
+.w-txt.w-txt-dsize {
+  width: 252px;
+}
+
+.w-txt.w-txt-xssize {
+    width: 62px;
+}
+
+.w-txt.w-txt-ssize {
+    width: 157px;
+}
+
+/* Medium is default size (dsize) */
+.w-txt.w-txt-msize {
+    width: 252px;
+}
+
+.w-txt.w-txt-lsize {
+    width: 362px;
+}
+
+.w-txt.w-txt-xlsize {
+    width: 442px;
+}
+
+.w-txt.w-txt-xxlsize {
+    width: 650px;
+}
+
+.w-txt.w-txt-placeholder {
+  color: #666666;
+}
+
+/* Textfield with ICON */
+
+.w-txt-icon-block {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1;
+    padding-right: 5px;
+    position: relative;
+}
+
+/* IE9 and 10 don't apply padding on input so to get space between text and icon, padding is set on the icon element (label).*/
+/* To make input and icon look as one element (icon inside input), we put them alongside and apply same borders */
+/* For input with left side icon, we hide left input border and right label border */
+/* We do the opposite for input with right side icon */
+
+/* Icon LEFT side */
+
+.w-txt.w-txt-img-left-calendar,
+.w-txt.w-txt-img-left-time,
+.w-txt.w-txt-img-left-box,
+.w-txt.w-txt-img-left-pin {
+    padding-left: 3px; /* Padding on input is not applied on IE10- */
+    border-left: 1px transparent;
+    width: 137px;
+    float: right; /* put input on right side of icon */
+}
+
+.w-txt.w-txt-img-left-search {
+    padding-left: 3px; /* Padding on input is not applied on IE10- */
+    border-left: 1px transparent;
+    float: right; /* put input on right side of icon */
+}
+
+.w-txt-icon-left-calendar,
+.w-txt-icon-left-time,
+.w-txt-icon-left-search,
+.w-txt-icon-left-box,
+.w-txt-icon-left-pin {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    vertical-align: middle;
+    padding: 0 5px 0 7px; /* space between input and icon */
+    background-color: #FFF;
+    border-left: 1px solid #ACD4ED;
+    border-top: 1px solid #ACD4ED;
+    border-bottom: 1px solid #ACD4ED;
+    border-right: 1px transparent!important; /* Make sure this border is never displayed, so input and label look like one element */
+}
+
+.w-txt-icon-left-calendar:before {
+    content: '\e050';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-left-time:before {
+    content: '\e02d';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-left-search:before {
+    content: '\e00d';
+    color:#949494;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-left-box:before {
+    content: '\e13a';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-left-pin:before {
+    content: '\e021';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+/*Box shadows for input and left icon element */
+.w-txt.w-txt-active:not(.w-txt-disabled) + [class*="w-txt-icon-left"] {
+    /* Shadow top, bottom and left on input */
+    -webkit-box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset 6px 0 6px -6px #DBDBDB;
+    box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset 6px 0 6px -6px #DBDBDB;
+}
+.w-txt-icon-block > .w-txt.w-txt-active:not(.w-txt-disabled)[class*="w-txt-img-left"] {
+    /* Shadow top, bottom and right on label icon */
+    -webkit-box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset -6px 0 6px -6px #DBDBDB;
+    box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset -6px 0 6px -6px #DBDBDB;
+}
+
+/* Icon RIGHT side */
+
+.w-txt.w-txt-img-right-calendar,
+.w-txt.w-txt-img-right-time,
+.w-txt.w-txt-img-right-box,
+.w-txt.w-txt-img-right-pin  {
+  border-right: 1px transparent;
+  padding-right: 3px; /* Padding on input is not applied on IE10- */
+  width: 137px;
+}
+
+.w-txt.w-txt-img-right-search  {
+    border-right: 1px transparent;
+    padding-right: 3px; /* Padding on input is not applied on IE10- */
+}
+
+.w-txt-icon-right-calendar,
+.w-txt-icon-right-time,
+.w-txt-icon-right-search,
+.w-txt-icon-right-box,
+.w-txt-icon-right-pin {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    vertical-align: middle;
+    padding: 0 5px 0 7px;
+    background-color: #FFF;
+    border-right: 1px solid #ACD4ED;
+    border-top: 1px solid #ACD4ED;
+    border-bottom: 1px solid #ACD4ED;
+    border-left: 1px transparent!important; /* Make sure this border is never displayed, so input and label look like one element */
+    left: -6px; /* stick icon on right side of input */
+}
+
+.w-txt-icon-right-calendar:before {
+    content: '\e050';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-right-time:before {
+    content: '\e02d';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-right-search:before {
+    content: '\e00d';
+    color:#949494;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-right-box:before {
+    content: '\e13a';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+.w-txt-icon-right-pin:before {
+    content: '\e021';
+    color:#199de0;
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+    font-size: 15px;
+    position: relative;
+    top: 8px;
+}
+
+/*Box shadows for input and right icon element */
+.w-txt.w-txt-active:not(.w-txt-disabled) + [class*="w-txt-icon-right"] {
+    /* Shadow top, bottom and right on input */
+    -webkit-box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset -6px 0 6px -6px #DBDBDB;
+    box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset -6px 0 6px -6px #DBDBDB;
+}
+.w-txt-icon-block > .w-txt.w-txt-active:not(.w-txt-disabled)[class*="w-txt-img-right"] {
+    /* Shadow top, bottom and left on label icon */
+    -webkit-box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset 6px 0 6px -6px #DBDBDB;
+    box-shadow: inset 0 6px 6px -6px #DBDBDB,
+    inset 0 -6px 6px -6px #DBDBDB,
+    inset 6px 0 6px -6px #DBDBDB;
+}
+/* END Textfield with ICON */
+
+/* END INPUT TYPE="text" */
+
+/* INPUT TYPE="textarea" */
+
+.w-txtarea {
+  padding-top: 8px;
+  padding-right: 0;
+  height: auto;
+  width: auto!important;
+  white-space: pre-wrap;
+}
+
+.w-tbl-cell .w-txtarea {
+  margin: 5px 0;
+}
+
+/* END INPUT TYPE="textarea" */
+
+/* WeekdayCheckbox Styles Begin */
+
+.w-weekday-box {
+  float: left;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
+  border: 1px solid #CCC;
+  padding-top: 3px;
+  height: 26px;
+  width: 100%;
+}
+
+.w-chklist-cell {
+  float: left;
+}
+
+.w-day-string {
+  padding-left: 3px;
+  padding-right: 10px;
+  color: #6a6a6a;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/* WeekdayCheckbox Styles End */
+
+/* INPUT TYPE="checkbox" */
+
+/* This is to get rid of outline in chrome between tab switch */
+
+.w-chk:focus {
+  outline: none;
+}
+
+.IsIE7 .w-chk{
+  /*float: left;*/
+}
+
+.w-chk,
+.w-chk:visited {
+  cursor: pointer;
+  border: 1px solid #ACD4ED;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+}
+
+.w-chk.w-chk-active {
+  color: #000;
+  -webkit-box-shadow: inset 0 0 6px #DBDBDB;
+  box-shadow: inset 0 0 6px #DBDBDB;
+  outline: none;
+}
+
+.w-chk.w-chk-disabled {
+  cursor: default;
+  border: 1px dotted #d7d7d7;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.w-chk.w-chk-disabled:before {
+  color: #bcbcbc!important;
+}
+
+.w-chk.w-chk-invalid {
+  background-color: transparent;
+  border: 1px solid #F14C4C;
+}
+
+.w-chk.w-chk-dsize {
+  width: 22px;
+  height: 22px;
+  margin: 0 3px;
+  vertical-align: middle;
+}
+
+.w-chk-native:checked + label.w-chk:before {
+  /* checked blue square */
+  content: "\e05b";
+  font-family: 'SAP-icons','Ariba_icon_library';
+  color:#0079ad;
+  font-size: 15px;
+  display: block;
+  position: absolute;
+  
+  speak: none;
+  text-align: center;
+  width: inherit;
+}
+
+.w-chk {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  top: 0;
+  line-height: 22px;
+}
+
+.w-chk-native,
+.w-rdo-native {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.w-chk-container,
+.w-rdo-container {
+  display: inline-block;
+}
+
+
+/* End INPUT TYPE="checkbox" */
+
+/* INPUT TYPE="rdo" */
+
+/* This is to get rid of outline in chrome between tab switch */
+
+.w-rdo:focus {
+  outline: none;
+}
+
+.w-rdo,
+.w-rdo:visited {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid #ACD4ED;
+}
+
+.w-rdo.w-rdo-hover,
+.w-rdo:hover:not(.w-rdo-disabled),
+.w-chk.w-chk-hover,
+.w-chk:hover:not(.w-chk-disabled),
+.w-rdo-native:focus + .w-rdo,
+.w-chk-native:focus + .w-chk {
+  background-color: #F5F5F5;
+  border-color: #199DE0;
+}
+
+.w-rdo.w-rdo-active {
+  color: #000;
+  outline: none;
+}
+
+.w-rdo.w-rdo-disabled {
+  cursor: default;
+  background-color: #D7D7D7;
+  box-shadow: none;
+}
+
+.w-rdo.w-rdo-disabled:before {
+  background-color: #bcbcbc!important;
+}
+
+.w-rdo.w-rdo-invalid {
+  border-color: #F14C4C;
+}
+
+.w-rdo.w-rdo-dsize {
+  width: 20px;
+  height: 20px;
+}
+
+.w-rdo-list .w-rdo.w-rdo-dsize {
+  /* to fix rdo positioning */
+  top: 5.5px;
+}
+
+/* DashboardTabSetTitle - Radio Button & its text vertical alignment */
+.w-rdo-dtst .w-rdo.w-rdo-dsize {
+  width: 20px;
+  height: 20px;
+  top: 7px;
+}
+
+.w-rdo-native:checked + label.w-rdo:before {
+  /* inner circle character*/
+  content: '\2022';
+  float: left;
+  text-indent: -9999px;
+  -webkit-border-radius: 50px;
+  font-size: 44px;
+  width: 12px;
+  height: 12px;
+  margin: 3px;
+  line-height: 16px;
+  background-color: #199DE0;
+  border : 1px solid transparent;
+  border-radius: 50%;
+}
+
+/* space is needed because checkbox is styled within a div */
+
+.w-rdo-container + label {
+  top: -6px;
+  position: relative;
+}
+
+/*Align cuetip with radiobutton in special case*/
+.w-rdo-container + label + div.rr a.linkArrow  {
+  position: relative;
+  top: -6px;
+}
+
+.w-rdo-list label:first-child,
+.w-rdo-list-title {
+  padding-right: 0.5em;
+}
+/* APWRadioList */
+.w-rdo-list-label {
+  /*To align text label of rdo with title  */
+  position: relative;
+  top: -2px;
+}
+
+/* RadioButtonList */
+.w-rdo-btn-list-text {
+  /*To align text label of RadioButtonList with rdo  */
+  position: relative;
+  top: -6px;
+}
+
+/* End INPUT TYPE="radio" */
+
+/*
+Put styles for the module widget. They will be aggregated into ng_widget.
+*/
+
+.aw-mod {
+  background-color: #fafafa;
+  border: 1px solid #666666;
+  margin: 0;
+  padding: 5px;
+  visibility: visible!important;
+  width: auto;
+}
+
+.aw-mod .aw-mod-ftr {
+  background-color: #666666;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: white;
+  padding: 1em;
+}
+
+.aw-mod .aw-mod-hdr {
+  background-color: #666666;
+  -webkit-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: white;
+  margin: 0;
+  padding: 1em;
+}
+
+.aw-mod .aw-mod-smaller {
+  font-size: smaller;
+}
+
+.aw-mod .aw-mod-title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.aw-mod-nopadding {
+  border: none;
+  padding: 0;
+}
+
+.aw-mod-nopadding .aw-mod-bd {
+  border: 1px solid #666666;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+/*
+Put login specific styles here. They will be aggregated into ng_widget.
+*/
+
+.IsLogin .w-main-wrapper,
+.IsLogin .w-main-wrapper input {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  font-weight: 200;
+}
+
+.IsLogin .cmdBAWLar {
+  height: 80px;
+}
+
+.IsLogin .cmdBAWLar .cmdCol1 {
+  margin: 0;
+  padding: 15px 0 5px 20px;
+  width: 1px;
+}
+
+.IsLogin .cmdBAWLar .cmdCol2 {
+  padding: 0 0 1px 15px;
+  width: 98%;
+}
+
+.IsLogin .cmdBAWLar .cmdCol3 {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.IsLogin .w-md-ct-error {
+  padding: 15px;
+  width: 300px;
+}
+
+.IsLogin .w-md-icon-error-m {
+  font-size: 16px;
+}
+
+.w-login-page-center,
+.w-login-page-center-hand {
+  width: 1016px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.w-login-header {
+  height: 80px;
+}
+
+.w-login-header-img {
+  float: left;
+  padding: 10px 0;
+}
+
+.w-login-header-links {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.w-login-footer-img {
+  float: left;
+  padding: 10px 0;
+}
+
+.w-login-form-txt {
+  font-size: 32px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: left;
+  padding-bottom: 15px;
+  width: 390px; /* force text to wrap */
+}
+
+.w-login-form-img {
+}
+
+.w-login-form {
+  width: 1016px;
+}
+
+.w-login-graph-bg {
+  background-color: #F7F8F9;
+  height: 500px;
+  width: 100%;
+}
+
+.w-login-graph-img {
+  float: left;
+}
+
+a.w-login-text-learnmore,
+a.w-login-text-learnmore:link,
+a.w-login-text-learnmore:visited {
+    font-size: 20px;
+    color: #2ba4f2;
+}
+
+.w-login-text-learnmore-icon {
+    font-size:13px;
+    padding-left: 10px;
+}
+
+.w-login-hand-img {
+  position: relative;
+  bottom: -26px;
+  float: right;
+}
+
+.w-login-slider-bg {
+  background-color: #2ba4f2;
+  width: 100%;
+  text-align: center!important;
+}
+
+.w-login-slider {
+  display: inline-block;
+  position: relative;
+}
+
+.w-slider-contents {
+  display: table; /* Needed to center align RSS text; table-cell is applied to children using Slider.js */
+  width: 1016px;
+  height:300px; /* Don't use min-heigh as display is set to table, so will expand automatically if content > 300px */
+}
+
+.w-slider-contents div {
+  display: none;
+  padding: 20px 70px;
+}
+
+.w-slider-content-text {
+  font-size: 32px;
+  line-height: 42px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  /* Display is set to table-cell through Slider.js, used with following property, text will vertical align */
+  vertical-align: middle;
+}
+
+.w-slider-content-text a,
+.w-slider-content-text a:hover {
+  color: #fbed53;
+}
+
+a.w-slider-content-text-getstarted,
+a.w-slider-content-text-getstarted:link,
+a.w-slider-content-text-getstarted:visited {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.w-slider-space-text-getstarted{
+  padding-left: 100px;
+}
+
+.w-slider-getstarted-icon {
+  font-size:12px;
+  padding-left: 10px;
+}
+
+.w-slider-arrowL,
+.w-slider-arrowR {
+  position: absolute;
+  height: 100%;
+  clear: both;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.5);
+  top: 0;
+}
+
+/*Display left arrow on left side*/
+.w-slider-arrowL {
+  left: 0;
+}
+/*Display right arrow on right side*/
+.w-slider-arrowR {
+    right: 0;
+}
+
+/*Center arrow icons*/
+.w-slider-arrowL-icon:before,
+.w-slider-arrowR-icon:before {
+  position: relative;
+  top: 49%;
+}
+
+.w-slider-arrowL-icon,
+.w-slider-arrowR-icon {
+  position: relative;
+  height: 100%;
+  display: inline;
+}
+
+.w-slider-arrowL:hover,
+.w-slider-arrowR:hover,
+.w-slider-arrowL-icon:hover,
+.w-slider-arrowR-icon:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.w-slider-nav-bullets {
+  position: relative;
+  padding-bottom: 30px;
+  left:42%;
+  width: 42%;
+}
+
+.w-slider-nav-bullets ul {
+  list-style-type: none;
+}
+
+.w-slider-nav-bullets ul li a {
+  display:block;
+  width:10px;
+  height:10px;
+  float: left;
+  margin:0 5px;
+  background-color: rgba(255, 255, 255, 0.5);;
+  text-indent: -9999px;
+  border-radius: 10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+}
+.w-slider-nav-bullets ul li a:hover,
+.w-slider-nav-bullet-active {
+  background-color: #ffffff!important;
+}
+
+.w-login-discover-bg {
+  background-color: #F7F8F9;
+  height: 360px;
+  width: 100%;
+}
+
+.w-login-discover-paddingT{
+  padding-top: 58px;
+}
+
+.w-login-discover-left {
+  width: 50%;
+}
+
+.w-login-discover-right {
+  width: 50%;
+  vertical-align: top; /* to align with left side */
+}
+
+.w-login-discoverR-img,
+.w-login-discoverL-img {
+    vertical-align: top;
+}
+
+.w-login-discoverR-title,
+.w-login-discoverL-title {
+    font-size: 38px;
+    line-height: 38px;
+    padding-bottom: 30px;
+}
+
+.w-login-discoverR-text,
+.w-login-discoverL-text {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+/* align all discover text to the left and add padding */
+.w-login-discoverR-title,
+.w-login-discoverL-title,
+.w-login-discoverR-text,
+.w-login-discoverL-text,
+.w-login-discoverR-learnmore,
+.w-login-discoverL-learnmore {
+  float:left;
+  padding-left: 7px;
+}
+/* separator between left and right side */
+.w-login-discover-sep {
+  position: relative;
+  padding: 0 30px;
+}
+
+.w-login-discover-sep hr {
+  width: 1px;
+  height: 360px;
+  position: absolute;
+  top: -102.5px;
+}
+
+.w-login-newsletter {
+  padding: 75px 0;
+}
+
+/* Footer  */
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 36px;
+  color: #969696;
+  font-size: 10px;
+  padding:30px 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.w-footer-ct-right {
+  text-align: right;
+  padding-right: 30px;
+  vertical-align: bottom; /* To align with footerLinks left td */
+}
+
+.IsLogin .w-footer-ct-right {
+  padding-right: 0;
+}
+
+.w-footer-ct-left {
+  text-align: left;
+  padding-left: 35px;
+}
+
+.IsLogin .w-footer-ct-left {
+  padding-left: 0;;
+}
+
+.footerPadder {
+  height: 1px!important;
+  width: 18px!important;
+}
+
+.footerLinks {
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+.IsLogin footer {
+  font-size: 12px;
+  width: 1016px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+/* End Footer  */
+
+
+.IsLogin .loginContent {
+  padding: 15px 10px 0 20px;
+  vertical-align: top;
+}
+
+.IsLogin .loginSidebar {
+  padding: 15px 10px 0 10px;
+  vertical-align: top;
+}
+
+.IsLogin .aw-debugMessage {
+  padding: 30px 10px 10px;
+}
+
+#loginForm {
+  /*padding: 0 30px;*/
+}
+
+.loginForm-table {
+  width: 140px;
+}
+
+.loginForm-td {
+  padding: 5px 0 0;
+  width: 95%;
+}
+
+.loginForm-input {
+  width: 95%;
+}
+
+.loginForm-pt15 {
+  padding-top: 15px;
+}
+
+.loginForm-pt20 {
+  padding-top: 20px;
+}
+
+.loginFormBox .rbBC,
+.loginFormBox .rbFC,
+.loginFormBox .rbBFC {
+  background-color: #D7D7E5;
+  border-color: #D7D7E5;
+}
+
+.loginFormBox,
+.loginBox {
+  text-align: left;
+}
+
+.loginBox .rbBC {
+  background-color: #D7D7E5;
+  border-color: #D7D7E5;
+}
+
+.loginBox .rbB {
+  background-color: #FFFFFF;
+}
+.w-login-form-input-user,
+.w-login-form-input-pwd {
+   display: inline-block;
+}
+.w-login-form-input-user .w-txt-dsize,
+.w-login-form-input-pwd .w-psw {
+  width: 302px;
+  height: 50px;
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+}
+
+/* Placeholder Login inputs*/
+.w-login-form-input-user .w-txt-dsize::-webkit-input-placeholder {
+  color:#ffffff;
+}
+
+/* Firefox 19+ placeholder */
+.w-login-form-input-user .w-txt-dsize::-moz-placeholder {
+  color:#ffffff;
+  opacity: 1;
+}
+/* IE 10+ placeholder*/
+.w-login-form-input-user .w-txt-dsize:-ms-input-placeholder {
+    color:#ffffff;
+}
+
+/* Custom username/password placeholders for login page*/
+.w-login-form-input-user .pfc label.ph,
+.w-login-form-input-pwd .pfc label.ph {
+  color: #ffffff;
+  position: absolute;
+  top: 17px;
+  left: 30px;
+  font-size: 16px;
+}
+
+.w-login-form-btn {
+  min-width: 86px;
+  height: 36px;
+  background-color: #2BA4F2;
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+.w-login-form-input-btn-space {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+}
+
+.w-login-form-forget {
+  padding-bottom: 10px;
+  padding-top: 20px;
+  color: #ffffff;
+}
+.w-login-form-forget a {
+  color: #fbed53;
+}
+
+.w-login-form-input-user {
+  padding-bottom: 10px;
+}
+
+.w-login-graph-space-td-left{
+  padding-left: 90px;
+}
+
+.w-login-graph-title {
+  font-size: 38px;
+  line-height: 36px;
+  color: #393939;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.w-login-graph-text {
+  font-size: 20px;
+  line-height: 28px;
+  color: #393939;
+  text-align: left;
+}
+
+.w-login-hand-text {
+  font-size: 50px;
+  line-height: 60px;
+  color: #ffffff;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.w-login-hand-text-from {
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.w-login-sup-browsers {
+  clear: both;
+  text-align: left;
+}
+
+ul.supportedBrowsers {
+  padding-left: 5%;
+}
+
+
+.w-doc-portlet-status {
+    position:absolute;
+    width:4px;
+    top:0px;
+    left:0px;
+}
+.w-doc-portlet-status-rejected {
+    background-color: #e94125;
+    color: #e94125;
+}
+.w-doc-portlet-status-approved {
+    background-color: #58b957;
+    color: #58b957;
+}
+.w-doc-portlet-status-overdue {
+    background-color: #f2ae43;
+    color: #f2ae43;
+}
+.w-doc-portlet-status-label {
+    background-color: transparent;
+}
+.w-doc-portlet-status-hide {
+    display: none;
+}
+
+/*
+Put FireFox specific styles here. They will be aggregated into ng_widget.
+*/
+
+.IsMoz div.popupMenuButtonJustify {
+  padding: 4px 18px 4px 1px;
+  width: 100%;
+}
+
+.IsMoz input.chText {
+  margin-right: 0;
+}
+
+.IsMoz input.tf {
+  margin-right: 2px;
+}
+
+.IsMoz .stWidthFixWrapper .scrollTableWrapper {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.IsMoz table.inline {
+  display: inline-table;
+}
+
+/*
+Put Safari/Chrome specific styles here. They will be aggregated into ng_widget.
+*/
+
+.IsSaf div.popupMenuButtonJustify {
+  padding: 4px 18px 4px 1px;
+  width: 100%;
+}
+
+.IsSaf input.chText {
+  margin-right: 0;
+}
+
+.IsSaf input.tf {
+  margin-right: 2px;
+}
+
+.IsSaf .multiple_button_left {
+  padding: 1px 10px;
+}
+
+.IsSaf .multiple_button_right {
+  height: 20px;
+}
+
+.IsSaf select {
+  -khtml-appearance: none;
+  border: 1px solid #7F9DB9;
+  padding: 2px 18px 2px 5px;
+  background: #ffffff url(cssSelectArrow.gif) no-repeat center right;
+}
+
+.IsSaf .stWidthFixWrapper .scrollTableWrapper {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.IsSaf table.inline {
+  display: inline-table;
+}
+
+.IsIE a.olmChild {
+  /*height: 29px;*/
+}
+
+.IsIE img.DTCh {
+  /*margin: 3px;*/
+}
+
+.IsIE input.tf {
+  /*margin-right: 6px;*/
+}
+
+.IsIE .olmRoot {
+  /*background: #f2f2f8;*/
+  /* filter: progid: DXImageTransform.Microsoft.gradient does not work for IE7 for first level menu */
+}
+
+.IsIE td.w-tbl-footer {
+  /*width: 100%;*/
+}
+
+.IsIE .yScroll td.spacer {
+  /*width: 1px;*/
+  /*padding-right: 18px;*/
+}
+
+/* This is the class of DialogBoxes titles */
+.bodyRev {
+  color: #000;
+  font-size: 20px;
+}
+
+/* state classes */
+
+/* CSS classes used to apply a state to an element, usually used in conjunction with JS */
+
+/* blocks */
+
+.is-block {
+  display: block !important;
+}
+
+.is-iblock {
+  display: inline-block !important;
+}
+
+.is-inline {
+  display: inline !important;
+}
+
+.is-dnone {
+  display: none !important;
+}
+
+/* visibility */
+
+.is-hidden {
+  visibility: hidden !important;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+/* position */
+
+.is-pos-absolute {
+  position: absolute!important;
+}
+
+.is-pos-fixed {
+  position: fixed!important;
+}
+
+.is-pos-relative {
+  position: relative!important;
+}
+
+.is-pos-static {
+  position: static!important;
+}
+
+/* overflow */
+
+.is-of-auto {
+  overflow: auto!important;
+}
+
+.is-of-hidden {
+  overflow: hidden!important;
+}
+
+.is-of-visible {
+  overflow: visible!important;
+}
+
+.is-p-4 {
+  padding: 4px !important;
+}
+
+.xScroll {
+   overflow-x:scroll !important;
+}
+
+.yScroll {
+  overflow-y:scroll !important;
+}
+
+.IsEdge .xScroll, .IsIE .xScroll {
+  position: relative; 
+  overflow-x: auto;
+}
+
+/* other */
+
+.bold,
+.is-bold {
+  font-weight: bold;
+}
+.italic,
+.is-italic {
+  font-style:italic;
+}
+
+.disabled,
+.is-disabled {
+  color: #636363 !important;
+}
+
+/* utility classes */
+
+/* global CSS classes that handle complex styles that are used frequently */
+
+.u-nodeco,
+/* ideally the following 3 rules aren't necessary,
+but included to maintain
+parity with existing styles. remove later if possible -msnider 10/25/2013 */
+a.u-nodeco,
+a.u-nodeco:link,
+a.u-nodeco:visited {
+  text-decoration: none!important;
+}
+
+table.u-auto-width {
+  width: auto;
+}
+
+/**
+    SearchBox
+     hdr - header, bd - body, ftr - footer
+**/
+.w-box-search {
+  background-color: #f5f5f5;
+  padding: 15px 15px 7px 15px;
+}
+
+.w-box-grid {
+  position: relative;
+}
+
+.w-box-hdr {
+  padding: 0px 0px;
+  margin-bottom: 15px;
+  color: #363636;
+}
+.w-box-bd {
+  margin-bottom: 10px;
+}
+
+.w-box-ftr {
+  border-top: solid 1px #d7d7d7;
+  padding-top: 7px;
+  vertical-align: middle;
+}
+
+.w-srch-box-title h2,
+.w-twotonebox-top h2 {
+  color: #363636;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+.w-srch-box-title {
+  padding-bottom: 10px;
+}
+
+.w-time-last-imported {
+ color: #d7d7d7;
+}
+
+
+.w-box-grid .w-btn {
+  margin-left: 10px;
+}
+
+.w-box-grid .w-tbl-cell {
+  height: 37px;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.w-box-grid td.ffl {
+  padding-right: 12px;
+}
+
+/* Allow targeting of buttons of the SearchBox footer */
+.w-box-footer-btns button {
+  height: 32px;
+  line-height: 32px;
+}
+
+/* SearchBox containing fields UI ( w-form-row)
+      The problem:  ffp can be nested inside ffp. Therefore .ffp bottom padding can keep on accumulating.
+                    producing fields that are far apart from the fields above.
+      The solution:  remove the nested .ffp padding when it's inside search box. Manually add padding to nested
+                     fields (ARWDateRange) */
+.w-box-search td.ffp td.ffp {
+  padding-bottom: 0px;
+}
+
+/* special handling for date range selection widget. The 'from' and 'to' fields are nested inside a select field */
+.w-box-search td.w-date-range-from {
+  padding-top: 12px!important;
+  padding-bottom: 12px!important;
+}
+
+/* override form row styles so that fields align in search box. */
+.w-box-search .w-form-row td.ffl {
+  width: 175px;
+}
+/* End Search Box */
+
+/* Date Range */
+.w-date-range-label {
+  margin-right: 5px;
+  vertical-align: baseline!important;
+}
+
+/* End of Date Range*/
+
+/*
+Table Classes - AWTDataTable
+*/
+.mls {
+  width: auto;
+}
+
+/* 07-Oct-2014 TODO: Assuming datatable styles are the same everywhere. If visual designer
+intends dashboard portlets to have different table styles, revisit these to target them
+differently for portlets. */
+
+.w-tbl-wrapper {
+  border-bottom: 1px solid #D7D7D7;
+}
+/* Top border needed only in special case when table is rendered without header row. */
+.w-tbl-wrapper-top-border {
+  border-top: 1px solid #D7D7D7;
+}
+
+.w-tbl-no-box {
+  border:none;
+  padding:0px;
+  margin-top:0px;
+}
+
+.w-tbl-no-box .w-stw-header {
+  background-image:none;
+  padding:0px;
+  border-bottom-width:0px;
+}
+
+/* When datatable is displayed inside a portlet,
+  don't put bottom border. Portlet has a box already.*/
+.portletBox .w-tbl-wrapper {
+  border-bottom: none;
+}
+
+.w-tbl-hd {
+  font-size: 13px;
+  font-weight: 100;
+  color: #636363;
+  background-color: #f1f1f1;
+}
+
+.portletBox .w-tbl-hd {
+  border-top: 1px solid #F2F2F2;
+}
+
+/* header with alignment attribute. align left is default rendering */
+.w-tbl-hd[align="right"] {
+  text-align: right;
+}
+
+.w-tbl-hd[align="center"] {
+  text-align: center;
+}
+
+.w-tbl-hd a {
+  color: #636363;
+  text-decoration: none;
+}
+
+.w-tbl-hd a:hover,
+.w-tbl-hd a:focus {
+  color: #199DE0;
+}
+
+.w-tbl-hd .is-active {
+  font-weight: normal;
+}
+
+.w-tbl-hd-options {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.w-tbl-hd-options:hover {
+  color: #363636;
+}
+
+.w-tbl-hd-cb {
+  padding: 5px 7px!important;
+}
+
+.w-tbl-cell {
+  color: #282828;
+  font-size: 13px;
+  height: 34px;
+  padding: 0 7px;
+  vertical-align: middle;
+}
+
+.w-tbl-cell .w-chMenuPositionObj,
+.w-tbl-cell .w-txt,
+.w-tbl-cell .w-dropdown {
+  margin: 4px 0;
+}
+
+.w-tbl-cell .w-chMenuPositionObj .w-txt {
+  margin: 0px;
+}
+
+.w-tbl-cell a {
+  font-weight: normal;
+}
+
+/* Nested in tbl cell could contain tables of content. But these nested tables,
+   we don't want the table to expand 100% */
+.w-tbl-cell table {
+  width: auto;
+}
+
+.w-tbl-fixed {
+  width:100%;
+  table-layout:fixed;
+  position:relative;
+}
+
+/* style for the empty tables and portlets */
+.empty,
+.w-tbl-empty {
+  /* eliminate top border */
+  border-top: 0 !important;
+  padding: 10px 20px 10px 20px !important;
+  text-align: center !important;
+  color: #969696 !important;
+}
+
+/* DataTable options menu table wrapper */
+.w-tbl-options-wrapper {
+  font-size: 15px;
+  width: auto;
+}
+
+.w-tbl-options {
+  white-space: nowrap;
+}
+
+.w-tbl-options-txt {
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+.w-tbl-grby-padder {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+/** DataTable Footer **/
+/** Header and footer doesn't set a height attribute. It uses the height
+    of the containing element to give it's own height. This is so that
+    if there's no containing element, the header and footer would collapse.**/
+.w-tbl-footer {
+  background-color: #F5F5F5;
+  padding: 0 15px;
+  border-top: 1px solid #D7D7D7;
+}
+
+.portletBox .w-tbl-footer {
+  border-top: none;
+}
+
+.w-tbl-footer-right {
+  text-align: right;
+  padding-right: 15px;
+}
+
+.w-tbl-footer-right table {
+  display: inline-block;
+}
+
+.w-tbl-footer table {
+  width : auto;
+}
+
+/* Allow targeting of buttons of the DataTable footer */
+.w-tbl-footer .w-btn{
+  height: 32px;
+  line-height: 32px;
+}
+
+.w-tbl-footer .w-btn {
+  margin: 7px 0;
+}
+
+.w-tbl-footer .w-dropdown {
+  margin: 6px 0;
+}
+
+.w-tbl-footer .w-btn + .w-btn,
+.w-tbl-footer .w-btn + .w-pulldown-button,
+.w-tbl-footer .w-pulldown-button + .w-pulldown-button,
+.w-tbl-footer .w-pulldown-button + .w-btn {
+  margin-left: 10px;
+}
+
+.w-tbl-footer-selection-icon {
+  margin: 0 7px 0 0;
+}
+/** End DataTable Footer **/
+
+/* Classic (default) style */
+.w-tbl-classic-wrapper {
+}
+
+.w-tbl-w-1 {
+  /* see AWTScrollTableWrapper for details*/
+  width: 1px!important;
+}
+
+.w-tbl-hd-w-1 {
+    width: 1%;
+}
+
+.w-tbl-w-1p {
+  width: 1%!important;
+}
+
+.w-tbl-w-auto {
+  width: auto!important;
+}
+
+.w-tbl-w-100 {
+  width: 100%!important;
+}
+
+.w-tbl-customize-view {
+  display: inline-block;
+  margin: 14px 15px;
+}
+
+.w-tbl-column-break {
+  border-left: 1px solid #F2F2F2;
+}
+
+.w-tbl-spacer-lines {
+  background-image:url(cssAwtLines_aw6.png);
+  background-position:0px 0px;
+  background-repeat: repeat;
+}
+.w-tbl-corner-img {
+  border-top:0;
+}
+.w-tbl-corner-icon,
+.w-tbl-btns-separator {
+  color: #d7d7d7;
+  font-size: 15px;
+}
+.w-tbl-btns-separator {
+  font-size: 18px;
+  padding:0 10px;
+}
+.w-tbl-sort-icon {
+  font-size:11px;
+}
+
+/* AWTBatchNavigationBar */
+.w-batch-nav {
+  padding:0 10px;
+  vertical-align: middle;
+}
+.w-batch-txt {
+  padding-right: 5px;
+}
+.w-batch-nav-row {
+  padding: 0 5px 0;
+  float: right;
+}
+/* End Data Table Classes */
+
+/* Pivot table View */
+.w-pivtbl-cell {
+  border-left: 1px solid #F2F2F2;
+}
+
+.w-pivtbl-label {
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 6px;
+}
+
+.w-pivtbl-expandable-column {
+  text-align: right;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+/* End Pivot View */
+
+/* SectionHeading classes */
+.w-sh-title {
+  color:#363636;
+  font-size:18px;
+  height:45px;
+  line-height:45px;
+  padding-right:5px;
+  padding-left:0;
+  text-align: left;
+}
+.w-sh-tbl {
+  border-bottom: 1px solid #D7D7D7;
+}
+
+/* end SectionHeading */
+
+/* SectionBody */
+.w-sb {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid transparent;
+}
+
+.w-sb-notAfterTitle {
+  padding-top: 0;
+}
+
+.w-sb-lastSection {
+  margin-bottom: 0;
+}
+
+/* no padding for dialogs they have their own margin  & padding*/
+
+.w-dlg-panel-active .w-sb {
+  padding: 0px;
+}
+
+/* end SectionBody */
+
+/* TODO ahebert 02/13/14: as of now,
+   it is safer to just integrate from AW5 to AW6 the scrollTableWrapper class,
+   to be renamed later
+*/
+
+/* 07-Oct-2014 TODO: Assuming ScrollTableWrapper styles are same everywhere. If designer
+intends dashboard portlets to have different table styles, revisit these to target them
+differently for portlets. */
+
+/** y.h  Will remove the scrollTableWrapper later. It's pretty big change, so I'll leave that after
+ I come back.  In general, we should use AW6 class, and not carry over AW5 styles.*/
+.scrollTableWrapper {
+  overflow:hidden;
+  clear:both;
+}
+
+.scrollTableWrapper td.tableBody {
+  border-top:1px solid #F2F2F2;
+}
+
+.scrollTableWrapper .firstRow.stSectionRow td.tableBody,
+.scrollTableWrapper .firstRow.tableRow1 td.tableBody {
+  /* eliminate top border */
+  border-top-width: 0;
+}
+
+.scrollTableWrapper th.tableHead {
+  border-bottom:1px solid #F2F2F2;
+}
+
+.tableHeader .w-pulldown-button {
+  margin: 0 5px;
+
+}
+
+.tableHeader .w-pulldown-button  button {
+  /*Will take the height from .w-btn*/
+}
+
+/* AWTScrollTableWrapper classes */
+.w-stw-footer {
+  margin: 0.5em 0;
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
+.w-stw-footer .w-btn {
+  margin-right: 10px;
+}
+
+.w-stw-footer-l {
+  float: left;
+  min-height: 1em;
+  overflow: hidden;
+}
+
+.w-stw-footer-r {
+  float: right;
+  min-height: 1em;
+  overflow: hidden;
+  text-align: right;
+}
+.w-stw-footer a {
+  color: #58AFF2;
+  font-size: 12px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.w-stw-header {
+  padding-left: 0px;
+  border-bottom: 1px solid #D7D7D7;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+/* Utility class for text inside the header but that should be small size */
+.u-stw-header-txt {
+  font-size: 13px;
+}
+
+.portletBox .w-stw-header {
+  padding-left: 0;
+  border-top: solid 1px #BCBCBC;
+  background-color: transparent;
+}
+
+/* header title */
+.w-stw-header h2,
+.w-stw-header-ext {
+  color: #363636;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  padding-left:0;
+  margin: 9px 0;
+}
+.w-stw-header .w-stw-header-ext {
+  margin: 14px 0;
+}
+
+/* when we have search bar in the table header we need to apply some common spacing.  */
+.w-stw-header .w-arccs-table {
+  margin-bottom: 10px;
+}
+
+
+/* Allow targeting of buttons of the DataTable header */
+.w-stw-header .w-btn {
+  height: 32px;
+  line-height: 32px;
+  margin-left: 10px;
+}
+
+
+
+.portletBox .w-stw-header {
+  border: none;
+}
+/* end AWTScrollTableWrapper */
+
+/* TODO ahebert 02/13/14: as of now,
+   it is safer to just integrate from AW5 to AW6 the tableHead class,
+   to be renamed later
+*/
+div.tableHead {
+  width:100%;
+  overflow:hidden;
+}
+
+div.tableHead table {
+  width:auto;
+  empty-cells:show;
+}
+
+th.tableHead {
+  white-space:nowrap;
+  text-align: left;
+  padding: 7px 7px;
+}
+
+div.tableBody {
+  /* Take our best guess on these settings -- fix up on client */
+  width:100%;
+  height:150px;
+  overflow-y:hidden;
+  overflow-x:hidden;
+  position:relative;
+}
+
+.scrollTableWrapper tr.tableRowSelected > td:first-of-type,
+.awtWrapperTable tr.tableRowSelected > td:first-of-type {
+   padding-left: 10px !important;
+  border-left:5px solid #6DC1EB;
+}
+
+.panel div.awtstrut {
+  display: block;
+}
+
+div.awtstrut {
+  display:none;
+  line-height:0px;
+}
+
+tr.tableGroupBy {
+  height:30px;
+}
+
+td.tableGroupBy {
+  color: #959595;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom:1px solid #d7d7d7;
+  border-top:1px solid #d7d7d7;
+  padding:4px 0 2px 5px;
+}
+
+tr.tableGroupBy td.firstRow {
+  border-top-width:0;
+}
+
+td.dottedRowBottom {
+  border-bottom:1px dotted #9999CC;
+}
+
+.scrollTableWrapper td.tableHeader td.dottedRowBottom {
+  border-bottom-width:0;
+}
+
+/* ARWTable styles */
+.w-arw-tbl {
+  padding:0!important;
+}
+
+/* end ARWTable */
+
+/*
+Summary Wheel & Summary Wheel Disclosure classes
+*/
+
+.w-sum-wheel {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.w-sum-wheel path {
+  cursor: pointer;
+}
+
+.w-sum-wheel-ttl {
+  border: none;
+  font-size: 20px;
+  left: 1px;
+  position: absolute;
+  text-transform: none;
+  top: 1px;
+}
+
+.w-sum-wheel-val {
+  color: #d7d7d7;
+  font-size: 40px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.IsSaf .w-sum-wheel-val,
+.IsChr .w-sum-wheel-val {
+  padding-top: 3px;
+}
+
+.w-sum-wheel-abbr {
+  font-size: 0.5em;
+}
+
+.w-sum-wheel-active {
+  /* note: tied to blue color -msnider 11/14/2013 */
+  color: #95C6EA;
+}
+
+.w-sum-wheel-lbl {
+  color: #636363;
+  position: absolute;
+  width: 55px;
+}
+
+.w-sum-wheel-lbl .w-btn,
+.w-sum-wheel .w-btn {
+  display: none;
+}
+
+.w-sum-wheel-lbl-on-left .w-sum-wheel-lbl-main,
+.w-sum-wheel-lbl-on-right .w-sum-wheel-lbl-main {
+  width: 55px;
+  position: relative;
+  left: -2px;
+}
+
+.w-sum-wheel-lbl-on-right .w-sum-wheel-lbl-main {
+  left: 2px;
+  text-align: right;
+}
+
+.w-sum-wheel-lbl-on-left .w-sum-wheel-lbl-sub,
+.w-sum-wheel-lbl-on-right .w-sum-wheel-lbl-sub {
+  position: absolute;
+  top: -3px;
+}
+
+.w-sum-wheel-lbl-main {
+  border-bottom: 1px solid #d7d7d7;
+  font-size: 16px;
+  overflow: hidden;
+  /* text-overflow: ellipsis requires overflow: hidden and white-space: nowrap to work */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.w-sum-wheel-group {
+  background-color: #F5F5F5;
+  padding: 20px 0px;
+}
+
+.w-sum-wheel-disclosure-active {
+  background-color: #70b8e6;
+}
+
+.w-sum-wheel-wrapper {
+  border-right: 1px solid #CBCBCB;
+}
+
+.col-lastChild > .w-sum-wheel-wrapper {
+  border-right: none;
+}
+
+.w-sum-wheel-disclosure-content {
+  background-color: #fff;
+}
+
+.w-sum-wheel-disclosure-lbl {
+  border-right: none;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.w-sum-wheel-disclosure-top .col {
+  margin-right: 0;
+}
+
+.w-sum-wheel-disclosure-top .col-6:first-child {
+  width: 478px;
+}
+
+.w-sum-wheel-disclosure-top .col-6 {
+  width: 502px;
+}
+
+.w-sum-wheel-disclosure-top .col-4:first-child {
+  width: 310.67px;
+}
+
+.w-sum-wheel-disclosure-top .col-4 {
+  width: 334.67px;
+}
+
+.w-sum-wheel-legends {
+  position: absolute;
+  top: 25px;
+  padding: 2px 0;
+}
+
+.w-sum-wheel-legend-title {
+  font-size: 12px;
+  color: #636363;
+  padding-right: 5px;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 20px;
+}
+
+.w-sum-wheel-legend-icon {
+  width: 9px;
+  height: 9px;
+  margin: 0 3px 0 8px;
+}
+
+.w-sum-wheel-legend-selected {
+  font-weight: bold;
+}
+
+/*
+Sproc Summary Wheel & Summary Wheel Disclosure classes
+*/
+
+.w-sproc-sum-wheels {
+  border-bottom: 1px solid #D7D7D7;
+  color: #363636;
+}
+
+.w-sproc-sum-wheels .w-sum-wheel-ttl {
+  color: #363636;
+  font-weight: 400;
+}
+
+.w-sproc-sum-wheels .w-sum-wheel-lbl-main {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.w-sproc-sum-wheels .w-sum-wheel-disclosure-lbl {
+  font-weight: 400;
+}
+
+.w-sproc-col-header {
+  color: #959595;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.w-sproc-sum-wheels a,
+.w-sproc-sum-wheels a:link,
+.w-sproc-sum-wheels a:visited,
+.w-sproc-sum-wheels a,
+.w-sproc-sum-wheels a:link,
+.w-sproc-sum-wheels a:visited  {
+  color: #2BA4F2;
+  text-decoration: none;
+}
+
+.w-sum-wheel-nometrics {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+/*
+Semantic Widget classes
+*/
+
+.w-lbl {
+  display: inline-block;
+  padding-right: 0.25em
+}
+
+.w-sep {
+  border-bottom: 1px solid #ccc;
+}
+
+/*
+nobr is not a valid HTML 5 tag, so we need to remove this rule eventually.
+It's still here, because we have some legacy form stuff mixed into AW6 widgets.
+*/
+.w-form-row nobr input {
+  width: auto;
+}
+
+.w-form-row input[type=checkbox],
+.w-form-row input[type=radio] {
+  margin-right: 0.25em;
+}
+
+.w-form-row input[type=text] {
+  width: auto;
+}
+
+/** Calendar Widget */
+
+.w-calendar {
+  width: auto;
+  border: solid 1px #F5F5F5;
+  border-spacing: 1px;
+  padding: 5px 10px 10px 10px;
+  -webkit-box-shadow: 0 0 3px #AAAAAA;
+  box-shadow: 0 0 3px #AAAAAA;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.w-calendar-container:focus {
+  outline : none;
+}
+
+.IsIE7 .w-calendar td,
+.IsIE7 .w-calendar th {
+  /*display: table-cell;*/
+  /*padding: 1px;*/
+}
+
+.w-calendar-awmenu {
+  position: absolute;
+  z-index: 1500;
+  background-color: #fff;
+  padding: 2px;
+  cursor: default;
+}
+
+.IsIE7 .w-calendar-awmenu .w-calendar {
+  /*border: none;*/
+}
+
+.IsIE7 .w-calendar-awmenu {
+  /*border: solid 1px #DBDBDB;*/
+  /*padding: 3px;*/
+}
+
+.w-calendar-title {
+  letter-spacing: 1px;
+  margin: 0 5px;
+}
+
+.w-calendar-next-month,
+.w-calendar-prev-month,
+.w-calendar-next-year,
+.w-calendar-prev-year {
+  font-size: 12px;
+}
+
+.w-calendar-prev-year:hover,
+.w-calendar-prev-month:hover,
+.w-calendar-next-year:hover,
+.w-calendar-next-month:hover {
+  background-color: #f5f5f5;
+}
+
+.w-calendar-prev-year:active,
+.w-calendar-prev-month:active,
+.w-calendar-next-year:active,
+.w-calendar-next-month:active {
+  background-color: #dbdbdb;
+}
+
+.w-calendar-header {
+  font-size: 10px;
+  color: #555555;
+  height: 25px;
+  text-align: center;
+}
+
+.w-calendar-days {
+  background-color: #F5F5F5;
+  border: solid 1px #FFFFFF;
+}
+
+.w-calendar-days,
+.w-calendar-days a {
+  text-align: center;
+  text-decoration: none;
+  color: #555555;
+  font-size: 14px;
+  outline: 0;
+}
+
+.w-calendar-days a {
+  display: inline-block;
+  height: 20px;
+  width: 25px;
+  padding-top: 5px;
+}
+
+.w-calendar-days a:hover,
+.w-calendar-days a:focus,
+.w-calendar-days td.focus a {
+  background-color: #DBDBDB;
+}
+
+.w-calendar-days a:active {
+  background-color: #199DE0;
+}
+
+.w-calendar-days td.w-calendar-today,
+.w-calendar-days td.w-calendar-today a,
+.w-calendar-days td.w-calendar-today a:hover,
+.w-calendar-days td.w-calendar-today a:focus,
+.w-calendar-days td.w-calendar-today a:active {
+  background-color: #CCCCCC;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.w-calendar-days td.w-calendar-selected-day,
+.w-calendar-days td.w-calendar-selected-day a,
+.w-calendar-days td.w-calendar-selected-day a:hover,
+.w-calendar-days td.w-calendar-selected-day a:focus,
+.w-calendar-days td.w-calendar-selected-day a:active {
+  background-color: #199DE0;
+  border: 2px solid transparent;
+}
+
+.w-calendar-position {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 16px;
+  left: -1px;
+  font-size: 10px;
+  line-height: 10px;
+  display: inline-block;
+}
+
+.IsIE7 .w-calendar-position {
+  /*top: 22px;*/
+}
+
+.w-calendar-prev-icon {
+  text-align: left;
+}
+
+.w-calendar-next-icon {
+  text-align: right;
+}
+
+/* AWDropDown classes */
+.w-dropdown {
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  background: #FFF;
+  color: #464646;
+  white-space: nowrap;
+  vertical-align: middle;
+  height: 30px;
+  border: 1px solid #acd4ed;
+}
+
+.w-dropdown:focus {
+  border: none;
+  outline:1px solid #199DE0;
+}
+/* Classes that can size the element */
+.w-dropdown-fxd-size {
+  padding: 5px 15px ;
+}
+.w-dropdown-small {
+  width: 110px;
+}
+
+.w-dropdown-extra-small {
+  width: 110px;
+}
+
+.w-dropdown-small {
+  width: 175px;
+}
+
+.w-dropdown-large {
+  width: 270px;
+}
+
+.w-dropdown-extra-large {
+  width: 310px;
+}
+
+.w-dropdown-selected {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 25px;
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  min-width: 50px;
+}
+
+.w-dropdown-invalid {
+    border: 1px solid #F14C4C;
+}
+
+.w-dlg-panel-active .w-dropdown-selected {
+  text-overflow: initial;
+}
+
+.w-dropdown-disabled {
+  background: #F5F5F5!important;
+}
+
+.w-dropdown-disabled:hover {
+  cursor: text !important;
+}
+
+.w-dropdown-pic-ct {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  right: 6px;
+  top: 10px;
+  line-height: 100%;
+}
+
+.w-dropdown-invalid .w-dropdown-pic-ct {
+  color: #F14C4C;
+}
+
+.IsIE7 .w-dropdown-pic-ct {
+  /*float: left;*/
+}
+.w-dropdown-pic {
+  color: #969696;
+  font-size: 15px;
+  width: 22px;
+  text-align: center;
+  height: 18px;
+  padding-top:4px;
+  line-height: 18px;
+}
+
+
+
+.u-open .w-dropdown-items {
+  display: block;
+}
+
+.w-dropdown-items {
+  background: #ffffff;
+  position: absolute;
+  font-size: 13px;
+  left: 0;
+  top: 100%;
+  border: 1px solid #DBDBDB;
+  overflow-y: auto;
+  padding: 5px 0;
+  display: none;
+  z-index: 1500;
+  width: 100%;
+  -webkit-box-shadow: 0 0 5px #DBDBDB;
+  box-shadow: 0 0 5px #DBDBDB;
+}
+
+.w-dropdown-items.w-dropdown-slide-down {
+  top: 100%;
+  margin-top: 1px;
+}
+
+.w-dropdown-items.w-dropdown-slide-up {
+  bottom: 100%;
+  top:auto;
+}
+.u-open .w-dropdown-items.w-dropdown-items-clipped {
+  position: fixed;
+  z-index: 2500;
+}
+
+.w-dropdown-item {
+  z-index: 10;
+  color: #363636;
+  display: block;
+  background: #ffffff;
+  line-height: 30px;
+  min-height: 30px;
+  padding:0 14px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-dropdown-item:hover {
+  background: #F5F5F5;
+  cursor: hand;
+  overflow: visible;
+  white-space: normal;
+}
+
+div.w-dropdown:hover {
+  cursor: pointer;
+  background-color: #FAFAFA !important;
+}
+
+div.w-dropdown:active {
+  background-color: #E7E7E7 !important;
+}
+
+/* Separator for action items */
+.w-dropdown-item.w-chSeparator {
+  line-height: 1px;
+  min-height: 1px;
+}
+
+.w-dropdown-active {
+  background: #ECECEC!important;
+}
+
+.w-dropdown-size {
+  float: left;
+}
+
+.w-dropdown-ie7 {
+  z-index: 10;
+}
+/*
+  Proficiency Widget classes
+ */
+
+.w-skills .col {
+  margin-right: 0;
+}
+
+.w-skills .col-custom {
+  width: 68px;
+}
+
+.w-skills-add {
+  padding: 0.5em;
+}
+
+.w-skills-add a {
+  color: #b2b2b2;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+.w-skills-bar {
+  background-color: #e1e1e1;
+  height: 8px;
+  margin-top: 10px;
+}
+
+.w-skills-bar-inner {
+  height: 8px;
+}
+
+.is-active .w-skills-bar-inner {
+  background-color: #2CA4EC;
+}
+
+.w-skills-bubble {
+  background: transparent url(sprite.png) no-repeat 0 -1671px;
+  cursor: pointer;
+  display: block;
+  height: 15px;
+  position: absolute;
+  text-decoration: none;
+  top: 0.4em;
+  width: 15px;
+  z-index: 99;
+  /* hovers start at 100, so this should be safe */
+}
+
+.is-active.w-skills-bubble {
+  background: transparent url(sprite.png) no-repeat 0 -1636px;
+}
+.w-skills-readOnly .w-skills-bubble {
+  cursor: default;
+}
+
+.w-skills-col-lbl {
+  border-bottom: 1px solid #d7d7d7;
+  position: relative;
+}
+
+.w-skills-col-prof {
+  border-bottom: 1px solid #d7d7d7;
+  position: relative;
+  text-align: center;
+  width: 470px;
+}
+
+.w-skills-col-spacer {
+  width: 42px;
+}
+
+.w-skills-col-switch {
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+
+.w-skills-delete {
+  background: transparent url(sprite.png) no-repeat 0 -978px;
+  height: 15px;
+  position: absolute;
+  left: -7px;
+  top: 8px;
+  width: 15px;
+}
+
+.w-skills-hd {
+  color: #b2b2b2;
+  font-size: 0.8em;
+}
+
+.w-skills-hd-prof-end {
+  float: right;
+  text-align: right;
+}
+
+.w-skills-hd-prof-start {
+  float: left;
+  text-align: left;
+}
+
+.w-skills-info {
+  background: transparent url(sprite.png) no-repeat 4px -1602px;
+  cursor: pointer;
+  float: right;
+  height: 21px;
+  margin-right: 0.5em;
+  margin-top: 0.25em;
+  width: 21px;
+}
+
+.w-skills-lbl {
+  float: left;
+  font-size: 12px;
+  overflow: hidden;
+  padding-left: 1em;
+  /* text-overflow: ellipsis requires overflow: hidden and white-space: nowrap to work */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 180px;
+}
+
+.w-skills-line {
+  color: #464646;
+  font-size: 16px;
+  line-height: 1.875em;
+}
+
+.w-skills-line .w-skills-col-prof {
+  border-left: 1px solid #d7d7d7;
+}
+
+.w-skills-line-odd .w-skills-col-lbl,
+.w-skills-line-odd .w-skills-col-prof {
+  background-color: #f9f9f9;
+}
+
+.w-skills-segment {
+  border-right: 1px solid #d7d7d7;
+  float: left;
+  height: 1.875em;
+  width: 93px;
+}
+
+.w-skills-switch {
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  height: 24px;
+  text-align: center;
+  text-decoration: none;
+  width: 2.7em;
+}
+
+.w-skills-switch-a {
+  float: left;
+}
+
+.w-skills-switch-b {
+  float: right;
+}
+
+.w-skills-switch.is-active {
+  background-color: #2ca4ec;
+  color: #fff;
+}
+
+.w-skills-switch-wrap {
+  background-color: #f1f1f1;
+  height: 24px;
+  line-height: 24px;
+  margin: 0.125em 0;
+}
+
+.w-apc-field-modif-body {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*
+  hover card classes
+ */
+
+.w-hcard {
+  /* for legacy browsers */
+  border: 1px solid rgb(128,128,128);
+  border: 1px solid rgba(128,128,128,.5);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.w-hcard-content {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #333;
+  box-shadow: 0 0 5px #333;
+  color: #630;
+  position: relative;
+  text-align: left;
+  width: 260px;
+}
+
+.w-hcard-content-wrap {
+  color: #636363;
+  padding: 0.75em;
+}
+
+.w-hcard-ptr {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.w-hcard-ptr.w-hcard-pos-l {
+  border-color: transparent rgb(128,128,128) transparent;
+  /* for legacy browsers */
+  border-color: transparent rgba(128,128,128,.5) transparent;
+  border-style: solid solid solid none;
+  border-width: 8px 11px 8px 0;
+}
+
+.w-hcard-ptr.w-hcard-pos-b {
+  border-color: transparent transparent rgb(128,128,128) transparent;
+  /* for legacy browsers */
+  border-color: transparent transparent rgba(128,128,128,.5) transparent;
+  border-style: none solid solid solid;
+  border-width: 0 10px 10px 10px;
+}
+
+.w-hcard-ptr.w-hcard-pos-t {
+  border-color:  rgb(128,128,128) transparent transparent transparent;
+  /* for legacy browsers */
+  border-color: rgba(128,128,128,.5) transparent transparent  transparent;
+  border-style: solid solid none solid;
+  border-width: 10px 10px 0 10px;
+}
+
+.w-hcard-ptr-inner.w-hcard-pos-l {
+  border-right-color: #fff;
+}
+
+.w-hcard-ptr-inner.w-hcard-pos-b {
+  border-bottom-color: #fff;
+}
+
+.w-hcard-ptr-inner.w-hcard-pos-t {
+  border-top-color: #fff;
+}
+
+.w-hcard-wrap {
+  height: 0;
+  overflow: visible;
+}
+
+/*
+  Star Rating classes
+ */
+
+.w-star-rating,
+.w-star-rating-readonly {
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+
+.IsIE7 .w-star-rating,
+.IsIE7 .w-star-rating-readonly {
+  /*overflow: visible;*/
+  /*white-space: nowrap;*/
+  /*visibility: hidden;*/
+}
+
+.w-star-rating-input {
+  display: none;
+}
+
+.w-star-rating:hover .w-star-rating-star:hover,
+.w-star-rating:hover .w-star-rating-star:hover ~ .w-star-rating-star,
+.w-star-rating-input:checked ~ .w-star-rating-star {
+  background-position: 0 -500px;
+}
+
+.w-star-rating-star,
+.w-star-rating:hover .w-star-rating-star {
+  float: right;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('sprite.png') -1px -550px;
+}
+
+/* Hint Message */
+
+.w-hint {
+  color: #363636;
+  padding: 10px 0 15px 0;
+  text-align:justify;
+}
+
+.w-hint-box {
+  height: 1.5em;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+.w-hint-box-open .w-hint-box {
+  height: auto;
+}
+
+.w-hint-collapse {
+  padding-left: 0.75em;
+}
+
+.w-hint-expand {
+  padding-left: 15px;
+}
+
+.w-hint-ftr {
+  font-style: italic;
+}
+
+.w-hint-togl {
+  display: block;
+  float: right;
+  padding-top: 2px;
+}
+
+.w-hint-top-line {
+  border-top: 1px solid #d7d7d7;
+}
+
+/* if the corner layout is displaying dividing lines.
+    don't show the hint top line. */
+.w-corner-layout-show-lines .w-hint-top-line {
+  border-top: none;
+}
+/* if the corner layout is displaying dividing lines.
+    don't show the StepNavigator top line. */
+.w-corner-layout-show-lines .w-stepnavbar-top-bar {
+  border-bottom: none;
+}
+
+.w-hint-trigger {
+  text-decoration: none;
+}
+
+.w-hint-trigger img,
+.w-hint-trigger var {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.w-hint-box-noexpand .w-hint-collapse,
+.w-hint-box-noexpand .w-hint-expand,
+.w-hint-box-closed .w-hint-collapse,
+.w-hint-box-open .w-hint-expand {
+  display: none;
+}
+
+/** Date Field **/
+.w-datefield {
+  position: relative;
+}
+
+/*
+  Date Time widget
+ */
+
+.w-datetime {
+  width: auto;
+}
+
+.w-datetime-time {
+  padding-left: 6px;
+}
+
+.w-datetime-time .w-txt.w-txt-dsize {
+  width: 95px;
+}
+
+.w-datetime-position {
+  position: relative;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 18px;
+  left: 40px;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.IsIE7 .w-datetime-position {
+  /*top: 30px;*/
+  /*left: 42px;*/
+  /*font-size: 1px;*/
+  /*line-height: 1px;*/
+}
+
+.w-datetime-awmenu {
+  position: absolute;
+  z-index: 1500;
+  background-color: #fff;
+  padding: 2px;
+  cursor: default;
+  border-style: none;
+}
+
+.IsIE7 .w-datetime-awmenu {
+  /*border: solid 1px #DBDBDB;*/
+  /*padding: 6px 5px;*/
+}
+
+.w-datetime-awmenu select {
+  width: auto;
+  border: solid 1px #F5F5F5;
+  border-spacing: 1px;
+  padding: 8px;
+  -webkit-box-shadow: 0 0 3px #AAAAAA;
+  box-shadow: 0 0 3px #AAAAAA;
+  font-size: 14px;
+  font-weight: normal;
+  background-image: none;
+}
+
+/*
+ TabList, BaseTabSet and TabSet classes.
+*/
+.w-page-tabs,
+.w-dashboard-tabs {
+  /* Wrapper class to selectively style elements under page tab type. */
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+.w-tablist {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  clear: both;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.w-page-tab-separator {
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.w-tabitem {
+  font-size: 13px;
+  margin: 0 0 -1px 0 !important;
+  display: inline-block;
+  position: relative;
+  /* !important to override global li values */
+  padding: 0;
+}
+
+.IsIE7 .w-tabitem {
+  /*display: inline;*/
+}
+
+.w-tabitem-selected,
+.w-tabitem-selected:hover {
+  background-color: transparent;
+}
+
+.w-tabitem-selected a {
+  color: #000000!important;
+}
+.w-tabitem-selected a:hover,
+.w-tabitem-selected a:focus {
+  color: #199DE0!important;
+}
+
+.w-tabitem-action {
+  height:45px;
+  display: block;
+  line-height:45px;
+  float:right;
+}
+
+.w-tablist a,
+.w-tabitem-a-dsbld {
+  display: block;
+  padding: 0 18px;
+  position: relative;
+  border: 1px solid transparent;
+  line-height: 45px;
+}
+.w-tablist a:hover,
+.w-tablist a:focus {
+  border-color: #f2f2f2 #f2f2f2 #d7d7d7;
+  background-color: #f2f2f2;
+  text-decoration: none;
+}
+
+.w-tabitem-a.w-tabitem-a-slctd a,
+.w-tabitem-a.w-tabitem-a-slctd a:hover,
+.w-tabitem-a.w-tabitem-a-slctd a:focus,
+.w-tabitem-a-dsbld-slctd {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #ffffff;
+  border-color: #bcbcbc #bcbcbc transparent;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
+  color: #363636;
+  cursor: default;
+}
+
+.w-tabitem-a-dsbld {
+  color: #a1a1a1;
+
+}
+/* Override for dashboard tabs */
+.w-dashboard-tabs .w-tabitem {
+  margin: 0!important;
+}
+
+.w-dashboard-tabs {
+  text-transform: uppercase;
+}
+
+.w-dashboard-tabs .w-tablist {
+  padding-left: 30px;
+}
+.w-dashboard-tabs .w-tablist a,
+.w-dashboard-tabs .w-tabitem-a-dsbld {
+  border:0;
+  border-top-width: 0;
+  border-bottom-width: 3px;
+  line-height: 40px;
+}
+.w-dashboard-tabs .w-tablist a:hover,
+.w-dashboard-tabs .w-tablist a:focus {
+  border-color: transparent;
+  background-color: transparent;
+  color: #abc0c8;
+}
+
+.w-dashboard-tabs .w-tabitem-a.w-tabitem-a-slctd a,
+.w-dashboard-tabs .w-tabitem-a.w-tabitem-a-slctd a:hover,
+.w-dashboard-tabs .w-tabitem-a.w-tabitem-a-slctd a:focus,
+.w-dashboard-tabs .w-tabitem-a-dsbld.w-tabitem-a-dsbld-slctd {
+  border:0;
+  background-color: transparent;
+  border-bottom: 4px solid #199DE0;
+}
+
+.w-dashboard-tabs .w-tabitem-selected a {
+  color: #39bbfd!important;
+}
+
+/* end Override for dashboard tabs */
+
+.w-tab-content {
+  margin: 0;
+  padding: 15px 0 30px;
+  clear: both;
+}
+
+.w-tab-panel {
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+/* no padding for dialogs they have their own margin  & padding*/
+
+.w-dlg-panel-active .w-tab-content {
+  padding-bottom: 0px;
+}
+
+
+/* DashboardCommandBarAW6.awl */
+.w-dashboard-commands-spacer-right {
+  width: 30px;
+}
+
+.w-dashboard-configure-icon {
+  position: relative;
+  top: 2px;
+}
+/* end DashboardCommandBarAW6.awl */
+
+/* Chooser */
+.w-chAddLink {
+  font-size: 10px;
+  line-height:32px;
+  border: 0;
+  padding: 0 3px;
+  vertical-align: top;
+}
+.w-ch-fi {
+  width:22px;
+  height:18px;
+  color: #969696;
+  font-size: 15px;
+  padding-top: 2px;
+  line-height: 22px;
+}
+.w-chAddLabel {
+  font-size: 13px;
+  padding-left: 4px;
+  vertical-align: bottom;
+}
+
+.w-chCustomContent {
+  float: left;
+  white-space: nowrap;
+  line-height: 32px;
+  padding: 0px 8px;
+  text-align: left;
+}
+
+/* Width of the chooser is defined here */
+.w-chInput {
+  background-color: transparent;
+  color: #464646 !important;
+  padding: 0 0 0 8px;
+  border: 0;
+  height: 29px !important;
+  min-width: 129px;
+  font-size: 13px;
+}
+
+.w-chInvalSel {
+  background-color: #FFEAAA;
+}
+
+.w-chItemSpl {
+  background-color: #FFFFFF !important;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 1px 0 3px;
+}
+
+.w-chList a:link,
+.w-chList a:visited {
+  font-size: 13px !important;
+  line-height: 30px !important;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-chMenuPositionObj {
+  height: 32px;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #000000;
+}
+
+
+
+.w-chMultiContainer {
+  line-height:32px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+
+
+.w-stw-header .w-chMenuPositionObj {
+  margin-top: 5px;
+}
+
+.w-chModeLink {
+  border: 0;
+  vertical-align: top;
+}
+
+.w-chMultiRow {
+  background-color: #f2f2f2;
+  border-top:1px solid #ffffff;
+  line-height:32px;
+  padding:0 8px;
+  vertical-align: middle;
+  display:inline-block;
+}
+
+.w-chMultiRow input {
+  font-size: 13px;
+}
+
+.w-chMultiRow:hover {
+  background-color: #f5f5f5;
+}
+
+.w-chMultiRow:active {
+  background-color: #ececec;
+}
+.w-chMoreSelectedRow {
+  background-color: #f2f2f2;
+  border-top:1px solid #ffffff;
+  font-size: 13px;
+  height:30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.w-chMultiText {
+  border: 0;
+  padding: 1px;
+}
+
+.w-chNoSel {
+  color: #CCCCCC;
+}
+
+.w-chPic {
+  width: 22px;
+  height: 22px;
+}
+
+.w-chRemoveLink {
+  line-height: 32px;
+  float:right;
+  font-size: 10px;
+  color:#BCBCBC;
+  border: 0;
+  padding: 0 8px;
+  vertical-align: top;
+}
+
+.w-chRemoveLink:hover {
+  color:#666666;
+}
+
+.w-chSeparator {
+  border-top: 1px solid #DBDBDB;
+}
+.w-chSetDefaultLink {
+    padding:4px 29px 5px 8px;
+}
+/* Width of the chooser menu is defined here */
+.w-chSearchLink {
+  color: #00679e;
+  font-size: 13px;
+  padding: 4px 29px 5px 15px;
+}
+
+.w-chSearchLink:hover {
+  background: #f2f2f2;
+}
+
+.w-chSearchLink:active {
+  background: #f5f5f5;
+}
+
+.w-ch-srch-loop {
+  float: left;
+  font-size: 13px;
+  width:22px;
+  height: 22px;
+}
+.w-chText {
+  border: 0 !important;
+  padding: 2px;
+  margin-right: 0;
+}
+
+.w-chTW {
+  width: 129px;
+}
+
+.w-chValidSel {
+  background-color: transparent;
+}
+
+.w-chWrapper {
+  display: block;
+  margin: 0 !important;
+  min-height: 32px;
+}
+
+.w-chWrapLeft {
+  float: left;
+  height: 30px;
+  line-height: 28px;
+  border: 1px solid #acd4ed;
+  background-color: #FFFFFF;
+  border-right: none;
+  cursor: text;
+  display: inline-block;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: middle;
+}
+
+.w-chWrapper-invalid .w-chWrapLeft {
+     border: 1px solid #F14C4C;
+     border-right: none;
+}
+
+.w-chWrapper-border-focus .w-chWrapLeft {
+     border: 1px solid #199DE0 ;
+     border-right: none ;
+}
+
+.w-chWrapLeft  > .w-txt.w-txt-dsize, .w-chMultiWrap input {
+  padding-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.w-chMultiWrap input {
+  line-height: 15px;
+}
+
+/* Default Sizing for chooser */
+.w-chMenuPositionObj,
+.w-chMultiContainer {
+  width: 291px;
+}
+
+.w-ch-m-basic .w-chMenuPositionObj {
+  width: 263px;
+}
+/* must be wider as there is 1 action on the right Add More */
+/* Max width for action should be always 80px */
+.w-chMenuPositionObj.w-ch-m-extra-actions {
+  width: 370px;
+}
+
+.w-chMenuPositionObj.w-ch-m-cust-content:not(.w-ch-m-extra-actions) {
+  width: 395px;
+}
+
+.w-chMenuPositionObj.w-ch-m-extra-actions.w-ch-m-cust-content {
+  width: auto;
+   /*just place holder this must be calculated in JS as it can get pretty varies sizes */
+}
+
+/* default 260px but there is 8 px padding */
+.w-chWrapLeft  > .w-txt.w-txt-dsize {
+  width: 244px;
+}
+/* this is the left part of the multichooser panel that stays shown*/
+/*  244px - 14px close icon */
+/* width of input box should be = */
+/* w-chMultiWrap input = w-chMultiContainer - (input padding + chMultiRow padding + Remove icon padding + remove icon font size)
+/* = 291 - (9 + 16 + 16 + 10) */
+/* = 240 */
+.w-chMultiWrap input {
+  width: 240px;
+}
+
+.w-chWrapLeft-basic {
+  border-right: 1px solid #acd4ed;
+}
+/*
+ * The 2 following classes are applied by Chooser.js
+ */
+
+.w-chWrapHover {
+  background-color: #FAFAFA !important;
+}
+
+.w-chWrapClick {
+  background-color: #E7E7E7 !important;
+}
+
+.w-chWrapRight {
+  float: left;
+  height: 23px;
+  border: 1px solid #acd4ed;
+  background-color: #FFFFFF;
+  border-left: none;
+  padding: 4px 5px 3px 0;
+}
+
+.w-chWrapper-invalid .w-chWrapRight{
+  border: 1px solid #F14C4C;
+  border-left: none;
+}
+
+.w-chWrapper-border-focus .w-chWrapRight {
+     border: 1px solid #199DE0 ;
+     border-left: none ;
+}
+.w-chWrapDisabled {
+  background-color: #FAFAFA;
+}
+
+.w-chWrapExtra {
+  float: left;
+  line-height: 32px;
+  padding: 0 6px 0 5px;
+  white-space: nowrap;
+}
+/** End Chooser */
+
+/** Chooser Panel **/
+ .w-chpContainer {
+  height: 280px;
+  width: 598px;
+  padding: 24px 21px;
+}
+
+.w-chpLists {
+  height: 236px;
+  width: 598px;
+}
+
+.w-chpL-list {
+  width: 100%;
+  height: 236px;
+  width: 583px;
+}
+
+.w-chpL-selection {
+  width: 60%;
+  height: 236px;
+  vertical-align: top;
+  padding-right: 15px;
+}
+
+.w-chpL-selected {
+  width: 40%;
+  height: 236px;
+  vertical-align: top;
+}
+
+.w-chpSearch {
+  height: 50px;
+  width: 598px;
+}
+
+.w-chpS-TFContainer {
+  float: left;
+}
+
+.w-chpS-ButtonContainer {
+  float: left;
+  padding-left: 10px;
+}
+
+.w-chpInput {
+  border: 1px solid #DBDBDB !important;
+  color: #B2B2B2 !important;
+  padding: 0 0 0 14px;
+  border: 0px;
+  height: 36px !important;
+  width: 434px !important;
+}
+
+/** DataTable special classes for ChooserPanel **/
+
+.w-chpContainer .tableHeader h2 {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.w-chpContainer .w-chpL-selection .tableBody .tableRow1 {
+  border: 1px solid #DBDBDB;
+  font-size: 12px;
+  text-align: left;
+}
+
+.w-chpContainer .w-chpL-selected .tableBody .tableRow1 {
+  border: 1px solid #DBDBDB;
+  font-size: 12px;
+  text-align: left;
+}
+
+.w-chpContainer .w-chpL-list .tableBody .tableRow1 {
+  font-size: 12px;
+  text-align: left;
+}
+
+.w-chpContainer .tableBody .tableRow1 .w-tbl-cell {
+  padding: 10px;
+}
+
+/** End DataTable special classes for ChooserPanel **/
+/** End Chooser Panel **/
+
+/* CueTip classes */
+.w-pm-menu.w-ct-reg {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.w-ct-ctnr {
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  background-color: #ffffff;
+  margin-left:-25px;
+  margin-top:14px;
+  white-space: normal;
+  z-index: 101;
+}
+
+.w-ct-ptr {
+  margin-left:2px;
+  border-color: transparent transparent rgb(128,128,128) transparent;
+  /* for legacy browsers */
+  border-color: transparent transparent rgba(128,128,128,.5) transparent;
+  border-style: none solid solid solid;
+  border-width: 0 15px 15px 15px;
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: 102;
+}
+
+.w-ct-ptr-inner {
+  margin-left: -15px;
+  border-color: transparent transparent rgb(128,128,128) transparent;
+  /* for legacy browsers */
+  border-color: transparent transparent rgba(128,128,128,.5) transparent;
+  border-style: none solid solid solid;
+  border-width: 0 15px 15px 15px;
+  height: 2px;
+  width: 0;
+}
+.w-ct-ptr-inner.w-ct-spl {
+  border-bottom-color: #ffffff;
+}
+.w-ct-icon {
+  border-radius: 10px;
+  color: #636363;
+  display:inline;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  height: 13px;
+  width: 13px;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 5px 5px 5px 15px;
+  text-align: center;
+  line-height: 15px;
+}
+
+a:hover .w-ct-icon,
+a:focus .w-ct-icon {
+  color: #007cc0;
+}
+/* ahebert: to implement later */
+.w-ct-icon-active {
+  color: #007cc0;
+}
+
+.w-ct-txt {
+  box-shadow: 0 0 5px #363636;
+  position: relative;
+  text-align: left;
+  padding: 15px 20px;
+  width: 180px;
+  word-wrap: break-word;
+}
+
+.hov-arrow {
+  padding: 0 8px 2px 0;
+}
+
+.hov-arrow:hover {
+  background: url(cssarrow.gif) no-repeat 100% 2px;
+}
+
+.hov-arrow-left {
+  padding: 0 0 2px 8px;
+}
+
+.hov-arrow-left:hover {
+  background: url(cssarrow.gif) no-repeat 0 2px;
+  padding: 0 0 2px 8px;
+}
+
+/* timeline widget */
+.w-timeline {
+  width: 546px;
+}
+
+.w-timeline-action {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 8px;
+}
+
+.w-timeline-btn .w-btn {
+  min-width: 100px;
+}
+
+.w-timeline-content {
+  border-left: 3px solid #333;
+  padding-left: 20px;
+}
+.w-timeline-due .w-timeline-content {
+  border-color: #FAC33C;
+}
+.w-timeline-future .w-timeline-content {
+  border-color: #B5D82B;
+}
+.w-timeline-overdue .w-timeline-content {
+  border-color: #ED661D;
+}
+
+.w-timeline-contentWrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 290px;
+}
+
+.w-timeline-hd {
+  float: left;
+  width: 116px;
+}
+
+.w-timeline-last {
+  padding-bottom: 8px;
+}
+
+.w-timeline-lbl {
+  float: left;
+  font-size: 14px;
+  line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.w-timeline-num {
+  color: #fff;
+  float: left;
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 10px;
+  text-align: center;
+  width: 32px;
+}
+
+.w-timeline-due .w-timeline-num {
+  background-color: #FAC33C;
+}
+.w-timeline-future .w-timeline-num {
+  background-color: #B5D82B;
+}
+.w-timeline-overdue .w-timeline-num {
+  background-color: #ED661D;
+}
+
+.w-timeline-row {
+  border-top: 1px solid #CBCBCB;
+  clear: right;
+  float: right;
+  position: relative;
+  width: 424px;
+}
+.w-timeline-first {
+  border-top: 0;
+}
+
+.w-timeline-section {
+  border-top: 1px solid #333;
+  clear: both;
+}
+.w-timeline-due {
+  border-color: #FAC33C;
+}
+.w-timeline-future {
+  border-color: #B5D82B;
+}
+.w-timeline-overdue {
+  border-color: #ED661D;
+}
+
+.w-timeline-sub {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.w-timeline-ttl {
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 8px;
+}
+
+.w-timeline-val {
+  font-size: 14px;
+  line-height: 20px;
+}
+/* end timeline */
+
+/* PageErrorPanel */
+.w-page-error-panel {
+  background: #F2DEDE;
+  padding: 10px;
+  position: fixed;
+  left: 17%;
+  top: 0px;
+  width: 65%;
+  z-index: 1202;
+  border: 1px solid #EBCCD1;
+  -webkit-box-shadow: 0px 3px 5px -3px #696969;
+  -moz-box-shadow: 0px 3px 5px -3px #696969;
+  box-shadow: 0px 3px 5px -3px #696969;
+  font-size: 13px;
+
+}
+
+.w-page-error-icon {
+  vertical-align: top;
+  padding: 10px;
+}
+
+.w-page-error-icon span {
+  font-size: 20px;
+  color: #CC0000
+}
+
+
+.w-page-error-panel img {
+  background-color: rgb(207,16,26);
+}
+.w-page-error-panel-row {
+  padding-top:2px;
+  padding-right:2px;
+}
+
+.w-page-error-panel-row span {
+  font-size:  13px;
+  color:#CC0000
+}
+
+.w-page-error-panel-row .w-page-err-closeopen-icon {
+  color: #696969;
+}
+
+/* haven't converted .modalWindow yet, so leave this in place */
+.modalWindow .w-page-error-panel {
+  left: 5%;
+  width: 90%;
+}
+
+.w-page-error-panel .msgText {
+  font-weight: 700;
+  color: #CC0000;
+  padding: 6px 6px 0px 6px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* This is special case when there is just one single message and all is hidden*/
+.w-page-error-panel-sngl-msg .msgText {
+  padding-top: 10px;
+}
+
+
+.w-page-error-panel .hintText {
+  font-weight: normal;
+  color: #3B3A3A;
+}
+
+.w-page-error-panel .minimizedText {
+  color: rgb(207,16,26);
+  padding: 2px 2px 2px 2px;
+  vertical-align: top;
+  font-style: italic;
+}
+
+.w-page-error-panel .msgTextSingleError {
+  color:rgb(207,16,26);
+  padding: 8px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.w-page-error-panel .errorNav {
+  color: #00679E;
+  padding: 6px 6px 2px 6px;
+  vertical-align: bottom;
+  text-align: right;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.w-page-err-closeopen-icon {
+  color: #696969;
+}
+
+.w-page-error-slide-msg {
+  font-weight: normal;
+  text-align: left;
+}
+
+
+.errBg {
+  background-color: #F2DFDF;
+}
+
+/* AW6 messageError class */
+.w-message-error[data-icon]:before{
+    padding-right:3px;
+}
+
+.w-message-error[data-icon]{
+   color:#DB524B;
+   padding-left:3px;
+}
+
+/* Approval Graph */
+.w-apv-dropdown-icon {
+  font-size: 10px;
+  padding: 0 5px;
+  width: 12px;
+}
+
+
+.w-apv-checkbox-icon {
+  cursor:pointer;
+  color: #00679E;
+  font-size: 15px;
+  padding: 0 4px;
+  width: 14px;
+}
+.w-apv-checkbox-icon:hover {
+  cursor:pointer;
+  color: #2BA4F2;
+}
+
+.w-apv-delete-icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 4px;
+  right: 5px;
+}
+
+.w-apvOptional-cell,
+.w-apvApproved-cell,
+.w-apvDenied-cell,
+.w-apvActive-cell,
+.w-apvPending-cell {
+  background-color: #FFFFFF;
+  font-size: 12px;
+  border:1px solid #333366;
+  padding: 0;
+  margin: 0;
+}
+
+.w-apvActive-cell {
+  border: 1px solid #2BA4F2;
+}
+
+.w-apvPending-cell {
+  border: 1px solid #E1E1E1;
+}
+
+.w-apvOptional-cell {
+  border: 1px solid #FEC130;
+}
+
+.w-apvApproved-cell {
+  border: 1px solid #99C717;
+}
+
+.w-apvDenied-cell {
+  border: 1px solid #FF271F;
+}
+
+.w-approval-state {
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 4px 25px;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.w-apv-content-tab {
+  table-layout: fixed;
+}
+
+.w-apv-content {
+  padding:0px;
+  margin:0px;
+  width:100%;
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+
+
+/* Mozilla Firefox fix. In Firefox, it handle subpixel different.
+   See. http://ejohn.org/blog/sub-pixel-problems-in-css/
+   http://stackoverflow.com/questions/21721951/firefox-css-moz-transform-scale-down-a-div-the-border-information-is-lost
+   1 pixel border can be round down to 0 when scaled.
+   So we'll add a outline of 1 pixel so that if firefox round down the original border, the outline will still show.
+*/
+.IsMoz .w-element-scaled .w-apvActive-cell {
+  outline: 1px solid #2BA4F2;
+}
+
+.IsMoz .w-element-scaled .w-apvPending-cell {
+  outline: 1px solid #E1E1E1;
+}
+
+.IsMoz .w-element-scaled .w-apvOptional-cell {
+  outline: 1px solid #FEC130;
+}
+
+.IsMoz .w-element-scaled .w-apvApproved-cell {
+  outline: 1px solid #99C717;
+}
+
+.IsMoz .w-element-scaled .w-apvDenied-cell {
+  outline: 1px solid #FF271F;
+}
+
+.w-approval-list {
+  padding: 0;
+  margin: 0;
+}
+
+.w-approval-list .w-approval-list-item:first-child {
+  padding: 0;
+}
+
+.w-approval-list-item {
+  list-style-type: none;
+  padding: 5px 0 0 0;
+}
+
+.w-apvOptional-cell .w-approval-state {
+  background-color: #FEC130;
+}
+
+.w-apvApproved-cell .w-approval-state {
+  background-color: #99C717;
+}
+
+.w-apvDenied-cell .w-approval-state {
+  background-color: #FF271F;
+}
+
+.w-apvActive-cell .w-approval-state {
+  background-color: #2BA4F2;
+}
+
+.w-apvPending-cell  .w-approval-state {
+  background-color: #E1E1E1;
+  color: #767676;
+}
+
+.w-approval-approver {
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.w-approval-startend .rssActiveTitle {
+  display: table-cell;
+  background-color: #fcf8e2;
+  padding: 15px 20px;
+}
+
+.apvOptional img,
+.apvApproved img,
+.apvDenied img,
+.apvActive img,
+.apvPending img{
+  display: none;
+}
+
+.w-approval-dlg {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border: none;
+  min-width: 980px;
+  overflow: scroll;
+}
+
+.IsIE7 .w-approval-dlg {
+  /** IE Bug. Scrolling element needs to set position to relative if it contains
+      child element with position relative.
+      http://www.webdeveloper.com/forum/showthread.php?114891-IE-bug-with-overflow-scroll-and-position-relative*/
+  /*position: relative;*/
+}
+
+/* Page Title */
+.pageHead, .w-page-head {
+  color:#363636;
+  font-size: 20px;
+}
+
+/* Form Table with Form Rows */
+.w-formTable-region {
+  margin-left: 20px;
+
+}
+
+.w-formRow {
+  line-height: 22px;
+  padding: 10px 0;
+
+}
+
+.rowLabel {
+  color: #959595;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+.rowData {
+  color: #000000;
+  font-size: 14px;
+}
+
+/* Temporary till we reskin error indicator */
+.required {
+  vertical-align: middle;
+  line-height: 24px;
+  font-size: 24px;
+  padding-left: 3px;
+}
+
+/* scaling widgets */
+.w-element-scaled {
+  position: relative;
+  clear: both;
+}
+
+.w-element-scaled .w-approval-state {
+  position: static;
+}
+
+/* hide the action icons when elements has been reduced. */
+.w-element-scaled .w-apv-dropdown-icon,
+.w-element-scaled .w-apv-delete-icon {
+  opacity: 0;
+}
+
+/* resizable component */
+div.w-resize-close-button {
+  position: absolute;
+  right: 0px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+div.w-resize-close-button a {
+  color: #959595;
+  text-decoration: none;
+}
+
+.IsIE7 .w-resize-close-button {
+  /*right: 10px;*/
+  /*z-index: 10;*/
+}
+
+.w-resize-full-view-action {
+  float: right;
+  padding-top: 20px;
+  display: none;
+}
+
+.w-resize-full-view-action a,
+.w-resize-full-view-action a:link,
+.w-resize-full-view-action a:visited {
+  color: #2BA4F2;
+  text-decoration: none;
+}
+
+/* AWBody - Progress bar - wait */
+#awwaitAlertDiv {
+}
+
+.IsIPad #awwaitAlertDiv {
+  border:0px;
+  padding:30px 40px;
+  background-color:rgba(0,0,0,.77);
+  border-radius:10px;
+}
+
+.IsIPad #awwaitMessage {
+  color:white;
+  padding:0px 0px 0px 0px;
+  font-size:16px;
+  font-weight:bold;
+}
+.w-body-wait {
+  background-color: #ffffff;
+  background-image: url(anxBusyIndicator.gif);
+  -moz-box-shadow: 0 0 5px #969696;
+  -webkit-box-shadow: 0 0 5px #969696;
+  box-shadow: 0 0 5px #969696;
+  padding:5px;
+  height:120px;
+  margin: auto 0;
+  width:460px;
+  z-index:2000;
+}
+.w-body-wait-msg {
+  padding-top:90px;
+  border: 1px solid transparent;
+}
+
+/* StepNavigator */
+.w-stepnav-buttons-top {
+  padding:6px 3px 2px 3px;
+}
+.w-stepnav-buttons-bottom {
+  padding:2px 3px 6px 3px;
+}
+
+.w-stepnavbar-buttons {
+  background:transparent;
+  padding-left: 15px;
+}
+.w-stepnavbar .w-stepnavbar-buttons button {
+  margin-left: 0;
+}
+/** navigator bar.  This is the top bar, and the bottom bar in a wizard page.
+    Bar contains title and buttons. **/
+.w-stepnavbar {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  position: relative; /* so no child will go outside */
+}
+.w-stepnavbar button {
+  margin-left: 15px;
+}
+
+.w-stepnavbar-top-bar {
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #111;
+    line-height: 35px;
+  border-bottom: 1px solid #D7D7D7;
+    white-space: normal;
+}
+
+.w-wizard-layout-container .w-stepnavbar-top-bar {
+  border-bottom: none;
+}
+
+.w-stepnavbar-bottom-bar {
+  border-top: 1px solid #D7D7D7;
+  height: 60px;
+  line-height: 60px;
+}
+
+.w-wizard-layout-container .w-stepnavbar-bottom-bar {
+  border-top: none;
+  margin-top: 0;
+}
+
+.w-stepnavbar-button-group-top {
+  width:1%;
+  vertical-align: top;
+}
+
+.w-stepnavbar-button-group-bottom {
+  width:99%;
+}
+
+.w-stepnavbar-title-area {
+  white-space: normal;
+}
+
+.w-stepnavbar-header {
+  height: 75px;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* ARWPageTemplate */
+.w-arw-page-template {
+  border-bottom: 1px solid #d7d7d7;
+  line-height:60px;
+  height:60px;
+}
+
+/* ARWFieldMatchFieldBrowser */
+.w-arw-field-browser-pad {
+  padding:10px 15px 5px 0;
+}
+
+/* ARCMultiObjectChooser styles */
+.w-arcmoc-divider {
+  padding:0 5px;
+}
+.w-arcmoc-header {
+  border-bottom: 1px solid #d7d7d7;
+  height: 60px;
+  line-height: 60px;
+}
+.w-arcmoc-buttons {
+  text-align: right;
+  width: auto;
+}
+.w-arcmoc-buttons button {
+  margin-left:15px;
+}
+/* end ARCMultiObjectChooser styles */
+
+/* ARCChooserSearch styles */
+.w-arccs-row1 {
+  padding:0px;
+}
+
+.w-arccs-row2 {
+  padding-right:0px;
+}
+.w-arccs-row2 input {
+  margin-left: 15px;
+}
+.w-arccs-table {
+  width: 1% !important;
+}
+
+.w-arccs-table td {
+  vertical-align: middle;
+}
+.w-arccs-btn button {
+  margin-left: 15px;
+}
+/* end ARCChooserSearch */
+
+/* ARVQuickMultiVectorField classes */
+.w-arvqmvf {
+  padding-right:2px;
+  background:#dddddd;
+}
+/* end ARVQuickMultiVectorField */
+
+/* ARCEditSplitAccounting */
+
+/*
+  Todo / derichard / 02-apr-2014
+  After updating grid layout for nested components, styles targeted to edit the col width
+  below can be considered for removal.
+ */
+.w-split-acct-item-desc {
+  color: #464646;
+}
+.w-acct-split .w-tbl-hd {
+  height: 24px;
+}
+.w-acct-split .col-12 {
+  width: 310px;
+  margin: 0px;
+  padding: 0px;
+}
+.w-acct-split .w-box-grid-l {
+  width: 60%;
+}
+.w-acct-split .w-box-grid-r {
+  width: 30%;
+  margin-right: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.w-acct-split .w-gf-region {
+  max-width: 320px;
+}
+.w-acct-split .accentBox td.fflS,
+.w-acct-split .accentBox td.ffpS {
+    padding-right:0px;
+}
+
+.w-split-frame-btn-top {
+}
+.w-split-frame-btn-bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.w-split-frame-btn-top .w-btn, .w-split-frame-btn-bottom .w-btn {
+  margin-left: 10px;
+}
+.w-split-frame-btn-area {
+  padding: 10px 0px;
+}
+/* ARCEditSplitAccounting Ends */
+
+/* StepByStepTOC classes */
+.w-stepbysteptoc {
+  margin:5px 10px 10px;
+  top: 10px;
+  white-space: nowrap;
+}
+.w-stepbysteptoc-selected {
+  background: white;
+}
+.w-stepbysteptoc .w-stepbysteptoc-title {
+  font-size: 12px;
+  color: #363636;
+  display: inline-block;
+  padding: 0 25px 0 10px;
+}
+
+.w-stepbysteptoc .w-stepbysteptoc-wizlink {
+  font-size: 12px;
+  color: #363636;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  padding: 0 25px 0 10px;
+}
+
+.w-stepbysteptoc-step-number {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #0087ca;
+  text-align: center;
+  font-size: 15px;
+  line-height: 28px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.wizStepCurrent .w-stepbysteptoc-step-number {
+  border-color: #AAAAAA;
+}
+
+.w-stepbysteptoc-non-number-step {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border: 5px solid #0087ca;
+}
+
+.w-stepbysteptoc-step-link {
+  margin-left: 15px;
+}
+/* StepByStepTOC Ends */
+
+/* Substep classes */
+.wizSubstep {
+  /* background-color:#FFFFFF; */
+  padding:1px 3px 1px 3px;
+  margin:1px;
+}
+
+.wizSubstepCurrent {
+  background-color:#FFEAAA;
+  padding:1px 3px 1px 3px;
+  border:1px solid #9999CC;
+  text-decoration:none;
+}
+/* end Substep classes */
+
+/* ARWSummaryGroup */
+.w-arw-summarygroup {
+  margin-top:15px;
+}
+.w-arw-summarygroup .accentBox div.w-gf-col {
+  position: relative;
+  top: -50px;
+  left: -55px;
+}
+.w-arw-summarygroup .accentBox label.w-gf-lbl {
+  position: relative;
+  top: 25px;
+  left: -20px;
+}
+.w-arw-summarygroup-tbl {
+  background-color:#F5F5F5;
+  padding:5px 15px 15px 15px;
+}
+.w-arw-summarygroup-tbl td {
+  text-align: right;
+}
+.w-arw-summarygroup-extra {
+  padding-top:15px;
+}
+.w-arw-summarygroup td.fflS,
+.w-arw-summarygroup td.ffpS {
+  padding-right:80px;
+}
+/* begin AWPasswordField */
+.pfc {
+  position:relative;
+  border : 1px solid transparent;
+}
+.field-border
+{
+border : 1px solid transparent;
+}
+
+label.ph {
+  display:none;
+}
+
+.pfc label.ph {
+  display:block;
+  position:absolute;
+  top:3px;
+  left:7px;
+}
+
+.w-psw {
+    padding: 2px;
+}
+
+.w-psw-width {
+    width:170px;
+}
+
+.w-psw-invalid {
+  background-color: transparent;
+  border: 1px solid #F14C4C;
+}
+
+
+.w-psw-capslock {
+  position:absolute;
+  display:none;
+  background:#FFEAAA !important;
+}
+
+.w-psw-capslock-bg {
+  position: absolute;
+  max-width: 155px;
+  min-height: 40px;
+  padding: 0px;
+  margin: 5px 0 0 5px;
+  background-color: rgba(255, 255, 255, 0.70);;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  display: none;
+}
+
+.w-psw-capslock-bg:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 14px 10px 0;
+  border-color: transparent rgba(255, 255, 255, 0.70);;
+  display: block;
+  width: 0;
+  /*z-index: 1;*/
+  margin-top: -10px;
+  left: -14px;
+  top: 21px;
+}
+
+.w-psw-capslock-text {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0 10px 7px;
+}
+
+
+/* end AWPasswordField */
+
+/* begin AWTextArea */
+.w-textarea-mli-table {
+  width: 1% !important;
+}
+
+.w-textarea-mli-l {
+  text-align:right;
+  font-weight:bold;
+}
+
+.w-textarea-mli-r {
+  float:right;
+}
+/* end AWTextArea */
+
+/** Dashboard **/
+.btnDashWrap {
+    display:block;
+    margin:0px 2px;
+    cursor:pointer;
+}
+
+.noContent {
+    text-align:center;
+    padding-top:250px;
+    font-style:italic;
+}
+
+/* drag container */
+.dc {
+  display:inline;
+}
+
+/* Drag and Drop feature */
+/* for horizontal drop field */
+.hzDropField {
+    border-left-width:0px;
+    padding:0px 2px 0px 4px;
+}
+
+.hzDropFieldSelected {
+    border-left:3px solid blue;
+    padding:0px 2px 0px 1px;
+}
+
+/* for horizontal drop area */
+.hzDropArea{
+    padding:0px 3px 0px 0px;
+}
+
+.hzDropAreaSelected {
+    padding:0px 3px 0px 0px;
+}
+
+.hzDropArea div.dropIndicator {
+    font-size: 8pt;
+    padding:0px 3px 0px 0px;
+}
+
+.hzDropAreaSelected div.dropIndicator {
+    font-size: 8pt;
+    padding:0px;
+    border-left:2px dotted #199DE0;
+}
+
+.onDrag .hzDropArea div.dropIndicator {
+    height: 32px;
+    width: 2px;
+}
+
+/* for vertical drop field */
+.vtDropField {
+    padding-bottom:15px;
+}
+
+.vtTopDropField {
+    padding:10px 0px;
+}
+
+.onDrag .vtDropFieldSelected {
+    border-top:2px dotted #0000FF;
+    padding:7px 0px 10px 0px;
+}
+
+/* for vertical drop area */
+
+/*
+Explanatory notes:
+
+DropZone => Zones of page layout. ToC is left nav area. SingleCol and TwoCol are two modes
+in right area.
+
+DropIndicator => Dotted box that highlights. dropIndicatorSD simply means that area is
+fully empty now instead of containing one or more items already.
+
+DropArea => Marker for droppable areas. Lights up when onDrag is initiated.
+
+DropAreaSelected => During onDrag shows that current area is the selected area over which
+user is hovering.
+*/
+.vtDropArea {
+}
+
+div.dropIndicator, div.dropIndicatorSD {
+    line-height:1px;
+}
+
+td.dbTOC {
+    width:1%;
+    vertical-align:top;
+}
+
+td.emptyDbTOC {
+    padding:0px;
+}
+
+div.emptyDbTOC {
+    display:none;
+}
+
+div.dbTOC {
+    padding:0px 15px 0px 0px;
+}
+
+.onDrag .bottomDbLayout .dropIndicator,
+.onDrag .dbTOC .dropIndicator {
+    height:40px;
+}
+
+.dropZoneSpacer {
+    height:5px;
+    display:none;
+}
+
+.tocDropZone {
+    width:1px;
+    font-size:0px;
+}
+
+.singleColDropZone {
+    height:0px;
+    font-size:0px;
+    padding:0px;
+    border:none;
+    line-height:0px;
+}
+
+.twoColDropZone {
+    width:50%;
+}
+
+.tocDropZone,
+.singleColDropZone,
+.twoColDropZone,
+.vtDropArea div.dropIndicator,
+.vtDropArea div.dropIndicatorSD {
+    text-align:center;
+    font-style:italic;
+    visibility:hidden;
+}
+
+.onDrag div.emptyDbTOC {
+    display:block;
+}
+
+.onDrag .dropZoneSpacer {
+    display:block;
+}
+
+.onDrag .tocDropZone {
+    padding:10px 10px 10px 10px;
+    height:500px;
+}
+
+.onDrag .singleColDropZone {
+    height:40px;
+}
+
+.onDrag .twoColDropZone {
+    height:40px;
+}
+
+.onDrag .vtDropArea div.dropIndicator,
+.onDrag .vtDropArea div.dropIndicatorSD {
+    display: block!important;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.onDrag .tocDropZone,
+.onDrag .singleColDropZone,
+.onDrag .twoColDropZone,
+.onDrag .vtDropArea div.dropIndicator,
+.onDrag .vtDropArea div.dropIndicatorSD {
+    visibility:visible;
+    font-size:11px;
+    border:2px dotted #199DE0;
+    color: #000000;
+}
+
+.onDrag .vtDropAreaSelected div.dropIndicator,
+.onDrag .vtDropAreaSelected div.dropIndicatorSD {
+    border:2px dotted #0000FF;
+    padding:0px;
+}
+
+.onDrag .portletDropZoneSelected {
+    border: 2px dotted #199DE0;
+}
+/* end Drag and Drop feature */
+
+/** Header **/
+.w-header-home-link,
+.w-header-preferences-link,
+.w-header-delegationinfo-link,
+.w-header-help-link,
+.w-header-username-link,
+.w-header-logout-link,
+.w-header-login-link,
+.w-header-notification-link,
+.w-header-search-link,
+.w-header-collabmsgnotification-link,
+.w-header-print-link,
+.w-header-alert-link,
+.w-header-customize-link,
+.w-header-realmlabel,
+.w-header-chatbox-link{
+  padding: 0 15px;
+}
+
+.w-header-site-link {
+  padding: 0 0 0 15px;
+}
+/** end Header **/
+
+/** RoundedBox forced to render flat square box in AW6 **/
+.w-square-box {
+  border: 1px solid #BDBDBD;
+  padding: 0;
+  margin: 0;
+}
+
+.w-square-cornered-layout {
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+  margin: 0;
+  min-height: 60px;
+}
+
+/** y.h Temp fix for the dashboard portlet.
+    The previous implementation of RoundedBox is broken. It harded .w-square-box and prevented
+    other styles and binding from passed in. Will have to look at later.**/
+
+/* Add some maximal height + make sure it can scroll when content is big*/
+.portletBox  .news{
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+
+.actionPortletBox,
+.portletBox,
+.quickTour,
+.w-notification-box {
+  margin: 0;
+  box-shadow:0px 0px 2px 0px #969696;
+  background-color: #fff;
+  border : 1px solid transparent;
+}
+
+.portletBox .w-tbl-footer {
+    background-color: #fff;
+}
+
+/* Portlet size adjustment classes */
+div.w-portlet-wrapper {
+}
+div.w-portlet-content {
+    overflow-x: scroll;
+    display: none;
+}
+
+/** padding in sync with vtDropField **/
+.quickTourPortletBoxExt {
+  margin-bottom:15px;
+  padding-bottom:0;
+}
+
+/* quicktour: seperator between rows */
+
+.quickTour table {
+  border-collapse: collapse;
+}
+.quickTour tr {
+  border: solid;
+  border-width: 1px 0 0;
+  border-color: #d7d7d7;
+}
+.quickTour tr:first-child {
+  border-top: none;
+}
+
+/** End Temp fix  **/
+
+/** AWApiPage **/
+.w-api-page-component {
+  font-weight:bold;
+}
+.w-api-page-sub {
+  font-style:italic;
+}
+.w-api-page-sub-spl {
+  font-style:italic;
+  color:#AAAAAA;
+}
+.w-api-page-spacer {
+  margin-right:100px;
+  margin-left:100px;
+}
+/** end AWApiPage **/
+
+/* Code Input */
+.w-codeInput {
+  width:30px !important;
+  font-size:25px;
+  text-align:center;
+}
+
+/** AWComponentInspector
+ * It's ok to set different font-family to AWComponentInspector classes
+ **/
+.w-cpt-inspector-ct {
+  width:300px;
+}
+.w-cpt-inspector-src {
+  padding-right:5px;
+}
+.w-cpt-inspector-content {
+  padding:0 5px 0 20px;
+}
+.w-cpt-inspector-row {
+  font:normal 9px Arial, Verdana, Helvetica, sans-serif;
+  color:#666666;
+  text-align:right;
+}
+.w-cpt-inspector-1 {
+  font:9px Arial, Verdana, Helvetica, sans-serif;
+}
+.w-cpt-inspector-2 {
+  padding:1px;
+  line-height:9px;
+  margin-right:4px;
+}
+.w-cpt-inspector-3 {
+  padding:1px;
+  line-height:9px;
+  margin:2px 4px 0 0;
+}
+/** end AWComponentInspector **/
+
+/** AWTDragList **/
+.w-drag-list-img {
+  height:2px;
+  width:12px;
+}
+/** end AWTDragList **/
+
+/** AWTRowAttributeExpandoColumnRenderer **/
+.w-row-clm-rdr {
+  padding-right:11px;
+}
+
+/** FormBlock **/
+.w-form-block-top {
+  padding-top:5px;
+  padding-left:20px;
+}
+.w-form-block-bottom {
+  padding-top:5px;
+}
+
+/** AribaContactBoxLink **/
+.w-a-contact-box {
+  text-decoration:none;
+}
+
+/** AribaLoginForm **/
+.w-login-prod {
+  color:#bcbcbc;
+  padding:10px 10px 10px 0;
+  font-weight:bold;
+  text-align:left;
+}
+
+/** MessageBanner **/
+.w-msg-banner-ct {
+  margin: 15px 0;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:10;
+}
+.w-msg-banner-md-ct {
+  box-shadow: 0 0 2px 0 #f0ad4e;
+  margin: 0 auto;
+  text-align: center;
+  width:70%;
+}
+.w-msg-banner-close {
+  color:#bcbcbc;
+  vertical-align: top;
+}
+.w-msg-banner-close:hover {
+  color:#636363;
+}
+
+/** SearchPageWrapper **/
+.w-srch-pw-row {
+  padding-left:5px;
+}
+.w-srch-pw-title {
+  color: #363636;
+  font-size:20px;
+}
+.w-srch-pw-spacer {
+  width:160px;
+}
+.w-srch-pw-container {
+  padding:0 0 5px 0;
+}
+
+/** BasicFrameWrapper **/
+.w-basic-fw {
+  padding:8px;
+}
+
+/** ModalWindowWrapper **/
+.w-modal-ww-container {
+  padding:3px;
+}
+.w-modal-ww-row {
+  padding-right:4px;
+}
+
+/** FourZoneLayout **/
+.w-fzl {
+  line-height:1px;
+  height:1px;
+  zoom:1;
+}
+
+/** ComboButton **/
+.w-combo-btn {
+  position:relative;
+  top:10px;
+  left:2px;
+  height:16px;
+}
+
+/** PopupControl **/
+.w-popup-ctrl {
+  width:60px;
+}
+
+/** wizard **/
+.w-wizard-toc-header {
+  vertical-align: middle;
+  color: #363636;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 15px 0 15px 10px;
+  line-height: 35px;
+}
+
+.w-wizard-layout-container {
+  width: 100%;
+}
+
+.w-wizard-layout-top-left {
+  padding-right: 10px;
+    vertical-align: top;
+}
+
+.w-wizard-layout-top-right {
+    vertical-align: top;
+}
+
+.w-wizard-layout-bottom-left {
+  padding: 60px 0 15px;
+  border-right: solid 1px #D7D7D7;
+}
+
+.w-wizard-layout-bottom-left .wizBox {
+  position: relative;
+}
+
+.w-wizard-layout-bottom-left + .w-wizard-layout-bottom-right {
+  padding: 15px 0 15px 15px;
+}
+
+.w-wizard-layout-bottom-right {
+  padding: 0;
+}
+
+.w-wizard-layout-border {
+  border-bottom: solid 1px #D7D7D7;
+}
+
+/* Wizard Step */
+.wizStepCurrent, .wizStep {
+  padding: 13px 0 13px 15px;
+  position: relative;
+  left: 1px;
+}
+
+.wizStepCurrent {
+  border: 1px solid #D7D7D7;
+  border-right: 1px solid #FFFFFF;
+  border-left: 3px solid #199DE0;
+}
+
+.wizStep {
+  /* Keep the border spacing. */
+  border: 1px solid #FFFFFF;
+  border-left: 3px solid #FFFFFF;
+  left: 0;
+  padding-left: 16px;
+}
+/* End Wizard Step */
+
+/* Wizards commonly use SectionBox and Datatable to render fields in groups. Applying std
+vertical separation between sections and tables as this is the common case. */
+.wizBody .w-sec-box .w-ob-wrap,
+.wizBody .scrollTableWrapper {
+  margin-bottom: 45px;
+}
+
+/* Reset top padding if first child of wizard is a HintMessage */
+.w-corner-layout-bottom-right .w-hint:nth-child(2),
+.wizBody .w-hint:nth-child(2) {
+  padding-top: 0;
+}
+/* End of Wizard */
+
+/* WizardButtonsBarBottom */
+.w-wizard-bbb {
+  padding:4px 0;
+}
+
+/* WizardButtonsBarTop */
+.w-wizard-bbt {
+  padding:6px 0 0 0;
+}
+
+/** OutlineBox **/
+.w-ob-hdr {
+    padding: 0;
+    border-bottom: 1px solid #D7D7D7;
+    background-color: #ffffff;
+}
+
+/* Allow targeting of buttons of the OutlineBox header */
+.w-ob-hdr .w-btn {
+  height: 32px;
+  line-height: 32px;
+}
+
+.w-ob-tbl {
+    border: 1px solid #D7D7D7;
+}
+.w-ob-wrap {
+    overflow:visible;
+}
+.w-ob-title, .w-ob-title a {
+    font-size: 18px;
+    color: #363636;
+    line-height: 44px;
+}
+.w-ob-title-hint {
+    padding: 5px 0 10px 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #363636;
+}
+.w-ob-expanded {
+    background-color: #fff;
+    padding: 10px;
+    padding-bottom:0px;
+}
+.w-ob-expanded td.ffp {
+  line-height: 32px;
+}
+.w-ob-collapsed {
+    padding:10px;
+    background:#FFFFFF;
+}
+.w-ob-expando-control {
+    padding-right: 10px;
+    width: 1%;
+}
+
+/* OutlineControl */
+.w-oc-icon-off,
+.w-oc-icon-on {
+  font-size: 10px;
+  padding:0 5px;
+}
+.w-oc-table {
+  width:auto;
+}
+
+.w-oc-number {
+  padding-right: 5px;
+}
+
+/* Fixing misalignment of icons in Select Folder widget */
+.w-oc-table > tbody > tr > td:first-child{
+    width:15px;
+}
+
+/** SectionBox : Overrides default OutlineBox to remove border etc. in wizard forms. **/
+.w-sec-box .w-ob-hdr {
+
+    /* TODO: Revisit if DropDown is changed. May need up to 3px right padding correction.
+    Today, dropdown already creates whitespace on right. */
+    padding: 0;
+    height: 44px;
+}
+.w-sec-box .w-ob-tbl {
+    border: 0;
+    padding: 0;
+}
+/* Cancel the previous rule in wizard */
+.wizBody .w-sec-box + .w-sec-box .w-ob-wrap {
+  padding-top: 0;
+}
+
+/** Font Icons **/
+@font-face {
+    font-family: 'SAP-icons';
+    src: url('SAP-icons.ttf'),
+    url('SAP-icons.eot'); /* IE9+ */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Ariba_icon_library';
+  src: url('Ariba_icon_library.eot'), /* IE9+ */
+       url('Ariba_icon_library.otf'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: 'SAP-icons','Ariba_icon_library';
+    content: attr(data-icon);
+    speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'SAP-icons';
+    font-style: normal;
+    speak: none;
+}
+
+.w-font-icon-size-portlet {
+    font-size: 10px;
+    padding-bottom: 0.1em;
+    text-shadow: 0 1px 0 #ffffff;
+    display:inline-block;
+    color: #bcbcbc;
+}
+.w-font-icon-size-portlet:hover,
+a:focus .w-font-icon-size-portlet {
+  color:#636363;
+}
+
+.w-font-icon-size-dashboard {
+    font-size: 16px;
+    padding-bottom: 0.1em;
+    text-shadow: 0 1px 0 #ffffff;
+    padding-left: 20px;
+    padding-right: 0px;
+    display:inline-block;
+}
+
+a:focus .w-font-icon-size-dashboard {
+text-decoration: underline  ;
+text-decoration-color: #D7D7D7  ;
+
+}
+/* PortletTitleBar */
+.w-font-icon-error {
+  font-size:13px;
+  color: red;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.w-font-icon-size-pivtbl {
+  font-size: 8px;
+  display: inline-block;
+  color: #00679E;
+  padding: 1px 5px 0 5px;
+  border: 1px solid #acd4ed;
+  margin-right: 1px;
+}
+
+/* FormTable, FormRow, ARWColumnGroupView, ARWGroupField - Begins ===================== */
+/* Keep these classes grouped in this section for better maintenance. */
+/*
+Form-fields (ff) are rendered in 3 cells in a row : ffl, ffi, ffp.
+ffl = form field label
+ffi = form field indicator (error indicator)
+ffp = form field input html (don't know why it's called p)
+
+fflS, ffiS, ffpS = 'S' stands for spacing cells. These are in the 1st row and control the
+column width for all form fields in rows below.
+
+ftL = form table Left. Also used for top and bottom zones.
+ftR = form table Right
+
+cueT = wrapper table frequently used around grouped fields.
+mls = nested form table used to lay out many fields that correspond to one user input
+*/
+td.fflS {
+  padding-right:180px;
+}
+td.ffiS {
+  padding-right:10px;
+}
+td.ffpS {
+  padding-right:175px;
+}
+td.ftAs {
+  padding-left:30px;
+}
+td.ffl, td.ffp, td.ffi {
+  vertical-align: top;
+  font-size: 13px;
+}
+
+.u-label-nowrap label {
+  white-space: nowrap;
+}
+
+.label {
+  color: #797979;
+}
+
+/* Add utility class to apply same color as regular form label to custom labels */
+.u-ffl {
+  color: #797979;
+  text-align: right;
+}
+
+td.ffl {
+  color: #767676;
+  text-align: right;
+  padding-top:8px;
+}
+
+/* remove this aw5 class will cause text wrap in column
+    add this aw5 class for backward support */
+.ftLOT td.ffl {
+  text-align:left;
+  height:auto;
+  white-space:nowrap;
+}
+
+td.ffi, td.ffi-noedit {
+  width: 15px;
+  min-width: 15px;
+  padding: 0px;
+  vertical-align: super;
+}
+td.ffp,
+table.ftL td.ffp,
+table.ftR td.ffp {
+  padding-bottom: 7px;
+  height: 32px;
+  line-height: 32px;
+  top: 0px;
+}
+td.ffp table.cueT {
+  /*margin-bottom: 12px;*/
+  min-height: 32px;
+}
+td.ffp table.mls td {
+  line-height: 32px;
+}
+td.ffp table.cueT td,
+td.ffp table.mls td span,
+td.ffp table.mls td input,
+td.ffp table.mls td div,
+td.ffp-noedit table.cueT td,
+td.ffp-noedit table.mls td span,
+td.ffp-noedit table.mls td input,
+td.ffp-noedit table.mls td div {
+  vertical-align: middle;
+}
+td.ffp table.cueT table.mls {
+  margin-top: 0px;
+}
+td.ffp table.cueT, td.ffp table.mls,
+td.ffp-noedit table.cueT, td.ffp-noedit table.mls {
+  display:block;
+}
+
+/* Spacer row in 'mls' table. Introduced only in AW6. Update AWL to introduce this row
+only when 'mls' table has fields separated into more than one row. */
+table.mls td.mls-spacer-row {
+  height: 12px;
+}
+
+/* We need to make sure that inside generated field layout when there is RR its inline */
+td.ffp table.mls .rr {
+  display: inline;
+}
+
+table.ftL td.ffl, table.ftR td.ffl,
+table.ftL td.ffl-noedit, table.ftR td.ffl-noedit {
+  width:1%;
+}
+
+td.ffl-noedit, td.ffp-noedit, td.ffi-noedit {
+  font-size: 13px;
+  vertical-align: top;
+  margin-top: 10px;
+  padding-top: 10px;
+  height: auto;
+}
+/* Add utility class to apply same color as regular form label to custom labels */
+.u-ffl-noedit {
+  color: #797979;
+  text-align: right;
+}
+
+td.ffl-noedit {
+  color: #797979;
+}
+td.ffl-noedit {
+  text-align: right;
+}
+td.ffp-noedit,
+td.ffp-noedit table,
+td.ffp-noedit table td,
+td.ffp-noedit table td div {
+  vertical-align: top;
+  line-height: normal;
+}
+td.ffp-noedit table td {
+  line-height: 18px;
+}
+td.ffp-noedit table.cueT td {
+  vertical-align: top;
+}
+
+/*
+Special noedit case: mls tables are nested inside cueT table cells. The mls tables can
+contain fields like checkbox instead of readonly text. So, only for mls tables do vertical
+align middle. Then offset the entire mls table up using -ve margin to display it level
+with leftside label text.
+*/
+td.ffp-noedit table.mls td {
+  height: 32px;
+  vertical-align: middle;
+}
+td.ffp-noedit table.mls {
+  margin-top: 0px;
+}
+/* Target cuetip in formtables and remove surrounding margin that comes with the widget */
+.ft-cuetip div.w-ct-icon {
+   margin:0 0 11px 10px;
+}
+.ffp-noedit .ft-cuetip div.w-ct-icon {
+  margin-bottom:0;
+}
+td.ffp td.ft-cuetip {
+  /* top aligned cuetip in editable mode */
+  display:inline-block;
+  line-height: 1;
+}
+td.ffp-noedit .ft-cuetip {
+  /* middle aligned cuetip in readonly mode */
+  display:inline-block;
+}
+
+/* Makes the following skinny elements take up 32px height matching other AW6 fields in
+formtable. The radio button is a special case when it is not rendered using radio list.
+The others are native file browse and native input buttons. */
+td.ffp span.w-rdo-btn-env,
+td.ffp span.w-btn-env {
+  display:inline-block;
+  height: 26px;
+  padding-top: 6px;
+}
+
+td.ffp table,
+td.ffp-noedit table {
+  width: auto;
+}
+
+.w-groupfield-error {
+  padding-left: 3px;
+}
+
+.w-file-upload input {
+    padding-right: 0;
+    line-height: 0;
+}
+
+.IsIE9 .w-file-upload input,
+.IsIE10 .w-file-upload input {
+  line-height: 12px;
+}
+
+/** CornerLayout **/
+.w-corner-layout-toc-header {
+  height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.w-corner-layout-top-left {
+  padding-right: 30px;
+  vertical-align: middle;
+}
+
+.w-corner-layout-top-right {
+  padding-left: 30px;
+  vertical-align: middle;
+}
+.w-corner-layout-bottom-left {
+  padding: 20px 0 15px;
+  border-right: solid 1px #D7D7D7;
+}
+
+.w-corner-layout-no-lines .w-corner-layout-bottom-left {
+  border-right: none;
+}
+
+.w-corner-layout-bottom-right {
+  padding: 15px 0 15px 15px;
+}
+
+.w-corner-layout-border {
+  border-bottom: solid 1px #D7D7D7;
+}
+/** End CornerLayout **/
+
+/* FormTable, FormRow, ARWColumnGroupView, ARWGroupField - Ends ======================= */
+
+/* derichard 2014-dec-19 todo: Delete the section below completely after AW6 layout
+styles are written for formtable layouts. Retaining these for reference only now.
+
+td.fflS {
+  padding-right:160px;
+}
+td.ffiS {
+  padding-right:10px;
+}
+td.ffpS {
+  padding-right:175px;
+}
+td.ftAs {
+  padding-left:30px;
+}
+
+td.ffl, td.ffp, td.ffi {
+  vertical-align:top;
+  padding-top:6px;
+  padding-bottom:3px;
+}
+
+td.ffl {
+  font-size:14px!important;
+  height:18px;
+  padding:14px 3px 3px 8px;
+  text-align:right;
+}
+td.ffi {
+  padding:3px 1px 3px 0;
+  width:5px;
+  height:21px;
+}
+
+table.ftL td.ffl, table.ftR td.ffl {
+  width:1%;
+}
+tr.arwRow td.ffl {
+  width:160px;
+}
+
+td.ffp {
+  padding-left:5px;
+}
+td.ffp td.ffp {
+  padding:0;
+}
+div.ffpNF {
+  margin:-6px 5px 0 -5px;
+}
+td.ffp div.ffpNF td.ffp {
+  padding-top:6px;
+}
+
+.ftRO td.ffl {
+  height:15px;
+}
+.ftRO td.ffi {
+  height:18px;
+}
+.ftRO td.ffl,
+.ftRO td.ffi,
+.ftRO td.ffp {
+  padding-top:3px;
+  padding-bottom:2px;
+}
+
+.smallForm td.fflS {
+  padding-right:95px;
+}
+.smallForm td.ffpS {
+  padding-right:125px;
+}
+.smallForm td.ftAs {
+  padding-right:10px;
+}
+.smallForm td.ffl {
+  height:16px;
+  padding-left:0;
+}
+.smallForm td.ffl,
+.smallForm td.ffp,
+.smallForm td.ffi {
+  padding-top:4px;
+  padding-bottom:2px;
+}
+.smallForm td.ffi {
+  padding:2px 1px 2px 0;
+  width:10px;
+  height:18px;
+}
+.smallForm td.ffp {
+  padding-left:4px;
+}
+
+.ftLOT td.ffl {
+  text-align:left;
+  height:auto;
+  white-space:nowrap;
+}
+.ftLOT td.ffl,
+.ftLOT td.ffi {
+  padding:0;
+}
+.ftLOT td.ffi {
+  height:auto;
+}
+.ftLOT td.ffp {
+  padding:4px 0 6px 4px;
+}
+
+.sectionBody table.ftL td.fflS {
+  padding-right:140px;
+}
+
+td.ffp input,
+td.ffp select,
+td.ffp textarea {
+  margin-top:-3px;
+  margin-left:-4px;
+}
+td.ffp table.puMB,
+td.ffp .rtaWrapper,
+td.ffp .chWrapper {
+  margin-top:-4px;
+  margin-left:-4px;
+}
+table.cueT, table.mls {
+  border-collapse: collapse;
+}
+table.cueT {
+  padding-top:4px;
+  padding-left:4px;
+}
+td.ffp table.cueT, td.ffp table.mls {
+  display:block;
+  margin-top:-4px;
+  margin-left:-4px;
+}
+td.ffp table.mls table.mls {
+  margin-top:0;
+  margin-left:0;
+}
+table.mlsI {
+  display:inline;
+}
+table.mlsI td {
+  padding-right:5px;
+  text-align: left;
+}
+td.ffp table.mlsI {
+  display:table;
+}
+
+td.ffp table.cueT input,
+td.ffp table.cueT select,
+td.ffp table.cueT textarea {
+  margin-top:-3px;
+  margin-left:-4px;
+}
+td.ffp table.cueT table.puMB,
+td.ffp table.cueT .rtaWrapper,
+td.ffp table.cueT .chWrapper {
+  margin-top:-4px;
+  margin-left:-4px;
+}
+td.ffp span select,
+td.ffp table input,
+td.ffp table textarea,
+td.ffp table select,
+td.ffp table table.puMB,
+td.ffp table .rtaWrapper,
+td.ffp table .chWrapper,
+td.ffp table.mls input,
+td.ffp table.mls textarea,
+td.ffp table.mls select,
+td.ffp table.mls table.puMB,
+td.ffp table.mls .rtaWrapper,
+td.ffp table.mls .chWrapper {
+  margin-top:0;
+  margin-left:0;
+}
+td.ffp input[type="checkbox"] {
+  margin-top:0;
+  margin-left:0;
+}
+td.ffp input[type="radio"] {
+  margin-top:0;
+  margin-left:0;
+}
+td.ffp span.chWrapper {
+  display:block;
+}
+td.ffp span.chWrapper input {
+  margin:0 !important;
+}
+table.puMB {
+  display:block;
+}
+td.ffp div.awtstrut {
+  display:block;
+  width:300px;
+}
+.ffp nobr.DTCh input,
+.ffp table.mls nobr.DTCh,
+.ffp table.cueT nobr.DTCh {
+  margin-top:0;
+  margin-left:0;
+  display:inline;
+}
+.ffp nobr.DTCh {
+  display:block;
+  margin-top:-4px;
+  margin-left:-4px;
+}
+
+img.DTCh {
+  margin:-3px 5px 0 -3px;
+}
+.IsIE img.DTCh {
+  margin:3px;
+}
+
+.wideLabels table.ftL td.fflS {
+  padding-right:310px;
+}
+.sectionBody .wideLabels table.ftL td.fflS {
+  padding-right:290px;
+}
+.exWideLabels table.ftL td.fflS {
+  padding-left:400px;
+}
+
+.plainLabels td.ffp, .plainLabels .label {
+  color:#000000;
+  font-weight:normal;
+  font-size: 11px;
+}
+
+tr.dropArea td  {
+  padding-bottom:3px;
+}
+.onDrag tr.dropArea td  {
+  border-bottom:2px dashed #EEEEEE;
+  padding-bottom:1px;
+}
+.dropAreaSelected td.ffl,
+.dropAreaSelected td.ffi,
+.dropAreaSelected td.ffp,
+.onDrag tr.dropAreaSelected td.dropArea {
+  border-bottom: 2px dashed blue;
+  padding-bottom:1px;
+  background-color:white;
+}
+*/
+
+.w-msg-alert {
+  background-color:#FFEAAA;
+  padding:5px 3px 5px 25px;
+}
+
+/* MessageDisplay */
+.w-md-ct-ntf,
+.w-md-ct-wrng,
+.w-md-ct-error,
+.w-md-ct-conf {
+  color: #363636;
+  padding:15px;
+}
+.w-md-ct-ntf {
+  background-color: #d8edf8;
+  border: 1px solid #56c0e0;
+}
+.w-md-ct-wrng {
+  background-color: #fcf8e2;
+  border: 1px solid #faebca;
+}
+.w-md-ct-error {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  color: #CC0000;
+}
+.w-md-ct-conf {
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  color: #274d28;
+}
+td.w-md-icon-cell {
+  width: 1%;
+}
+.w-md-icon-error {
+  font-size:20px;
+  padding-right: 10px;
+}
+.w-md-icon-error-m {
+  font-size:20px;
+  padding-right: 14px;
+}
+.w-md-icon-conf {
+  color: #3c763d;
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.w-md-separator {
+  padding-bottom: 10px;
+}
+.w-md-title {
+  font-size: 18px;
+}
+.w-md-msg {
+  font-size: 13px;
+  line-height: 18px;
+}
+.w-md-bottom-pad {
+  margin-bottom: 15px;
+}
+
+/* PulldownButton */
+.w-pulldown-icon {
+  font-size:8px;
+  padding-left: 5px;
+}
+
+/* Error Indicator */
+.w-field-req, .w-field-warn, .w-field-err {
+  font-size: 18px;
+}
+.w-field-req {
+  color: #363636;
+
+}
+.w-field-warn {
+  color: #199DE0; /* 8 Jan 2015 : Change after UCDG provides specs. */
+}
+.w-field-err {
+  color: #DF0101; /* 8 Jan 2015 : Change after UCDG provides specs */
+}
+
+/*
+   Utility class for style of  'star' of statements: "(*) indicates a required field"
+   Copied from previous class but without padding.
+ */
+.u-required span {
+  color: #797979;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: middle;
+}
+/*
+   Utility class for style of  'star' of statements: "(*) indicates a required field"
+   Copied from previous class but without padding.
+ */
+.u-required-task{
+  float: right;
+  color: #969696;
+}
+
+.u-required-task span {
+  font-size: 18px;
+}
+
+/* ToggleBox */
+.w-togglebox-header {
+  border-bottom: 1px solid #d7d7d7;
+  background-color: #F6F6F6;
+  height:43px;
+  line-height:43px;
+}
+.w-togglebox-header h2 {
+  line-height:43px;
+}
+.w-togglebox-table {
+  float:left;
+  padding: 0 15px;
+}
+.w-togglebox-title {
+  font-size: 18px;
+}
+/* ToggleIcon */
+.w-togglebox-icon-on,
+.w-togglebox-icon-off {
+  color:#636363;
+  display: inline-block;
+  font-size: 10px;
+  /* ON and OFF font-icons have different widths. Defining fixed width to the surrounding
+  div keeps the horizontal alignment consistent. */
+  width: 13px;
+}
+.w-togglebox-bottom {
+  width:100%;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* display inline, otherwise the toggle icon will appear in a separate line from the text*/
+.wizBox .w-togglebox-icon-on,
+.wizBox .w-togglebox-icon-off {
+  display: inline;
+}
+
+
+
+/* AribaPageContent */
+.w-ariba-page-content {
+  padding-top: 10px;
+}
+
+/* Logo in Page Template */
+.w-ariba-logo {
+  height: 30px;
+}
+
+.w-ariba-logo-tall {
+  height: 45px;
+}
+
+/* Banner in Page Template */
+.w-ariba-banner {
+  height: 30px;
+}
+
+/* AribaPrintMenu */
+.w-print-menu-icon {
+  display: inline-block;
+  font-size: 16px!important;
+}
+a:focus .w-print-menu-icon {
+text-decoration: underline  ;
+text-decoration-color:#D7D7D7 ;
+}
+
+
+/* Fix for RichTextArea (defined in xinha) */
+.dialog {
+  width: auto;
+}
+
+/* Rich text */
+.rtaWrapper {
+  visibility:hidden;
+}
+
+.rtt {
+  color:#FFFFFF;
+  border:1px solid #d7d7d7;
+}
+
+.rtd {
+  border:1px solid #d7d7d7;
+  overflow-y:scroll;
+}
+
+.w-tbl-cell .rtaWrapper {
+    margin: 10px 0; /* give more spacing when inside DataTable row */
+}
+
+/* catalog Screen Back Slash */
+.w-back-bslash-icon {
+  font-size: 13px;
+  color:#bcbcbc;
+  padding: 0px 12px 0px 12px;
+}
+
+/* Outline Menu*/
+
+/*
+ Introducing common width style so components using this does not have to duplicate it in tier code.
+ Current implementation relaying on the relative position of the root menu and absolute positioning of the
+ submenu. We need to know the actual width here so we can position submenu correctly.
+
+  TODO: For the future improvement it would be good to exract thsi into javascript.
+*/
+.w-olm-w {
+  width: 270px !important;
+  border : 1px solid transparent
+}
+
+.w-olm, .w-olm-sub {
+  background: #FFF;
+}
+
+.w-olm {
+  position: relative;
+  display: block;
+  padding: 0px 15px;
+}
+
+.w-olm-item, .w-olm-sub-item {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  color: #363636;
+  text-align: left;
+}
+
+.w-olm-root, .w-olm-sub {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15),
+  -1px 0 0 rgba(0,0,0,0.03),
+  1px 0 0 rgba(0,0,0,0.03),
+  0 1px 0 rgba(0,0,0,0.12);
+  /*-webkit-box-shadow: 0 0 1px #333;*/
+  /*box-shadow: 0 0 1px #333;*/
+}
+
+/* main menu root - wrapping element */
+.w-olm-root {
+  padding-bottom: 10px;
+  background: #FFF;
+}
+
+/* The arrow icon that shows only for  menus having children*/
+.w-olm-sub-item-arw {
+  color: #8d8d8d;
+}
+
+.w-olm-item-lbl {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 100%;
+}
+
+/* sub menu root*/
+.w-olm-sub {
+  display: none;
+  position: absolute;
+  left: 267px;
+  top: 0px;
+  z-index: 20;
+  padding: 0px 15px 30px 15px;
+}
+
+/* title from parent category*/
+.w-olm-sub-title {
+  line-height: 45px;
+  font-size: 16px;
+  color: #636363;
+}
+.w-olm-sub-item:hover,
+.w-olm-sub-item:focus {
+border: 1px solid transparent;
+}
+
+
+/* sub menu Item*/
+.w-olm-sub-item {
+  display: block;
+  width: auto;
+}
+
+.w-olm-sub-item-leaf {
+  font-weight: normal;
+}
+
+.w-olm-sub-item-action{
+  text-decoration: none;
+}
+
+.w-olm-hover {
+  background-color: #f5f5f5;
+}
+
+
+.w-olm-hover .w-olm-sub-item-arw {
+  color: #000;
+}
+/* show sub menu*/
+.w-olm-hover .w-olm-sub {
+  display: block;
+}
+
+.w-olm-drop-up {
+  top:auto;
+  bottom:-1px;
+}
+
+/* temporary fix the Test admin link on test central page */
+.testBar {
+  position: absolute;
+  left:10px;
+  top:0;
+  filter: alpha(opacity=050);
+  -moz-opacity:0.5;
+  opacity:0.5;
+  z-index:1;
+}
+
+.testBarVis {
+  position: absolute;
+  border-left: 1px solid #9C9CB8;
+  border-right: 1px solid #9C9CB8;
+  border-bottom: 1px solid #9C9CB8;
+  background-color:#E9E9F1;
+  padding-left:3px;
+  left:10px;
+  top:0;
+  filter: alpha(opacity=100);
+  -moz-opacity:1.0;
+  opacity:1.0;
+  z-index:1;
+}
+
+/* AribaAlertNotification */
+.w-alert-notification {
+  background-color:#FFF;
+  border:1px #999999 solid;
+  font-family:Arial, Verdana, sans-serif;
+  left:25%;
+  margin:0;
+  padding:0 30px 0 0;
+  position:absolute;
+  top:0;
+  width:50%;
+  z-index:30;
+}
+
+.w-alert-notification .w-alert-list-content {
+  max-height:100px;
+  overflow:auto;
+  overflow-x:hidden;
+}
+
+.w-alert-shadow {
+  box-shadow:3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.w-alert-notification .w-alert-legend {
+  width:6px;
+}
+
+.w-alert-notification .w-alert-resolved-clr-legend {
+  background-color:#006633;
+}
+
+.w-alert-notification .w-alert-color-legend {
+  background-color:#cc3333;
+}
+
+.w-alert-notification .w-alert-system {
+  color:#cc3333;
+  font-size:12px;
+  font-weight:bold;
+  padding:8px;
+  text-align:right;
+  vertical-align:top;
+  width:1%;
+  white-space:nowrap;
+}
+
+.w-alert-notification .w-alert-resolved {
+  color:#006633;
+}
+
+.w-alert-system-count {
+  color:#942E34;
+  font-weight:normal;
+}
+
+.w-alert-notification .w-alert-list {
+  padding:8px 0 8px 8px;
+  text-align: left;
+}
+
+.w-alert-notification .w-alert-list .w-alert-divider {
+  border-top:1px solid #CCC;
+  margin-top:5px;
+  padding-top:5px;
+}
+
+.w-alert-notification .w-alert-resolved-divider {
+  border-bottom:1px solid #CCC;
+  height:1px;
+}
+
+.w-alert-notification .w-alert-close {
+  top:7px;
+  right:7px;
+  position:absolute;
+}
+
+.w-alert-notification .w-alert-title {
+  color:#333333;
+  margin-right:8px;
+  width:100%;
+  word-wrap:break-word;
+}
+
+.w-alert-detail-ttl {
+  background-color:#EEEEEE;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+  color:#414677;
+  font-size:14px;
+  padding:16px;
+  margin-bottom:16px;
+}
+
+.w-alert-detail-ttl .w-alert-resolved-ttl {
+  font-weight:bold;
+}
+
+.w-alert-detail-content {
+  max-height:200px;
+  overflow:auto;
+  padding:0 20px 20px 20px;
+  word-wrap:break-word;
+  width:600px;
+}
+
+.w-alert-detail-content .w-alert-symptoms-detail {
+  font-weight:bold;
+}
+
+.w-alert-detail-content .w-alert-symptoms-detail img {
+  padding-right:5px;
+  vertical-align:text-bottom;
+}
+
+.w-alert-detail-content ul {
+  margin:0 0 0 2px;
+  padding-left:2px;
+}
+
+/* AribaPageContent */
+.w-page-content {
+  text-align: left;
+}
+
+/* Banner management between AW5 <-> AW6 */
+.w-banr-open-optout {
+  font-size: 13px;
+  text-align: center;
+  line-height: 40px;
+  background-color:#F2F2F2;
+  color: #969696;
+}
+.w-banr-open-optout:hover,
+.w-banr-optout-arrow:hover,
+a:focus .w-banr-open-optout,
+a:focus .w-banr-optout-arrow {
+    color:#2ba4f2;
+}
+.w-banr-optout-arrow-cntr {
+  position: absolute;   /* To overlay on top of the page content. */
+  left: 48%;
+}
+.w-banr-optout-arrow {
+    height: 25px;
+    width: 50px;
+    border-radius:0 0 50px 50px;
+    background-color:#f2f2f2;
+    color: #969696;
+    text-align: center;
+}
+
+/* TwoToneBox */
+.w-twotonebox-top {
+  background-color:#e3e3e3;
+  padding:10px 15px;
+}
+
+.w-twotonebox-bottom {
+  border-bottom: 1px solid #d7d7d7;
+  padding:10px 15px;
+  background-color: #f2f2f2;
+}
+
+.w-twotonebox-bottom-btn {
+  float: right;
+}
+
+/* AribaBackPage */
+.w-back-page-cell {
+  padding-left: 30px;
+  height: 51px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+
+.w-back-page-logo,
+.w-back-page-hamburger {
+  float: left;
+  display: inline-block;
+}
+.w-back-page-logo {
+  color: #d7d7d7;
+  font-size: 60px;
+}
+.w-back-page-hamburger {
+  font-size: 18px;
+}
+.w-back-page-nav,
+.w-back-page-label {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+}
+.w-back-page-nav {
+  font-size: 15px;
+}
+.w-back-page-label {
+  padding-left: 5px;
+
+}
+a:hover .w-back-page-label,
+a:focus .w-back-page-label {
+text-decoration: underline  ;
+ text-decoration-color: #D7D7D7 ;
+}
+
+
+
+/*
+  ahebert:
+  Overrides for AribaLive (to be removed later) for demo projection
+*/
+/* portlet header line */
+.portletBox .w-tbl-hd {
+  border-top: 1px solid #e7e7e7;
+}
+/* table lines color */
+.scrollTableWrapper td.tableBody {
+  border-top:1px solid #e7e7e7;
+}
+/* table head line color */
+.scrollTableWrapper th.tableHead {
+  border-bottom:1px solid #e7e7e7;
+}
+/* table header (column header) */
+.w-tbl-hd {
+  background-color: #ececec;
+}
+
+/* table header (column header) for with selection control hiden */
+th.tableHead.w-tbl-hd-no-sel-ctr {
+  padding: 7px 0px;
+}
+
+/* table footer */
+.w-tbl-footer {
+  background-color: #ececec;
+}
+/* hover effect to highlight drop zone when table row is dragged */
+.scrollTableWrapper tr.tableRowDragHover td.tableBody {
+    border-top: 2px dashed #199DE0;
+}
+/* table line hover color */
+.scrollTableWrapper tr.tableRowHover,
+.scrollTableWrapper tr.tableRowSelected {
+  background-color:#f5f5f5 !important;
+}
+/* search page using arches */
+.a-ssb-container {
+  background-color: #ececec!important;
+}
+/* reset hover effect */
+.a-ssb-container .scrollTableWrapper tr.tableRowHover {
+  background-color:#ececec !important;
+}
+/* reset border inside search box */
+.a-ssb-container .scrollTableWrapper td.tableBody {
+  border-top:0!important;
+}
+/* + and - closer to field */
+.a-ssb-container .a-ssb-srch-img {
+  padding-left: 20px!important;
+}
+/* make width auto for search box table */
+.a-ssb-container .tableBody {
+  /*width: auto;*/
+}
+/* removes padding in search page using arches ASCOrganizationSimpleSearch */
+.a-asc-oss-row {
+  padding-top:0!important;
+}
+.a-asc-oss-table1 {
+  padding-bottom:0!important;
+}
+/* OrganizationPage */
+.a-asc-profile td.ffl-noedit,
+.a-asc-profile td.ffp-noedit,
+.a-asc-profile td.ffi-noedit {
+  padding-top: 8px!important;
+}
+.a-asc-profile td.ffp-noedit {
+  padding-top: 9px!important;
+}
+/* Cart Summary in downstream */
+.a-appr-subtot-tit {
+  background-color: #ececec!important;
+}
+.w-page-tabs .w-tablist {
+  background-color: #ebebeb;
+  padding: 15px 15px 0 15px;
+}
+.w-page-tabs .w-tablist a:hover {
+  background-color: #ebebeb;
+  border-color: #ebebeb #ebebeb #d7d7d7;
+}
+.w-page-tabs .w-tabitem-a.w-tabitem-a-slctd a,
+.w-page-tabs .w-tabitem-a.w-tabitem-a-slctd a:hover,
+.w-page-tabs .w-tabitem-a.w-tabitem-a-slctd a:focus,
+.w-page-tabs .w-tabitem-a-dsbld-slctd {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #ffffff;
+  border-bottom: 5px solid transparent !important;
+  border-color: transparent;
+  border-image: none;
+  border-style: solid;
+  border-width: 1px;
+  color: #363636;
+  cursor: default;
+}
+
+th.tableHead {
+  background-color: #ececec;
+}
+/* AribaLive Change Adding font-size 22px, Font-weight*/
+.w-login-header-txt {
+  top:-14px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.a-asp-profile-details-page-aribalive footer {
+  display: none;
+}
+/* end overrides for AribaLive */
+
+/* AribaLive - Temporary - Send 2 Device Popup Begins */
+table.send-to img.w-dvice-img {
+  margin-left: -5px;
+  padding-right: 25px;
+}
+table.send-to p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.w-dbTitle {
+    color:#7180B4;
+    font:bold 16px Arial, Verdana, Helvetica, sans-serif;
+    padding:0px 10px 0px 3px;
+    white-space:nowrap;
+    margin:0px;
+}
+
+.w-dbTitle b {
+    color:#676767;
+}
+/* AribaLive - Temporary - Send 2 Device Popup Ends */
+
+/** SelectableRegionWrapper **/
+.w-region-title {
+  padding:0 10px;
+  position:absolute;
+  display:none;
+}
+
+.w-region-selected-title {
+  padding:10px;
+  position:absolute;
+  display:inline;
+}
+
+.w-region-wrap {
+  border: 1px dotted #CCCCDD;
+  padding: 10px 5px;
+}
+
+.w-region-selected {
+  border: 2px solid #666699;
+}
+.w-icon-default {
+  color: #636363;
+}
+a:link .w-icon-default {
+  color: #00679E!important;
+}
+.w-icon-clr-green {
+  color: #58B957;
+}
+.w-icon-clr-orange {
+  color: #F2AE43;
+}
+.w-icon-clr-gray {
+  color: #636363;
+}
+.w-icon-clr-red {
+  color: #DB524B;
+}
+.w-icon-approve {
+  padding-left:4px;
+}
+.w-apprflow-icon-padding {
+  padding-left:5px;
+}
+
+.w-cpdoc-table td.dra {
+  padding:0 30px;
+}
+
+
+/** Spotlight **/
+.w-spotlightText {
+    position:absolute;
+    background-color:#EAF4FA;
+    z-index:60;
+    padding:30px 30px 30px 30px;
+    color:#363636;
+    font-size:14px;
+    text-align:left;
+    word-wrap:normal;
+    max-width:400px;
+    line-height:18px;
+    box-shadow:0px 10px 10px 0px rgba(0,0,0,0.6);
+    border: 1px solid transparent
+}
+.w-spotlightText h2 {
+    padding:0px 0px 0px 0px;
+    color:#199DE0;
+    font-size:18px;
+    text-align:left;
+}
+.w-spotlightVLine {
+    position:absolute;
+    background-color:#EAF4FA;
+    z-index:60;
+    width:1px;
+}
+.w-spotlightHLine {
+    position:absolute;
+    background-color:#EAF4FA;
+    z-index:60;
+    line-height:1px;
+    height:1px;
+    font-size:1px;
+}
+.w-spotlight-title {
+    color:#ffffff;
+    font:24px Verdana;
+    text-decoration:none;
+    padding:15px 0px 15px 20px;
+}
+.w-spotlight-title2 {
+    color:#ffffff;
+    font:16px Verdana;
+    text-decoration:none;
+    padding:0px 0px 10px 20px;
+}
+.w-spotlight-linktext, .w-spotlight-linktext:link, .w-spotlight-linktext:hover {
+    color:#ffffff;
+    font:12px Verdana;
+    text-decoration:none;
+    white-space: nowrap;
+    text-align:center;
+    padding:0px 10px 0px 0px;
+}
+.w-spotlight-infotext {
+    color:#969696;
+    font:12px Verdana;
+    text-decoration:none;
+    padding:5px 0px 10px 5px;
+    white-space: nowrap;
+    float:right;
+}
+.w-spotlight-banner {
+    background-color:#005D9E;
+    z-index: 2;
+}
+.w-spotlight-span {
+    display:inline-block; height:12px;
+}
+.w-spotlight-button {
+  padding:30px 20px 0px 0px;
+}
+
+.pageSubHead {
+    color: #999999;
+    font-size: bold 15px;
+}
+.w-toc-wiz-cont .w-hint-box {
+  height: 2.0em;
+  line-height: 2.0em;
+  padding-left:8px;
+  background-color: #eeeeee;
+}
+/* arpexception page */
+.w-arpexception-page-head {
+  color: red;
+  padding: 15px;
+}
+.w-arpexception-page-body {
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.w-arpexception-page-body .pageSubHead {
+  font-size: 20px;
+  padding-top: 15px;
+  display: inline-block;
+}
+.w-arpexception-page-body .sectionHead {
+  color: red;
+  font-weight: bold;
+}
+.w-arpexception-separator {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+#communityContentIframe {
+    width:250px;
+}
+
+.aucIframeExpanded {
+    width:250px;
+    border: none;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+    top:52px;
+}
+
+.aucIframeCollapsed {
+    height:50px;
+}
+
+
+.wCommunityPaneHidden  {
+    display: none;
+}
+
+.wCommunityPaneShown  {
+    display: inline-block;
+    width: 250px;
+}
+
+.wcommunityProfileBackground {
+    background-color:white;
+    height:52px;
+    width:250px;
+    position:fixed;
+    right:0px;
+    z-index:1;
+}
+
+/* hide print icon when external widgets launch its app/iframe */
+.w-ext-widget-lnch-page .w-header-print-link {
+  display: none;
+}
+
+/*Typeahed*/
+.w-txt-typeahead,
+.tt-query,
+.tt-hint {
+  font: 300 13px/16px Arial, Verdana, sans-serif;
+  width: 250px;
+  height: 28px;
+  line-height: 25px;
+  border: 1px solid #7F9DB9;
+  outline: none;
+}
+.w-txt-awttypeahead {
+    font:normal 11px Verdana, Arial, Helvetica, sans-serif;
+    width: 99px;
+    height: 29px;
+    line-height: 16px;
+    border: 1px solid #7F9DB9;
+    outline: none;
+}
+.w-txt-awttypeahead {
+    background-color: #fff;
+}
+.w-txt-awttypeahead:focus {
+    border: 1px solid #7F9DB9;
+}
+.w-txt-typeahead {
+  background-color: #fff;
+}
+.w-txt-typeahead:focus {
+  border: 1px solid #7F9DB9;
+}
+.tt-menu {
+  width: 300px;
+  margin: 5px 0;
+  padding: 2px 0;
+  background-color: #fff;
+  border: 1px solid #7F9DB9;
+}
+.tt-suggestion {
+  font: 300 13px/16px Arial, Verdana, sans-serif;
+  padding: 2px 10px;
+  line-height: 25px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+  
+.tt-suggestion.tt-cursor {
+  color: #fff; 
+  background-color: #0097cf;
+} 
+.tt-suggestion p {
+  margin: 0;
+}
+.td-word-wrap {
+  white-space: pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.icon-circled {
+  background-image:url(IconCircle.png);
+}
+
+/* Msg container styles for Create, Manage menu items */
+.action-msg-container {
+    min-height:30px;
+    text-align: center;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 4px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-text {
+ padding-left:25px;
+   padding-top:10px;
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #32363a;
+ }
+
+ .app-select-version {
+ padding-left:25px;
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #6a6d70;
+ }
+
+ .app-dropdown {
+ width: 336px;
+ height: 36px;
+ object-fit: contain;
+ float:left;
+ }
+
+ .mobile-email-row {
+ content: "";
+ clear: both;
+ }
+
+ .mobile-email-col1 {
+ float: left;
+ padding-left:20px;
+ padding-right:25px;
+ height:50%;
+ border-right:1px solid grey;
+ width:50%;
+ }
+
+ .mobile-email-option1{
+   font-family: 72;
+   font-size: 16px;
+   font-weight: bold;
+   font-stretch: normal;
+   font-style: normal;
+ letter-spacing: normal;
+   color: #999999;
+ }
+
+ .mobile-email-info{
+ padding-top:10px;
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #32363a;
+ }
+
+ .mobile-email-site-id1 {
+   padding-top:20px;
+   font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #7d7d7d;
+
+ }
+
+ .mobile-topPadding {
+    padding-top:20px;
+ }
+
+ .mobile-email-site-id2 {
+ padding-top:4px;
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #32363a;
+ }
+
+ .mobile-email-location1 {
+ padding-top:20px;
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #7d7d7d;
+ }
+
+ .mobile-email-location2 {
+ padding-top:4px;
+ }
+
+ .mobile-email-datacenter {
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #32363a;
+
+ }
+
+ .mobile-email-col2 {
+ float: left;
+ padding-left: 30px;
+ width:40%;
+
+ }
+
+ .mobile-email-option2 {
+ font-family: 72;
+   font-size: 16px;
+   font-weight: bold;
+   font-stretch: normal;
+   font-style: normal;
+ letter-spacing: normal;
+   color: #999999;
+
+ }
+
+ .mobile-email-link1{
+ padding-top:10px
+ }
+
+ .mobile-email-link2{
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #32363a;
+ }
+
+ .mobile-email-div-btn{
+ padding-top:10px;
+ }
+
+ .mobile-email-send-btn{
+ font-family: 72;
+ font-size: 14px;
+ font-weight: normal;
+ font-stretch: normal;
+ font-style: normal;
+ line-height: normal;
+ letter-spacing: normal;
+ text-align: center;
+ color: #ffffff;
+ border-radius: 4px;
+ background-color: #0a6ed1;
+ width: 69px;
+   height: 28px;
+ }
+
+ .mobile-app-old {
+ padding-top:20px;
+ padding-left:25px
+ }
+
+ .mobile-app-actv-code-label {
+ font-family: 72;
+         font-size: 14px;
+         font-weight: normal;
+         font-stretch: normal;
+         font-style: normal;
+         line-height: normal;
+         letter-spacing: normal;
+         color: #7d7d7d;
+ }
+
+ .mobile-app-actv-code {
+ margin-top:10px;
+ float:left;
+
+ }
+
+ .mobile-app-actv-code-btn{
+ padding-top:110px;
+ float:right;
+ }
+
+ mobile-app-actv-code-btn .action-button {
+     width: 98px;
+     height: 36px;
+     border-radius: 4px;
+     float:right;
+     font-family: 72;
+     font-size: 14px;
+     font-weight: normal;
+     font-stretch: normal;
+     font-style: normal;
+     line-height: normal;
+     letter-spacing: normal;
+ }
+
+ .mobile-app-acc-nt-allow {
+ padding-top:10px;
+ padding-left:25px;
+ font-family: 72;
+   font-size: 14px;
+   font-weight: normal;
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   color: #32363a;
+ }
+
+ .sourcing-proc-app .ffl{
+            float:left;
+        }
+ .sourcing-proc-app .ffi{
+              float:left;
+        }
+ .sourcing-proc-app .ffp{
+              float:left;
+        }
+ .sourcing-proc-app .w-btn{
+ padding:0px;
+ line-height:0px;
+ border-radius: 4px;
+ }
+ 
+.ada-focus:focus {
+  border: 1px dashed #000000;
+}
