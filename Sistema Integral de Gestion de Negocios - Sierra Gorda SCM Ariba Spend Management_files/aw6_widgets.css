@@ -1775,13 +1775,16 @@ div.dialogWrapper {
 }
 
 .IsSaf .w-dlg-buttons {
-  display: inline-table;
+  display: flex;
 }
 
 .w-dlg-buttons {
-  text-align: right;
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
   width: 100%;
+  flex-wrap: nowrap;
 }
 
 .w-dlg-buttons .buttonsContainer {
@@ -1796,11 +1799,13 @@ div.dialogWrapper {
 
 /* All buttons should be right aligned */
 .w-dlg-buttons button {
-  margin-left: 15px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .w-dlg-buttons button:focus {
-  margin-left: 13px;
+  outline: 1px solid;
+  outline-offset: 1px;
 }
 
 

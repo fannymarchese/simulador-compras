@@ -13610,3 +13610,17 @@ td.a-ipd-td-btn{
      border-width: thin;
      margin-top: 2%;
 }
+
+.windows.edge .a-srch-action-icon,
+  .windows.chrome .a-srch-action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+}
+
+.windows.edge .a-srch-action-icon::before,
+  .windows.chrome .a-srch-action-icon::before {
+    position: relative;
+    right: 5px;
+}
