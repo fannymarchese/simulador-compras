@@ -1,0 +1,1083 @@
+/*
+    Copyright (c) 1996-2015 Ariba, Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+        http: //www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/
+
+
+/* ==========================================================================
+   HTML5 display definitions
+   The required styles from aw6_widgets.css are overridden here for AW7 (IES Bronze Changes).
+   ========================================================================== */
+
+@font-face {
+  font-family: 'SAP-72-Regular';
+  src: url('SAP72Fonts/72-Regular.eot'), /* IE9+ */
+       url('SAP72Fonts/72-Regular.ttf'),
+       url('SAP72Fonts/72-Regular.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-Regular.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-Light';
+  src: url('SAP72Fonts/72-Light.eot'), /* IE9+ */
+       url('SAP72Fonts/72-Light.ttf'),
+       url('SAP72Fonts/72-Light.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-Light.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-Italic';
+  src: url('SAP72Fonts/72-Italic.eot'), /* IE9+ */
+       url('SAP72Fonts/72-Italic.ttf'),
+       url('SAP72Fonts/72-Italic.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-Italic.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-CondensedBold';
+  src: url('SAP72Fonts/72-CondensedBold.eot'), /* IE9+ */
+       url('SAP72Fonts/72-CondensedBold.ttf'),
+       url('SAP72Fonts/72-CondensedBold.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-CondensedBold.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-Condensed';
+  src: url('SAP72Fonts/72-Condensed.eot'), /* IE9+ */
+       url('SAP72Fonts/72-Condensed.ttf'),
+       url('SAP72Fonts/72-Condensed.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-Condensed.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-BoldItalic';
+  src: url('SAP72Fonts/72-BoldItalic.eot'), /* IE9+ */
+       url('SAP72Fonts/72-BoldItalic.ttf'),
+       url('SAP72Fonts/72-BoldItalic.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-BoldItalic.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-Bold';
+  src: url('SAP72Fonts/72-Bold.eot'), /* IE9+ */
+       url('SAP72Fonts/72-Bold.ttf'),
+       url('SAP72Fonts/72-Bold.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-Bold.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SAP-72-Black';
+  src: url('SAP72Fonts/72-Black.eot'), /* IE9+ */
+       url('SAP72Fonts/72-Black.ttf'),
+       url('SAP72Fonts/72-Black.woff'), /* Modern Browsers */
+       url('SAP72Fonts/72-Black.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/** Font Icons **/
+@font-face {
+    font-family: 'SAP-Icons-v2';
+    src: url('SAPIconsV2/SAP-icons.ttf'),
+    url('SAPIcons/SAP-icons.eot'); /* IE9+ */
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: 'SAP-icons', 'Ariba_icon_library', 'SAP-Icons-v2';
+    content: attr(data-icon);
+    speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'SAP-icons', 'SAP-Icons-v2';
+    font-style: normal;
+    speak: none;
+}
+
+/* Color Changes */
+
+.actionPortletBox,
+.portletBox,
+.quickTour,
+.w-notification-box {
+  box-shadow:0px 0px 2px 0px #D9D9D9;
+}
+
+.w-tbl-cell {
+  color: #515559;
+}
+
+.empty,
+.w-tbl-empty {
+  color: #32363A !important;
+}
+
+.w-img-clr-yellow,
+.aw7_w-img-clr-yellow
+a:link .w-img-clr-yellow,
+a:visited .w-img-clr-yellow,
+a:hover .w-img-clr-yellow
+{
+  color: #E9730C;
+}
+
+b, strong {
+  font-family: SAP-72-Bold;
+}
+
+a:link,
+a:visited {
+  color: #0A6ED1;
+}
+
+a:hover, a:focus {
+  color: #085CAF !important;
+  text-decoration: none !important;
+}
+
+.w-txt:focus, .w-txt:focus ~ [class*="w-txt-icon-"], .w-psw:focus {
+  border-color: #085CAF;
+}
+
+.w-txt:focus:hover,
+.w-txt:focus:hover ~ [class*="w-txt-icon-"],
+.w-psw:focus:hover {
+  border-color: #085CAF;
+}
+
+body {
+  color: #515559;
+}
+
+a:link .w-img,
+a:visited .w-img {
+    color: #0A6ED1;
+}
+
+.scrollTableWrapper td.tableBody {
+  border-top:1px solid #E5E5E5;
+}
+
+.scrollTableWrapper td.whiteSpaceNoWrap {
+    white-space: nowrap;
+}
+
+.scrollTableWrapper tr.tableRowSelected > td:first-of-type,
+.awtWrapperTable tr.tableRowSelected > td:first-of-type {
+    border-left: 5px solid #0A6ED1;
+}
+
+.scrollTableWrapper th.tableHead {
+  border-bottom:1px solid #E5E5E5;
+}
+
+.w-tbl-hd a {
+  color: #74777A;
+}
+
+.portletTitle {
+   color:#32363A;
+}
+
+/* 9 - Need to clarify */
+.a-dashbrd-page-bg .a-srch-bar-search-button .w-btn-primary {
+  background-color: #0A6ED1;
+  box-shadow: 0 0 0 1px #085caf;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.a-dashbrd-page-bg .a-srch-bar-search-icon {
+  color: #FFFFFF;;
+}
+
+.a-dashbrd-page-bg .a-srch-bar-saved-search{
+  background-color: #FAFAFA;
+}
+
+.w-txt.w-txt-placeholder {
+  color: #74777A;
+}
+
+.a-srch-bar-category {
+  border: 1px solid #89919A;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.w-txt.w-txt-placeholder {
+  color: #74777A;
+}
+
+/* Page 2 of Sourcing */
+/* Page Title */
+
+.pageHead, .w-page-head {
+  color:#32363A;
+}
+
+.w-stepnavbar-top-bar {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.w-hint {
+  color: #32363A;
+}
+
+td.ffl {
+  color: #6A6D70;
+}
+
+.w-txt,
+.w-txt:visited,
+.w-psw,
+.w-psw:visited {
+  border: 1px solid #89919A;
+  color: #74777A;
+  border-radius: 4px;
+}
+
+.IsLogin .w-main-wrapper, .IsLogin .w-main-wrapper input {
+    border-radius: 0px;
+}
+
+.w-chInput {
+  border: 0;
+}
+
+.w-chWrapLeft {
+  border: 1px solid #89919A;
+  border-right: none;
+  border-radius: 4px 0px 0px 4px;
+
+}
+
+.w-chWrapRight {
+  border: 1px solid #89919A;
+  border-left: none;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.w-chWrapper-border-focus .w-chWrapLeft {
+  border: 1px solid #085CAF;
+  border-right: none;
+}
+
+.w-chWrapper-border-focus .w-chWrapRight {
+  border: 1px solid #085CAF;
+  border-left: none;
+}
+
+.w-txt-icon-right-calendar,
+.w-txt-icon-right-time,
+.w-txt-icon-right-search,
+.w-txt-icon-right-box,
+.w-txt-icon-right-pin {
+  border-right: 1px solid #89919A;
+  border-top: 1px solid #89919A;
+  border-bottom: 1px solid #89919A;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.w-txt-icon-right-calendar:before,
+.w-txt-icon-right-time:before {
+  color: #085CAF;
+}
+
+.w-ct-icon {
+  color: #515559;
+}
+
+.w-dropdown {
+  color: #32363A;
+  border: 1px solid #89919A;
+  border-radius: 4px;
+}
+
+.w-dropdown:focus {
+  border: 1px solid #085CAF;
+  outline: none;
+}
+
+.w-field-req {
+  color: #BB0000;
+}
+
+.w-rdo,
+.w-rdo:visited {
+  border: 1px solid #89919A;
+}
+
+.w-rdo-native:checked + label.w-rdo:before {
+  background-color: #085CAF;
+}
+
+.w-chk, .w-chk:visited {
+  border: 1px solid #89919A;
+  border-radius: 4px;
+}
+
+.w-chk-native:checked + label.w-chk:before {
+  color: #085CAF;
+}
+
+.w-rdo.w-rdo-hover,
+.w-rdo:hover:not(.w-rdo-disabled),
+.w-chk.w-chk-hover,
+.w-chk:hover:not(.w-chk-disabled),
+.w-rdo-native:focus + .w-rdo,
+.w-chk-native:focus + .w-chk {
+  border-color: #085CAF;
+  border-width: 2px;
+}
+
+.a-dashbrd-page-bg .a-srch-bar-saved-search {
+  border: 1px solid #89919A;
+  border-left: none;
+}
+
+.a-srch-portlet-category-dropdown {
+  color: #0A6ED1;
+}
+
+.a-srch-bar-text-box input {
+  border-radius: 0px;
+}
+
+.a-srch-bar-text-box .w-txt:focus {
+  border: 1px solid #085CAF !important;
+}
+
+.w-chSearchLink {
+  color: #085CAF;
+}
+
+.a-tile-global-status-count {
+  color: #0A6ED1;
+}
+
+.a-tile-portlet-dropdown {
+  color: #0A6ED1;
+}
+
+.w-cmd-wrapper-L2 {
+  background-color: #FFFFFF;
+}
+
+.wizStepCurrent {
+  border-left: 3px solid #0A6ED1;
+}
+
+.w-stepbysteptoc-step-number {
+  border: 2px solid #0A6ED1;
+}
+
+/* Theme related changes : Themelight */
+
+td.a-srch-bar-category a,
+div.a-srch-portlet-category-dropdown {
+  color: #32363A;
+}
+
+/* Identifier Bar Styles */
+
+.aw7_identifier-bar-content {
+    font-family: SAP-72-Regular;
+}
+
+.aw7_identifier-bar-content a:hover, .aw7_shell-bar-content a:hover {
+    text-decoration: none !important;
+}
+
+.aw7_idb_content_wrapper {
+    display: flex;
+    height: 36px;
+    padding: 0px 48px 0px 48px;
+}
+
+.aw7_idb_content_wrapper > div {
+    flex: 1;
+    line-height: 35px;
+}
+
+.aw7_idb-left-content-wrapper {
+    display: flex;
+}
+
+.aw7_greeting_info {
+    font-size: 14px !important;
+    color: #FFFFFF !important;
+}
+
+.aw7_w-header-customize-link a {
+    font-size: 14px;
+}
+
+.aw7_w-header-customize-link > a.cmdLinkArrow:hover {
+    background: none;
+}
+
+.aw7_idb-command-bar-wrapper {
+    padding-top: 1px;
+}
+
+.aw7_undelegate_wrapper a {
+    font-size: 14px;
+}
+
+a[awname="AribaAction:undelegate:actionClicked"] {
+    position: static !important;
+}
+
+.aw7_admin_mode_wrapper {
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline;
+    padding: 3px;
+    line-height: 16px;
+}
+
+.aw7_admin_mode_content {
+    min-width: 82px;
+    color: #d1e8ff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.aw7_admin_mode_content-lft {
+    border-radius: 5px 0px 0px 5px;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.aw7_admin_mode_content-rgt {
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -0px;
+    margin-right: -8px;
+}
+
+.aw7_admin_mode_content a:hover{
+    text-decoration:none !important;
+}
+
+.aw7_admin_mode_content.active {
+    background-color: #D1E8FF;
+    color: #283848;
+}
+
+.aw7_admin-command-bar-wrapper {
+    text-align: center;
+}
+
+.aw7_admin-command-bar-wrapper > div.mastCmd {
+    display: inline-block;
+}
+
+.aw7_w-pml-icon {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+    left: 1px;
+    color: #0A6ED1;
+}
+
+.aw7_w-header-customize-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    top: -1px;
+}
+
+.aw7_w-header-customize-link .aw7_w-pml-icon {
+    color: #D1E8FF;
+}
+
+.aw7_w-header-customize-link a:hover .aw7_w-pml-icon {
+    color: #D1E8FF;
+}
+
+.aw7_identifier-bar-content a:focus,
+.aw7_w-header-customize-link a:focus .aw7_w-pml-icon{
+    color: #D1E8FF !important;
+}
+
+/* Canonical Bar Styles */
+
+.aw7_canonical-bar-wrapper {
+    height: 16px;
+    line-height: 12px;
+    font-family: SAP-72-Regular;
+    font-size: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 4px;
+}
+
+.aw7_w-header-realmlabel {
+    color: #6A6D70 !important;
+}
+
+/* Shell Bar CSS */
+
+tr.aw7_shell-bar-content {
+    height: 44px;
+    font-family: SAP-72-Regular;
+}
+
+.aw7_shell-bar-wrapper {
+    display: flex;
+    margin-left: 48px;
+    margin-right: 48px;
+    font-family: SAP-72-Regular;
+}
+
+.aw7_prodimg, .aw7_w-abpw-padder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.aw7_prodimg img, .aw7_a-cmdbar-prod-logo, .aw7_w-ariba-banner_product-image img {
+    max-height: 28px !important;
+}
+
+.w-ariba-logo, .w-ariba-logo-tall, .a-cmdbar-prod-logo {
+    max-width: none !important;
+}
+
+.aw7_w-cmd-wrapper {
+    flex: 2;
+    padding-right: 0px;
+    padding-top: 0px;
+    height: 44px !important;
+}
+
+.aw7_cmd-links {
+    display: inline-flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.aw7_back-page-wrapper {
+    display: flex;
+    margin-left: -30px;
+}
+
+.aw7_w-back-page-cell {
+    flex: 1;
+    max-height: 44px;
+}
+
+.aw7_back-action {
+    display: inline-block;
+    padding-top: 13px;
+}
+
+.aw7_w-help-menu-icon, .aw7_w-preferences-menu-icon, .aw7_w-refresh-session-menu-icon {
+    height: 18px;
+    width: 16px;
+    font-size: 16px;
+    font-family: SAP-Icons;
+}
+
+.aw7_w-header-username-link, .aw7_w-header-help-link, .aw7_w-header-preferences-link, .aw7_w-header-search-link,
+.aw7_w-header-print-link, .aw7_w-refresh-session-menu-icon, .aw7_w-header-notification-link, .aw7_w-header-alert-link,
+.aw7_w-header-collabmsgnotification-link, .aw7_w-header-customize-link, .aw7_w-header-delegationinfo-link,
+.aw7_w-header-realmlabel, .aw7_w-header-home-link, .aw7_w-header-chatbox-link {
+    padding: 0 14px;
+}
+
+.aw7_w-header-collabmsgnotification-link {
+    padding-top: 7px;
+}
+
+.aw7_user-name-initials {
+    background-color: #0F828F;
+    color: #FFFFFF;
+    height: 28px;
+    width: 28px;
+    font-size: 14px;
+    border-radius: 50%;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.aw7_w-header-username-link {
+    padding-right: 0px;
+}
+
+.aw7_w-header-help-link, .aw7_w-header-alert-link {
+    padding-top: 7px;
+}
+
+.aw7_w-header-alert-link a {
+    font-size: 16px !important;
+}
+
+.aw7_w-header-print-link, .aw7_w-header-search-link {
+    padding-top: 4px;
+}
+
+.aw7_w-header-preferences-link, .aw7_w-header-refresh-session-link, .aw7_w-header-chatbox-link {
+    display: inline-flex;
+    padding-top: 6px;
+}
+
+a .aw7_w-back-page-nav[data-icon]:before {
+    font-family: 'SAP-Icons-v2';
+}
+
+.aw7_w-back-page-logo {
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+a .aw7_w-back-page-nav, a .aw7_w-print-menu-icon,
+.aw7_w-header-search-link a,
+.aw7_a-online-notif-icon-empty,
+.aw7_a-online-notif-icon,
+.aw7_w-notification-bell-icon,
+.aw7_w-header-home-link,
+.aw7_w-header-site-icon {
+    font-size: 16px !important;
+}
+
+.aw7_no-padding {
+    padding-left: 0px;
+}
+
+.aw7_right-padding {
+    padding: 0px 14px 0px 0px;
+}
+
+.aw7_a-online-notif-icon-empty {
+    padding-top: 5px;
+}
+
+.w-header-site-link {
+    padding: 0px 14px 0 14px;
+}
+
+.aw7_w-header-site-link, .aw7_w-header-home-link-span {
+    padding-top: 6px;
+}
+
+.aw7_user-name-disabled, .aw7_w-notification-bell-icon {
+    display: inline-block;
+}
+
+.aw7_idb_content_wrapper {
+    background-color: #283848;
+}
+
+.aw7_admin_mode_content.active {
+    background-color: #D1E8FF;
+    color: #283848;
+}
+
+.aw7_admin_mode_content {
+    border: 1px solid #d1e8ff;
+}
+
+.aw7_admin_mode_content a {
+    color: #d1e8ff;
+}
+
+.aw7_admin_mode_content a:hover{
+    color: #d1e8ff !important;
+}
+
+.aw7_w-header-customize-link a {
+    color: #D1E8FF;
+}
+
+.aw7_w-header-customize-link a.cmdLink:link, a.cmdLink:visited {
+    color: #D1E8FF;
+}
+
+.aw7_undelegate_wrapper a {
+    color: #FFF;
+}
+
+/* End of Shell Bar CSS */
+
+/* Navigation Bar CSS */
+
+.aw7_w-navigation-bar-separator {
+    border: none;
+}
+
+.aw7_a-mastCmd-create-button-aux-icon {
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.aw7_a-mastCmd-create-button, .aw7_a-nav-bar-manage a, .aw7_dbTabWrapper .w-dashboard-tabs .w-tabitem a,
+.aw7_a-nav-bar-recent a {
+    font-size: 14px;
+    color: #74777A !important;
+    background: none;
+}
+
+.aw7_a-mastCmd-create-button:hover,
+.aw7_dbTabWrapper .w-dashboard-tabs .w-tabitem a:hover,
+.aw7_a-nav-bar-manage:hover a,
+.aw7_a-nav-bar-manage:hover .aw7_w-pml-icon,
+.aw7_a-nav-bar-recent:hover a,
+.aw7_a-nav-bar-recent:hover .aw7_w-pml-icon {
+    color: #32363A !important;
+}
+
+.aw7_a-mastCmd-create-button:active,
+.aw7_dbTabWrapper .w-dashboard-tabs .w-tabitem-selected a,
+.aw7_a-nav-bar-manage:active a,
+.aw7_a-nav-bar-manage:active .aw7_w-pml-icon,
+.aw7_a-nav-bar-recent:active a,
+.aw7_a-nav-bar-recent:active .aw7_w-pml-icon {
+    color: #0A6ED1 !important;
+}
+
+.aw7_dbTabWrapper .w-dashboard-tabs .w-tabitem-a.w-tabitem-a-slctd a {
+    border-bottom: 3px solid #0A6ED1 !important;
+}
+
+.aw7_a-mastCmd-create-button {
+    line-height: 0px;
+    display: inline-flex;
+    padding: 8px 0px 0px 0px;
+}
+
+.aw7_a-mastCmd-create-button:hover, .aw7_a-mastCmd-create-button:active, a:focus .aw7_a-mastCmd-create-button {
+    background: none;
+}
+
+.aw7_dbTabWrapper a:hover {
+    text-decoration: none !important;
+}
+
+.aw7_a-nav-bar-manage .aw7_w-pml-icon, .aw7_a-nav-bar-recent .aw7_w-pml-icon {
+    color: #74777A !important;
+    padding-left: 2px;
+}
+
+.aw7_dbTabWrapper .w-dashboard-tabs .w-tabitem {
+    margin-top: 7px !important;
+}
+
+.aw7_a-nav-bar-create {
+    padding-left: 30px;
+}
+
+.aw7_a-nav-bar-cmds {
+    padding-right: 48px;
+}
+
+/* End of Navigation Bar CSS */
+
+/* Button changes - Start */
+.aw7_w-btn-primary {
+    color : #FFFFFF;
+    background-color : #0A6ED1;
+    border-color: #0A6ED1;
+    border-radius: 4px;
+}
+
+.aw7_w-btn-primary:hover {
+  background-color : #085caf
+}
+
+.aw7_w-btn-primary:hover {
+  background-color : #085caf
+}
+
+.aw7_w-btn-primary:active {
+  background-color : #0254a7
+}
+
+.aw7_w-btn-primary:focus,
+.aw7_w-btn:focus {
+  box-shadow: 0 0 0 1px #085caf;
+  border: 2px solid #FFFFFF !important;
+}
+
+.aw7_w-btn,
+.aw7_w-btn:visited {
+    color : #0A6ED1;
+    background-color : #FFFFFF;
+    border-color: #0A6ED1;
+    border-radius: 4px;
+}
+
+.aw7_w-btn:hover {
+  color : #FFFFFF;
+  background-color : #085caf;
+
+}
+
+.aw7_w-btn:active {
+  color : #FFFFFF;
+  background-color :#0254a7
+}
+
+/* Button changes - End */
+
+/* Font changes - Begin */
+/**
+ * This class controls the font-family, size and weight all across the pages
+ */
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font: 300 13px/16px SAP-72-Regular, Arial, Verdana, sans-serif;
+}
+
+/* AWDebugPane styles:
+ * It's ok to set different font-family to AWDebugPane classes
+ */
+.debugBar {
+  font: 11px SAP-72-Regular, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.debugBarVis {
+  font: 11px SAP-72-Regular, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.debugWarning {
+   font: bold 6pt SAP-72-Bold, Arial, Verdana, sans-serif;
+   padding: 2px;
+}
+
+.debugError {
+  font: bold 6pt SAP-72-Bold, Arial, Verdana, sans-serif;
+}
+
+.w-cpt-inspector-row {
+  font:normal 9px SAP-72-Regular, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.w-cpt-inspector-1 {
+  font:9px SAP-72-Regular, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.w-dbTitle {
+    font:bold 16px SAP-72-Regular, Arial, Verdana, Helvetica, sans-serif;
+}
+
+.w-spotlight-title {
+    font:24px SAP-72-Regular, Verdana;
+}
+
+.w-spotlight-title2 {
+    font:16px SAP-72-Regular, Verdana;
+}
+
+.w-spotlight-linktext, .w-spotlight-linktext:link, .w-spotlight-linktext:hover {
+    font:12px SAP-72-Regular, Verdana;
+}
+
+.w-spotlight-infotext {
+    font:12px SAP-72-Regular, Verdana;
+}
+/* Font changes - End */
+
+/* Login page text color fix */
+.w-login-form-forget a {
+    color: #fbed53;
+}
+
+.w-alert-system-count {
+    position: relative;
+    top: -3px;
+}
+
+.IsLogin .w-main-wrapper, .IsLogin .w-main-wrapper input {
+    border-radius: 4px;
+    font-family: SAP-72-Regular, "HelveticaNeue-Light",
+                    "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.w-login-form-btn {
+    color: #FFFFFF;
+    background-color: #0A6ED1;
+}
+
+.w-login-form-btn:hover {
+    background-color: #085caf;
+}
+.a-srch-type-table {
+    line-height: 30px;
+}
+
+.ffp > .awmenuLink.linkArrow > span.aw7_w-pml-icon {
+  margin-right : 5px;
+}
+
+/* Print Preview CSS */
+@media print {
+
+    .aw7_idb_content_wrapper {
+       padding: 0px 4px 0px 4px;
+       justify-content: space-between;
+     }
+
+     .aw7_idb_content_wrapper > div {
+        display : inline-flex;
+         flex: none;
+     }
+
+     .aw7_shell-bar-wrapper {
+         margin : 0 4px;
+     }
+
+     .w-cmd-wrapper-L2 {
+        padding-right : 4px;
+     }
+
+     .aw7_a-nav-bar-cmds {
+         padding-right: 4px;
+     }
+
+}
+
+.a-dashbrd-page-bg {
+  background: #EDEFF0 !important;
+}
+
+.w-footer-ct-left,
+.w-footer-ct-right a:link, .w-footer-ct-right a:visited,
+.w-footer-ct-left a:link, .w-footer-ct-left a:visited, #teconsent a{
+  color: #0A6ED1 !important;
+}
+
+.aw7_a-online-notif-icon {
+    padding-top: 5px;
+}
+
+.aw7_w-pulldown-icon {
+    font-size: 12px;
+    position: relative;
+    bottom: -1px;
+}
+
+/* Error file related css */
+.error-page-flex-container {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 98vh;
+  }
+
+  .error-page-error-block {
+    color:black;
+    width: 1000px;
+    height: 600px;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+
+  .error-page-error-block > div {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+
+  .error-page-error-img {
+    width: 520px;
+    height: 390px;
+  }
+
+  .error-page-error-heading {
+    color: #32363A;
+    font-size: 64px;
+    margin-bottom: 24px;
+    font-family: SAP-72-Italic;
+  }
+
+  .error-page-error-description {
+    color: #364051;
+    font-size: 40px;
+    margin: 0 10px;
+    font-family: SAP-72-Light;
+  }
+
+  .error-page-error-description-block {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+.w-joule-menu-icon {
+    font-size: 16px;
+    display: inline-block;
+    margin: 7px;
+    color: #0A6ED1;
+    cursor: pointer;
+}
+.w-walkMe-menu-icon {
+    font-size: 16px;
+    display: inline-block;
+    margin: 7px;
+    color: #0A6ED1;
+    cursor: pointer;
+}
+.w-ai-menu-icon {
+    font-size: 6px;
+    display: inline-block;
+    margin: 7px;
+    color: #0A6ED1;
+    cursor: pointer;
+}
+.w-ai-menu-icon-arrow {
+    font-size: 1px;
+    display: inline-block;
+    margin: 7px;
+    color: #0A6ED1;
+    cursor: pointer;
+}
+.a-small-text{
+    font-size: 3px;
+}
