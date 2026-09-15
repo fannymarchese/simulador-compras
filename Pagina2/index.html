@@ -12,6 +12,48 @@
 
 
 <title>Simulador Compras Ariba Spend Management</title>
+	<style>
+
+/* ===== PASO 2 - BUSCAR ===== */
+
+#_0g_k2c {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Círculo rojo */
+#_0g_k2c::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 4px solid #ff2b2b;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+/* Etiqueta Paso 2 */
+#_0g_k2c::before {
+    content: "Paso 2";
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff2b2b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+</style>
 <link type="image/x-icon" href="https://s1.ariba.com/Sourcing/Main/ad/awres/sgscm/Logo_2024/232/favicon.ico" rel="shortcut icon">
 
 <script type="text/javascript" async="" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/walkme_1117178cd4e642328f294b27fe5dc19b_https.js.download"></script><script type="text/javascript">    var AWSessionTime;              
@@ -869,11 +911,23 @@ ariba.Dom.ApplicationType = "ACM";
 </div>
 <div class="w-back-page-cell aw7_w-back-page-cell aw7_w-back-page-logo" width="1%">
 
-<div class="rr" id="_mr8mwb"><a id="__vgczb" href="https://s1.ariba.com/Sourcing/Main/aw?awh=r&amp;awssk=bQYM9ZOgxYsL3B2t&amp;realm=sgscm&amp;awrdt=1#" bh="HL" _sf="false" class="leg-txt-dec-none">
+<div class="rr" id="_mr8mwb">
+    <a id="__vgczb"
+       href="/simulador-compras/"
+       bh="HL"
+       _sf="false"
+       class="leg-txt-dec-none">
 
-<img alt="Logotipo de la empresa" title="Logotipo de la empresa" border="0" height="30" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/cmdbar_prod_light.png" class="a-cmdbar-prod-logo aw7_a-cmdbar-prod-logo">
+        <img
+            alt="Academia SupplyNet"
+            title="Academia SupplyNet"
+            border="0"
+            src="../assets/images/logo-academia-supplynet.jpg"
+            class="a-cmdbar-prod-logo aw7_a-cmdbar-prod-logo"
+            style="height: 44px; width: auto; object-fit: contain;">
 
-</a></div>
+    </a>
+</div>
 
 </div>
 
