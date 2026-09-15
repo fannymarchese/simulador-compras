@@ -1,0 +1,99 @@
+/** Sourcing supplier splash menu **/
+.RGFormLink a:link {
+    color:#006699;
+    text-decoration:none;
+}
+
+.RGFormLink a:hover {
+    color:#006699 !important;
+    text-decoration:underline;
+}
+
+.RGFormLink a:visited {
+    color:#006699;
+    text-decoration:none;
+}
+
+.dialogCancelContainer {
+    position:relative;
+    line-height:0px;
+    font-size:0px;
+}
+
+a.dialogCancel, a.dialogCancel:hover{
+    position:absolute;
+    top:-32px;
+    right:-32px;
+    height:26px;
+    width:26px;
+    display:block;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    background-color:#505050 !important;
+    color:#FFFFFF !important;
+    text-align:center;
+    font-weight:bold;
+    line-height:23px;
+    font-size:15px;
+    text-decoration:none !important;
+}
+
+.IsIE a.dialogCancel {
+    background-image:url('disc_dialog_close.gif');
+    background-color:transparent !important;
+    line-height:0px;
+}
+
+td.discBtnLarge td.btnC {
+    background-image:url("btn_lg_orange_bg-2x30.gif");
+    color:black;
+    font-weight:bold;
+    padding:0px 10px 2px;
+    vertical-align:middle;
+    white-space:nowrap;
+}
+
+td.discBtnLarge td.btnL div {
+    background-image:url("btn_lg_orange_lft-15x30.gif");
+    width:15px;
+    height:30px;
+}
+
+td.discBtnLarge td.btnR div {
+    background-image:url("btn_lg_orange_rgt-15x30.gif");
+    width:15px;
+    height:30px;
+}
+
+.RecommendationFeebackSubtitle {
+    margin-bottom:5px;
+}
+.RecommendationFeebackRequired {
+    margin-bottom:15px;
+}
+.RecommendationFeebackRequiredImage {
+    margin-right:5px;
+}
+.RecommendationFeebackPrivacy {
+    margin-top:15px;
+    margin-bottom:10px;
+}
+.RecommendationFeebackButtons {
+    float:right;
+}
+.RecommendationFeebackSent {
+    margin-bottom:10px;
+}
+.RecommendationFeedbackWarning {
+    color:red;
+    margin-bottom:10px;
+}
+
+.break_word {
+  word-wrap: break-word;
+}
+
+/* Fixing the scroll issue for attachment and comments */
+ div.sourcingSupplierTable table.awtWrapperTable table.fixedTable .yScroll.tableBody {
+   overflow-x:scroll !important;
+ }
