@@ -1,0 +1,261 @@
+/*
+Theme Light / Created 2015-MAY-15
+*/
+
+body.a-dashbrd-page-bg {
+  background: url("themelight-bg.jpg") no-repeat center center fixed; 
+  background-size: cover;
+}
+
+.a-dashbrd-page-bg,
+.mastCmdContainer {
+  background-color: transparent;
+}
+
+td.cmdBar {
+  border-bottom: 1px solid #D7D7D7;
+}
+
+/* Header command bar on non-dashboard pages */
+.cmdBar, 
+.cmdBarSpl,
+.dbTabWrapper,
+.w-navigation-bar-separator td {
+  background-color: #e8eef1;
+}
+
+.wcommunityProfileBackground {
+    background-color: #E4E4E4;
+}
+
+body.a-dashbrd-page-bg .wcommunityProfileBackground {
+    background-color: #E4E4E4;
+}
+
+a .a-community-sgncollapse {
+    color: #363636;
+}
+
+
+/* Header command bar on dashboard page */
+body.a-dashbrd-page-bg .cmdBar,
+body.a-dashbrd-page-bg .cmdBarSpl,
+body.a-dashbrd-page-bg .w-navigation-bar-separator td,
+body.a-dashbrd-page-bg .dbTabWrapper,
+body.a-dashbrd-page-bg .dbTabWrapper td {
+  background-color: #fff;  
+}
+
+.a-nav-bar-recent a,
+.a-nav-bar-recent a:link,
+.a-nav-bar-recent a:visited,
+.a-nav-bar-manage a,
+.a-nav-bar-manage a:link,
+.a-nav-bar-manage a:visited  {
+  color:#199DE0;
+}
+.a-nav-bar-recent a:hover,
+.a-nav-bar-recent a:hover .w-pml-icon,
+.a-nav-bar-recent a:focus,
+.a-nav-bar-recent a:focus .w-pml-icon,
+.a-nav-bar-manage a:hover,
+.a-nav-bar-manage a:hover .w-pml-icon,
+.a-nav-bar-manage a:focus,
+.a-nav-bar-manage a:focus .w-pml-icon {
+  color:#00679E;
+}
+
+/* Header area elements inactive and not clickable */
+td.cmdBar,
+td.cmdBarSpl,
+#cmdlinks,
+#cmdlinks .w-pml-icon,
+.dbTabWrapper a,
+.dbTabWrapper .w-pml-icon,
+.w-dashboard-configure-icon,
+.a-dashbrd-page-bg .w-font-icon-size-dashboard,
+.w-abpw-padder,
+.w-back-page-nav,
+.w-back-page-label,
+.w-header-notification-link,
+.w-header-username-link,
+.w-header-realmlabel {
+  color: #969696;
+}
+.a-dashbrd-page-bg .a-community-sgncollapse a:link,
+.a-dashbrd-page-bg .a-community-sgnexpand a:link,
+.a-dashbrd-page-bg .a-community-sgncollapse a:visited,
+.a-dashbrd-page-bg .a-community-sgnexpand a:visited {
+  color:#636363;
+}
+
+/* Header area elements active and clickable */
+#cmdlinks a,
+#cmdlinks a .w-pml-icon,
+.dbTabWrapper a,
+.dbTabWrapper a .w-pml-icon,
+a .w-dashboard-configure-icon,
+.a-dashbrd-page-bg a .w-font-icon-size-dashboard,
+a .w-abpw-padder,
+a .w-back-page-nav,
+a .w-back-page-label,
+a .w-header-notification-link,
+a .w-header-username-link {
+  color: #636363;
+}
+/* Header area elements active on hover */
+#cmdlinks a:hover,
+#cmdlinks a:hover .w-pml-icon,
+.dbTabWrapper a:hover,
+.dbTabWrapper a:hover .w-pml-icon,
+a:hover .w-dashboard-configure-icon,
+.a-dashbrd-page-bg a:hover .w-font-icon-size-dashboard,
+a:hover .w-abpw-padder,
+a:hover .w-back-page-nav,
+a:hover .w-back-page-label,
+a:hover .w-header-notification-link,
+a:hover .a-community-sgncollapse,
+a:hover .a-community-sgncommunity,
+a:hover .a-community-sgncommunityExpand,
+a:hover .a-community-sgncommunitylink,
+a:hover .a-community-sgnexpand,
+a:hover .w-header-username-link {
+  color: #00679E;
+}
+
+/* Header area elements active on focus */
+#cmdlinks a:focus,
+#cmdlinks a:focus .w-pml-icon,
+.dbTabWrapper a:focus,
+.dbTabWrapper a:focus .w-pml-icon,
+a:focus .w-dashboard-configure-icon,
+.a-dashbrd-page-bg a:focus .w-font-icon-size-dashboard,
+a:focus .w-abpw-padder,
+a:focus .w-back-page-nav,
+a:focus .w-back-page-label,
+a:focus .w-header-notification-link,
+a:focus .a-community-sgncollapse,
+a:focus .a-community-sgncommunity,
+a:focus .a-community-sgncommunityExpand,
+a:focus .a-community-sgncommunitylink,
+a:focus .a-community-sgnexpand,
+a:focus .w-header-username-link {
+  color: #00679E;
+}
+
+.a-dashbrd-page-bg .w-font-icon-size-dashboard {
+  color: #363636;
+}
+
+td.a-srch-bar-category a, 
+div.a-srch-portlet-category-dropdown {
+  color: #636363;
+}
+
+.a-dashbrd-page-bg .portletTitleBar,
+.w-notification-box-header {
+  background-color: #F3F2F0;
+}
+
+.portletTitleBar .a-portlet-title-bar-wrng {
+  color: #636363;
+}
+
+body.a-dashbrd-page-bg .w-footer-ct-left,
+body.a-dashbrd-page-bg .w-footer-ct-right,
+body.a-dashbrd-page-bg #w-footer-id a {
+  color: #fff;
+}
+
+body.a-dashbrd-page-bg #w-footer-id a:hover,
+body.a-dashbrd-page-bg #w-footer-id a:focus {
+  text-decoration: underline;
+  color: #D7D7D7;
+}
+
+.a-dashbrd-page-bg .scrollTableWrapper th.tableHead {
+  background-color: #fff;
+}
+
+.w-dashboard-tabs .w-tabitem a {
+  color: #636363;
+}
+.w-dashboard-tabs .w-tabitem a:hover {
+  color: #199DE0;
+}
+.w-tabitem-selected a,
+.w-dashboard-tabs .w-tabitem-selected a {
+  color: #199DE0!important;
+  font-weight: bold;
+}
+.a-dashbrd-page-bg .a-cat-section-title {
+    color:#636363;
+}
+.a-dashbrd-page-bg .a-cat-home-non-cat-button  .w-btn, .w-btn:visited {
+    background-color:rgba(255, 255, 255, 0.3);
+    color:#636363;
+}
+.a-dashbrd-page-bg .a-cat-note-link a:link .a-cat-note-icon-small,
+.a-dashbrd-page-bg .a-cat-note-link a:visited .a-cat-note-icon-small {
+  color: #636363;
+}
+.a-dashbrd-page-bg .a-cat-note-link a:hover .a-cat-note-icon-small {
+  color: #333333;
+}
+
+/* Drag-n-drop styles for dashboard page. Non-dashboard pages have the same bg color in
+both themes. So, they do not have theme-specific styles at this time. */
+.onDrag .a-dashbrd-page-bg .tocDropZone,
+.onDrag .a-dashbrd-page-bg .singleColDropZone,
+.onDrag .a-dashbrd-page-bg .twoColDropZone,
+.onDrag .a-dashbrd-page-bg .vtDropArea div.dropIndicator,
+.onDrag .a-dashbrd-page-bg .vtDropArea div.dropIndicatorSD {
+    border-color: #199DE0;
+    color: #000000;
+}
+.onDrag .a-dashbrd-page-bg .vtDropAreaSelected div.dropIndicator,
+.onDrag .a-dashbrd-page-bg .vtDropAreaSelected div.dropIndicatorSD,
+.onDrag .a-dashbrd-page-bg .vtDropArea .vtDropFieldSelected,
+.onDrag .a-dashbrd-page-bg .portletDropZoneSelected {
+    border-color: #0000FF;
+}
+.a-cat-home-non-cat-button  a{
+    color:#636363;
+}
+
+/* AW7 - Shell Bar CSS */
+
+.aw7_admin_mode_content.active .readOnly {
+    color: #283848;
+}
+
+.aw7_a-cmdbar-prod-logo {
+    vertical-align: middle;
+}
+
+td.aw7_cmdBar, td.aw7_cmdBar .dbTabWrapper, td.aw7_cmdBar .w-navigation-bar-separator td {
+    background-color: #ffffff;
+    border-bottom: 0px;
+}
+
+td.aw7_cmdBar {
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.aw7_cmd-links a,
+.aw7_w-back-page-nav,
+.aw7_a-online-notif-icon-empty,
+.aw7_a-online-notif-icon,
+.aw7_w-notification-bell-icon {
+    color: #0A6ED1 !important;
+}
+
+.aw7_shell-bar-content a:hover,
+.aw7_a-online-notif-icon-empty:hover,
+.aw7_a-online-notif-icon:hover {
+    color: #085CAF !important;
+}
+
+.aw7_identifier-bar-content a:hover {
+    color: #D1E8FF !important;
+}
