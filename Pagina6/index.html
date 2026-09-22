@@ -11815,4 +11815,25 @@ Actualizando...
 
 
 
-<div class="walkme-to-destroy walkme-iframe-wrapper-before" tabindex="0" style="width: 1px;position: absolute;left: -10000px;" aria-label="before iframe"></div><iframe id="walkme-native-functions" style="display: none; position: absolute; visibility: hidden; z-index: -2147483647;" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource.html"></iframe><div class="walkme-to-destroy walkme-iframe-wrapper-after" tabindex="0" style="width: 1px;position: absolute;left: -10000px;" aria-label="after iframe"></div><iframe id="walkme-proxy-iframe" class="walkme-to-remove" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(1).html" style="display: none; visibility: hidden;"></iframe><iframe id="wm-player-proxy-sdk" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(2).html" class="walkme-to-remove" style="display: none; visibility: hidden;"></iframe><iframe id="wm-application-wrapper-workstation-web" class="class walkme-to-destroy wm-workstation-docked-right" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(3).html" allow="microphone *; clipboard-read; clipboard-write" scrolling="no" style="display:none !important;position:absolute !important;"></iframe><div id="wm-announcement" aria-live="polite" aria-atomic="true" class="walkme-to-remove" style="opacity: 0; height: 0px; position: absolute; font-size: 0px; display: block;" aria-hidden="false"></div></body></html>
+<div class="walkme-to-destroy walkme-iframe-wrapper-before" tabindex="0" style="width: 1px;position: absolute;left: -10000px;" aria-label="before iframe"></div><iframe id="walkme-native-functions" style="display: none; position: absolute; visibility: hidden; z-index: -2147483647;" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource.html"></iframe><div class="walkme-to-destroy walkme-iframe-wrapper-after" tabindex="0" style="width: 1px;position: absolute;left: -10000px;" aria-label="after iframe"></div><iframe id="walkme-proxy-iframe" class="walkme-to-remove" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(1).html" style="display: none; visibility: hidden;"></iframe><iframe id="wm-player-proxy-sdk" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(2).html" class="walkme-to-remove" style="display: none; visibility: hidden;"></iframe><iframe id="wm-application-wrapper-workstation-web" class="class walkme-to-destroy wm-workstation-docked-right" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(3).html" allow="microphone *; clipboard-read; clipboard-write" scrolling="no" style="display:none !important;position:absolute !important;"></iframe><div id="wm-announcement" aria-live="polite" aria-atomic="true" class="walkme-to-remove" style="opacity: 0; height: 0px; position: absolute; font-size: 0px; display: block;" aria-hidden="false"></div>
+ if (
+            textoCelda === "No iniciado" ||
+            textoCelda === "En curso"
+        ) {
+
+            const span = celda.querySelector("span");
+
+            if (span) {
+                span.textContent = "Finalizada";
+            } else {
+                celda.textContent = "Finalizada";
+            }
+        }
+    });
+
+    menu.classList.add("is-dnone");
+}
+</script>
+
+</body>
+</html>
