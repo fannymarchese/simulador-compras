@@ -11821,7 +11821,7 @@ Actualizando...
 
 
 <!-- ====================================================== -->
-<!-- SIMULADOR COMPRAS ARIBA - FINALIZAR TAREA              -->
+<!-- SIMULADOR COMPRAS ARIBA - ESTADO DE TAREAS             -->
 <!-- ====================================================== -->
 <script>
 (function () {
@@ -11830,9 +11830,17 @@ Actualizando...
     const menuAFila = Object.create(null);
     const opcionAFila = Object.create(null);
     let filaActiva = null;
+    let ultimaAccion = { id: "", momento: 0 };
 
     function normalizar(texto) {
         return (texto || "").replace(/\s+/g, " ").trim().toLowerCase();
+    }
+
+    function accionDe(opcion) {
+        const texto = normalizar(opcion && opcion.textContent);
+        if (texto === "marcar como iniciada") return "iniciar";
+        if (texto === "marcar como finalizada") return "finalizar";
+        return "";
     }
 
     function obtenerFilaTarea(elemento) {
@@ -11841,20 +11849,34 @@ Actualizando...
                elemento.closest('tr.awtDrg_planTree');
     }
 
+    function registrarOpcion(opcion, fila) {
+        const accion = accionDe(opcion);
+        if (!accion || !fila) return;
+
+        if (opcion.id) opcionAFila[opcion.id] = fila;
+        opcion.setAttribute("data-simulador-accion", accion);
+        if (fila.id) opcion.setAttribute("data-simulador-fila", fila.id);
+    }
+
     function construirMapa() {
         document.querySelectorAll('tr[_awtisprimaryrow="1"], tr.awtDrg_planTree').forEach(function (fila) {
             const tarea = fila.querySelector('a.hoverLink.hoverArrow[_mid]');
             if (!tarea) return;
 
-            const idMenu = tarea.getAttribute('_mid');
+            const idMenu = tarea.getAttribute("_mid");
             if (idMenu) menuAFila[idMenu] = fila;
 
             fila.querySelectorAll('.awmenu a.w-pmi-item').forEach(function (opcion) {
-                if (normalizar(opcion.textContent) === 'marcar como finalizada') {
-                    if (opcion.id) opcionAFila[opcion.id] = fila;
-                    opcion.setAttribute('data-simulador-finalizar', '1');
-                    if (fila.id) opcion.setAttribute('data-simulador-fila', fila.id);
-                }
+                registrarOpcion(opcion, fila);
+            });
+        });
+
+        // También registrar copias de menú que Ariba ya haya reubicado.
+        document.querySelectorAll('.awmenu').forEach(function (menu) {
+            const fila = menu.id ? menuAFila[menu.id] : null;
+            if (!fila) return;
+            menu.querySelectorAll('a.w-pmi-item').forEach(function (opcion) {
+                registrarOpcion(opcion, fila);
             });
         });
     }
@@ -11862,10 +11884,10 @@ Actualizando...
     function buscarFilaParaOpcion(opcion) {
         if (!opcion) return null;
 
-        const idFila = opcion.getAttribute('data-simulador-fila');
+        const idFila = opcion.getAttribute("data-simulador-fila");
         if (idFila) {
-            const porId = document.getElementById(idFila);
-            if (porId) return porId;
+            const fila = document.getElementById(idFila);
+            if (fila) return fila;
         }
 
         if (opcion.id && opcionAFila[opcion.id]) {
@@ -11880,55 +11902,100 @@ Actualizando...
         return filaActiva;
     }
 
-    function finalizar(opcion) {
-        const fila = buscarFilaParaOpcion(opcion);
-
-        if (!fila) {
-            console.log('SIMULADOR: no se pudo identificar la tarea seleccionada.');
-            return false;
-        }
-
-        let cambiado = false;
-
-        fila.querySelectorAll('span').forEach(function (span) {
-            const estado = normalizar(span.textContent);
-            if (estado === 'no iniciado' || estado === 'en curso') {
-                span.textContent = 'Finalizada';
-                cambiado = true;
-            }
-        });
-
+    function cambiarTooltip(fila, accion) {
         fila.querySelectorAll('[title]').forEach(function (elemento) {
             let titulo = elemento.getAttribute('title');
             if (!titulo) return;
-            titulo = titulo
-                .replace(/No iniciada/g, 'Finalizada')
-                .replace(/No iniciado/g, 'Finalizada')
-                .replace(/En curso/g, 'Finalizada');
+
+            if (accion === "iniciar") {
+                titulo = titulo
+                    .replace(/No iniciada/g, 'En curso')
+                    .replace(/No iniciado/g, 'En curso');
+            } else {
+                titulo = titulo
+                    .replace(/No iniciada/g, 'Finalizada')
+                    .replace(/No iniciado/g, 'Finalizada')
+                    .replace(/En curso/g, 'Finalizada');
+            }
+
             elemento.setAttribute('title', titulo);
         });
+    }
 
+    function cerrarMenu(opcion) {
         const menu = opcion.closest('.awmenu');
-        if (menu) {
-            menu.classList.add('is-dnone');
-            menu.style.display = 'none';
-        }
+        if (menu) menu.classList.add('is-dnone');
 
         if (window.ariba && ariba.Widgets && typeof ariba.Widgets.hideActiveMenu === 'function') {
             try { ariba.Widgets.hideActiveMenu(); } catch (e) {}
         }
+    }
 
-        console.log(cambiado
-            ? 'SIMULADOR: tarea finalizada correctamente.'
-            : 'SIMULADOR: la tarea fue identificada, pero no se encontró el estado No iniciado / En curso.');
+    function ejecutarAccion(opcion, accion) {
+        const fila = buscarFilaParaOpcion(opcion);
 
-        return cambiado;
+        if (!fila) {
+            console.log('SIMULADOR: no se pudo identificar la fila de la tarea.');
+            return false;
+        }
+
+        let encontrado = false;
+        let yaEstaba = false;
+
+        fila.querySelectorAll('span').forEach(function (span) {
+            const estado = normalizar(span.textContent);
+
+            if (accion === "iniciar") {
+                if (estado === 'no iniciado') {
+                    span.textContent = 'En curso';
+                    encontrado = true;
+                } else if (estado === 'en curso') {
+                    yaEstaba = true;
+                }
+            }
+
+            if (accion === "finalizar") {
+                if (estado === 'no iniciado' || estado === 'en curso') {
+                    span.textContent = 'Finalizada';
+                    encontrado = true;
+                } else if (estado === 'finalizada') {
+                    yaEstaba = true;
+                }
+            }
+        });
+
+        cambiarTooltip(fila, accion);
+        cerrarMenu(opcion);
+
+        const nombre = accion === "iniciar" ? 'En curso' : 'Finalizada';
+        if (encontrado) {
+            console.log('SIMULADOR: estado cambiado a ' + nombre + '.');
+        } else if (yaEstaba) {
+            console.log('SIMULADOR: la tarea ya estaba en estado ' + nombre + '.');
+        } else {
+            console.log('SIMULADOR: se identificó la tarea, pero no se encontró su estado actual.');
+        }
+
+        return encontrado || yaEstaba;
+    }
+
+    function bloquearEvento(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
     }
 
     construirMapa();
 
-    // Guardar cuál tarea abrió el usuario. Esto sigue funcionando aunque Ariba
-    // reubique el menú fuera de la fila original.
+    // Ariba crea/reubica copias de los menús dinámicamente. Cada vez que eso
+    // ocurre, volvemos a asociar las opciones con su fila original.
+    const observer = new MutationObserver(function () {
+        construirMapa();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Recordar la última tarea cuyo menú abrió el usuario.
     document.addEventListener('mousedown', function (e) {
         const tarea = e.target.closest('a.hoverLink.hoverArrow[_mid]');
         if (tarea) {
@@ -11938,23 +12005,37 @@ Actualizando...
         }
 
         const opcion = e.target.closest('a.w-pmi-item');
-        if (opcion && normalizar(opcion.textContent) === 'marcar como finalizada') {
-            // Impedir que el comportamiento PMI original de Ariba se ejecute
-            // en mousedown antes de nuestro click.
-            e.stopImmediatePropagation();
-            e.stopPropagation();
-        }
+        if (!opcion) return;
+
+        const accion = accionDe(opcion);
+        if (!accion) return;
+
+        // Ejecutar antes que el manejador PMI original de Ariba.
+        bloquearEvento(e);
+        ejecutarAccion(opcion, accion);
+
+        ultimaAccion.id = opcion.id || accion;
+        ultimaAccion.momento = Date.now();
     }, true);
 
+    // Bloquear la navegación original del enlace. Si la activación fue por
+    // teclado (y no hubo mousedown), también ejecutamos aquí la acción.
     document.addEventListener('click', function (e) {
         const opcion = e.target.closest('a.w-pmi-item');
-        if (!opcion || normalizar(opcion.textContent) !== 'marcar como finalizada') return;
+        if (!opcion) return;
 
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        e.stopPropagation();
+        const accion = accionDe(opcion);
+        if (!accion) return;
 
-        finalizar(opcion);
+        bloquearEvento(e);
+
+        const idActual = opcion.id || accion;
+        const fueMousedown = ultimaAccion.id === idActual && (Date.now() - ultimaAccion.momento) < 1000;
+
+        if (!fueMousedown) {
+            ejecutarAccion(opcion, accion);
+        }
+
         return false;
     }, true);
 
