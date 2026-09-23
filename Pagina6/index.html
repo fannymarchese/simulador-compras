@@ -11976,7 +11976,9 @@ Actualizando...
     }
 
     function construirMapa() {
-        const filas = document.querySelectorAll('tr[_awtisprimaryrow="1"]');
+        // Revisar TODAS las filas del árbol. Algunas tareas de Ariba no llevan
+        // _awtisprimaryrow="1", por eso el selector anterior dejaba tareas fuera.
+        const filas = document.querySelectorAll('tr.awtDrg_planTree.awtDrp_planTree[id]');
 
         for (let i = 0; i < filas.length; i++) {
             const fila = filas[i];
