@@ -11,7 +11,7 @@
 
 
 
-<title>Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management</title>
+<title>Simulador Compras Ariba Spend Management</title>
 	<style>
 /* ===== PESTAÑAS NO DISPONIBLES ===== */
 
@@ -11816,8 +11816,150 @@ Actualizando...
 
 
 <div class="walkme-to-destroy walkme-iframe-wrapper-before" tabindex="0" style="width: 1px;position: absolute;left: -10000px;" aria-label="before iframe"></div><iframe id="walkme-native-functions" style="display: none; position: absolute; visibility: hidden; z-index: -2147483647;" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource.html"></iframe><div class="walkme-to-destroy walkme-iframe-wrapper-after" tabindex="0" style="width: 1px;position: absolute;left: -10000px;" aria-label="after iframe"></div><iframe id="walkme-proxy-iframe" class="walkme-to-remove" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(1).html" style="display: none; visibility: hidden;"></iframe><iframe id="wm-player-proxy-sdk" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(2).html" class="walkme-to-remove" style="display: none; visibility: hidden;"></iframe><iframe id="wm-application-wrapper-workstation-web" class="class walkme-to-destroy wm-workstation-docked-right" src="./Sistema Integral de Gestion de Negocios - Sierra Gorda SCM Ariba Spend Management_files/saved_resource(3).html" allow="microphone *; clipboard-read; clipboard-write" scrolling="no" style="display:none !important;position:absolute !important;"></iframe><div id="wm-announcement" aria-live="polite" aria-atomic="true" class="walkme-to-remove" style="opacity: 0; height: 0px; position: absolute; font-size: 0px; display: block;" aria-hidden="false"></div>
-"(ningún valor)	"
 
+
+
+
+<!-- ====================================================== -->
+<!-- SIMULADOR COMPRAS ARIBA - FINALIZAR TAREA              -->
+<!-- ====================================================== -->
+<script>
+(function () {
+    "use strict";
+
+    const menuAFila = Object.create(null);
+    const opcionAFila = Object.create(null);
+    let filaActiva = null;
+
+    function normalizar(texto) {
+        return (texto || "").replace(/\s+/g, " ").trim().toLowerCase();
+    }
+
+    function obtenerFilaTarea(elemento) {
+        if (!elemento) return null;
+        return elemento.closest('tr[_awtisprimaryrow="1"]') ||
+               elemento.closest('tr.awtDrg_planTree');
+    }
+
+    function construirMapa() {
+        document.querySelectorAll('tr[_awtisprimaryrow="1"], tr.awtDrg_planTree').forEach(function (fila) {
+            const tarea = fila.querySelector('a.hoverLink.hoverArrow[_mid]');
+            if (!tarea) return;
+
+            const idMenu = tarea.getAttribute('_mid');
+            if (idMenu) menuAFila[idMenu] = fila;
+
+            fila.querySelectorAll('.awmenu a.w-pmi-item').forEach(function (opcion) {
+                if (normalizar(opcion.textContent) === 'marcar como finalizada') {
+                    if (opcion.id) opcionAFila[opcion.id] = fila;
+                    opcion.setAttribute('data-simulador-finalizar', '1');
+                    if (fila.id) opcion.setAttribute('data-simulador-fila', fila.id);
+                }
+            });
+        });
+    }
+
+    function buscarFilaParaOpcion(opcion) {
+        if (!opcion) return null;
+
+        const idFila = opcion.getAttribute('data-simulador-fila');
+        if (idFila) {
+            const porId = document.getElementById(idFila);
+            if (porId) return porId;
+        }
+
+        if (opcion.id && opcionAFila[opcion.id]) {
+            return opcionAFila[opcion.id];
+        }
+
+        const menu = opcion.closest('.awmenu');
+        if (menu && menu.id && menuAFila[menu.id]) {
+            return menuAFila[menu.id];
+        }
+
+        return filaActiva;
+    }
+
+    function finalizar(opcion) {
+        const fila = buscarFilaParaOpcion(opcion);
+
+        if (!fila) {
+            console.log('SIMULADOR: no se pudo identificar la tarea seleccionada.');
+            return false;
+        }
+
+        let cambiado = false;
+
+        fila.querySelectorAll('span').forEach(function (span) {
+            const estado = normalizar(span.textContent);
+            if (estado === 'no iniciado' || estado === 'en curso') {
+                span.textContent = 'Finalizada';
+                cambiado = true;
+            }
+        });
+
+        fila.querySelectorAll('[title]').forEach(function (elemento) {
+            let titulo = elemento.getAttribute('title');
+            if (!titulo) return;
+            titulo = titulo
+                .replace(/No iniciada/g, 'Finalizada')
+                .replace(/No iniciado/g, 'Finalizada')
+                .replace(/En curso/g, 'Finalizada');
+            elemento.setAttribute('title', titulo);
+        });
+
+        const menu = opcion.closest('.awmenu');
+        if (menu) {
+            menu.classList.add('is-dnone');
+            menu.style.display = 'none';
+        }
+
+        if (window.ariba && ariba.Widgets && typeof ariba.Widgets.hideActiveMenu === 'function') {
+            try { ariba.Widgets.hideActiveMenu(); } catch (e) {}
+        }
+
+        console.log(cambiado
+            ? 'SIMULADOR: tarea finalizada correctamente.'
+            : 'SIMULADOR: la tarea fue identificada, pero no se encontró el estado No iniciado / En curso.');
+
+        return cambiado;
+    }
+
+    construirMapa();
+
+    // Guardar cuál tarea abrió el usuario. Esto sigue funcionando aunque Ariba
+    // reubique el menú fuera de la fila original.
+    document.addEventListener('mousedown', function (e) {
+        const tarea = e.target.closest('a.hoverLink.hoverArrow[_mid]');
+        if (tarea) {
+            const fila = obtenerFilaTarea(tarea);
+            if (fila) filaActiva = fila;
+            return;
+        }
+
+        const opcion = e.target.closest('a.w-pmi-item');
+        if (opcion && normalizar(opcion.textContent) === 'marcar como finalizada') {
+            // Impedir que el comportamiento PMI original de Ariba se ejecute
+            // en mousedown antes de nuestro click.
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+        }
+    }, true);
+
+    document.addEventListener('click', function (e) {
+        const opcion = e.target.closest('a.w-pmi-item');
+        if (!opcion || normalizar(opcion.textContent) !== 'marcar como finalizada') return;
+
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        e.stopPropagation();
+
+        finalizar(opcion);
+        return false;
+    }, true);
+
+})();
+</script>
 
 </body>
 </html>
